@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dourê — Kit interno</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#1A1210;--ouro:#C08A2E;--ouro-claro:#E8C06B;--creme:#F3EAD8;--creme-2:#EADFC8;
+  --pistacio:#6E8B4E;--cereja:#9E2F2A;--tinta:#1A1210;--suave:#5C4A42;--linha:rgba(26,18,16,.16);
+  --d:"Bodoni Moda",Georgia,serif;--u:"Archivo",system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);
+}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--creme);color:var(--tinta);font-family:var(--u);font-size:16.5px;line-height:1.6;}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:2px;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(16px,4vw,40px);}
+h1,h2{font-family:var(--d);font-weight:400;line-height:1.05;margin:0;}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);}
+h2{font-size:clamp(1.5rem,3.6vw,2rem);margin:0 0 10px;}
+p{margin:0 0 1em;max-width:62ch;}
+a{color:inherit;}
+
+.kit{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;background:var(--noite);color:var(--creme);padding:12px clamp(16px,4vw,40px);font-size:.84rem;}
+.kit a{color:var(--creme);text-decoration:none;opacity:.72;}
+.kit a:hover,.kit a[aria-current="page"]{opacity:1;color:var(--ouro-claro);}
+.kit .m{font-family:var(--d);font-size:1.15rem;opacity:1;margin-right:6px;}
+
+header{background:var(--noite);color:var(--creme);padding:40px 0 44px;}
+header p{color:rgba(243,234,216,.72);margin-top:14px;}
+.aviso{font-size:.82rem;color:var(--ouro-claro);letter-spacing:.08em;margin-bottom:14px;}
+
+main{padding:clamp(28px,5vw,52px) 0 80px;}
+.grade{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:22px 0 48px;}
+.card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linha);border-radius:6px;padding:22px;text-decoration:none;min-height:180px;}
+.card:hover{border-color:var(--ouro);}
+.card .k{font-size:.72rem;letter-spacing:.12em;font-weight:700;color:var(--ouro);margin-bottom:10px;}
+.card h3{font-family:var(--d);font-weight:400;font-size:1.45rem;margin:0 0 8px;}
+.card p{font-size:.92rem;color:var(--suave);margin:0;flex:1;}
+.card .ir{margin-top:16px;font-size:.84rem;font-weight:600;}
+
+.caixa{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:clamp(18px,3vw,26px);margin:18px 0;}
+.check{list-style:none;padding:0;margin:0;}
+.check li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(26,18,16,.08);}
+.check li:last-child{border-bottom:0;}
+.check input{margin-top:4px;width:18px;height:18px;accent-color:var(--ouro);}
+.check label{cursor:pointer;}
+.check label s{color:var(--suave);}
+.prog{font-size:.88rem;color:var(--suave);margin:0 0 8px;}
+.salvo{font-size:.82rem;color:var(--pistacio);min-height:1.2em;}
+.cols{display:grid;gap:16px;}
+@media(min-width:800px){.cols{grid-template-columns:1fr 1fr;}}
+ul.lista{padding-left:18px;margin:0;color:var(--suave);}
+li{margin-bottom:.4em;}
+</style>
+</head>
+<body>
+<nav class="kit" aria-label="Kit interno">
+  <a class="m" href="projeto.html">Dourê</a>
+  <a href="projeto.html" aria-current="page">Kit</a>
+  <a href="index.html">Site</a>
+  <a href="precificacao.html">Precificação</a>
+  <a href="playbook.html">Playbook</a>
+  <a href="ficha-tecnica.html">Fichas</a>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="aviso">USO INTERNO · NÃO PUBLICAR</div>
+    <h1>Kit da marca</h1>
+    <p>O site, o simulador e o playbook já existiam soltos. Daqui você opera o que falta para abrir: checklist dos sete dias e fichas de receita medidas de verdade.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>Ferramentas</h2>
+  <div class="grade">
+    <a class="card" href="index.html">
+      <div class="k">PÚBLICO</div>
+      <h3>Site da marca</h3>
+      <p>Vitrine, coleção, presentes e CTAs. Links de iFood, WhatsApp e Instagram ainda vazios no CONFIG.</p>
+      <span class="ir">Abrir site →</span>
+    </a>
+    <a class="card" href="precificacao.html">
+      <div class="k">NÚMERO</div>
+      <h3>Custo e margem</h3>
+      <p>Simulador por canal. Troque os parâmetros de fornecedor; o restante recalcula na hora.</p>
+      <span class="ir">Abrir simulador →</span>
+    </a>
+    <a class="card" href="playbook.html">
+      <div class="k">ESTRATÉGIA</div>
+      <h3>Playbook</h3>
+      <p>Naming, catálogo, 100 posts, 30 Reels, calendário, operação e caminho até franquia.</p>
+      <span class="ir">Abrir playbook →</span>
+    </a>
+    <a class="card" href="ficha-tecnica.html">
+      <div class="k">COZINHA</div>
+      <h3>Fichas técnicas</h3>
+      <p>Medir ponto, tempo, rendimento e perda das sete receitas. Sem isso o simulador continua estimado.</p>
+      <span class="ir">Abrir fichas →</span>
+    </a>
+  </div>
+
+  <section id="sete-dias">
+    <h2>Próximos sete dias</h2>
+    <p class="prog" id="prog"></p>
+    <div class="caixa">
+      <ul class="check" id="check"></ul>
+      <p class="salvo" id="salvo"></p>
+    </div>
+  </section>
+
+  <div class="cols">
+    <div class="caixa">
+      <h2>Já está pronto</h2>
+      <ul class="lista">
+        <li>Nome, posicionamento e identidade</li>
+        <li>Catálogo e cardápio para marketplace</li>
+        <li>Modelo de custo parametrizável</li>
+        <li>Calendário comercial e plano de conteúdo</li>
+      </ul>
+    </div>
+    <div class="caixa">
+      <h2>Só você decide</h2>
+      <ul class="lista">
+        <li>URLs reais de iFood, WhatsApp e Instagram</li>
+        <li>Custos de fornecedor no simulador</li>
+        <li>Busca no INPI e reserva de domínio/@</li>
+        <li>Fotos dos cinco ícones — sem isso o site não publica de verdade</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<script>
+const CHAVE = "doure:checklist:v1";
+const ITENS = [
+  "Busca de anterioridade no INPI nas classes 30 e 35 para Dourê e Crocantê.",
+  "Registrar domínios e reservar todos os @ no mesmo dia.",
+  "Cotar embalagem com três fornecedores: pote 180 g, caixa rígida, lacre dourado.",
+  "Preencher o simulador com custos reais de fornecedor e travar a tabela de preços.",
+  "Produzir as sete receitas e preencher as fichas técnicas (ponto, tempo, rendimento).",
+  "Fotografar os cinco ícones em fundo escuro.",
+  "Abrir a conta do Instagram e publicar os posts 1 a 6 antes de abrir a loja no iFood."
+];
+
+function estado(){
+  try{ return JSON.parse(localStorage.getItem(CHAVE) || "[]"); }
+  catch(e){ return []; }
+}
+function salvar(feitos){
+  try{
+    localStorage.setItem(CHAVE, JSON.stringify(feitos));
+    document.getElementById("salvo").textContent = "Progresso salvo neste navegador.";
+  }catch(e){
+    document.getElementById("salvo").textContent = "Não foi possível salvar neste navegador.";
+  }
+}
+function render(){
+  const feitos = estado();
+  const n = feitos.filter(Boolean).length;
+  document.getElementById("prog").textContent = n + " de " + ITENS.length + " concluídos.";
+  document.getElementById("check").innerHTML = ITENS.map((texto, i) => {
+    const ok = !!feitos[i];
+    const t = ok ? "<s>" + texto + "</s>" : texto;
+    return "<li><input type='checkbox' id='c"+i+"'"+(ok?" checked":"")+"><label for='c"+i+"'>"+t+"</label></li>";
+  }).join("");
+  document.querySelectorAll("#check input").forEach((el, i) => {
+    el.addEventListener("change", () => {
+      const prox = estado();
+      prox[i] = el.checked;
+      salvar(prox);
+      render();
+    });
+  });
+}
+render();
+</script>
+</body>
+</html>

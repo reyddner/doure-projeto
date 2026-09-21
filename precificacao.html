@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dourê — Simulador de custo, preço e margem</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#1A1210;--noite-2:#241916;--ouro:#C08A2E;--ouro-claro:#E8C06B;
+  --creme:#F3EAD8;--creme-2:#EADFC8;--pistacio:#6E8B4E;--cereja:#9E2F2A;
+  --tinta:#1A1210;--suave:#5C4A42;--linha:rgba(26,18,16,.16);
+  --d:"Bodoni Moda",Georgia,serif;--u:"Archivo",system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){color-scheme:light;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--creme);color:var(--tinta);font-family:var(--u);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px);}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:2px;}
+h1,h2,h3{font-family:var(--d);font-weight:400;line-height:1.05;margin:0;}
+h1{font-size:clamp(2rem,6vw,3.2rem);}
+h2{font-size:clamp(1.5rem,4vw,2.1rem);}
+h3{font-size:1.15rem;}
+p{margin:0 0 .9em;max-width:66ch;}
+
+header{background:var(--noite);color:var(--creme);padding:calc(36px + env(safe-area-inset-top,0px)) 0 34px;}
+header p{color:rgba(243,234,216,.7);margin-top:12px;}
+header .marca{font-family:var(--d);font-size:1.3rem;letter-spacing:.05em;color:var(--ouro-claro);margin-bottom:18px;}
+
+main{padding:clamp(28px,5vw,52px) 0 90px;}
+.colunas{display:grid;gap:clamp(20px,3vw,32px);align-items:start;}
+@media(min-width:1000px){.colunas{grid-template-columns:400px 1fr;}
+  .painel{position:sticky;top:calc(16px + env(safe-area-inset-top,0px));max-height:calc(100vh - 40px);overflow-y:auto;}}
+
+.painel{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:22px;}
+fieldset{border:0;padding:0;margin:0 0 22px;}
+legend{font-size:.76rem;letter-spacing:.12em;color:var(--suave);font-weight:600;padding:0 0 10px;}
+.linha{display:grid;grid-template-columns:1fr 104px;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid rgba(26,18,16,.07);}
+.linha label{font-size:.92rem;}
+.linha .un{font-size:.76rem;color:var(--suave);display:block;}
+input[type=number],select{
+  font-family:var(--u);font-size:.95rem;width:100%;padding:9px 10px;min-height:42px;
+  border:1px solid var(--linha);border-radius:4px;background:#fff;color:var(--tinta);text-align:right;
+}
+select{text-align:left;}
+.acoes{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+button{font-family:var(--u);font-size:.9rem;font-weight:600;padding:11px 18px;min-height:44px;border-radius:999px;border:1.5px solid var(--linha);background:transparent;color:var(--tinta);cursor:pointer;}
+button.primario{background:var(--noite);color:var(--creme);border-color:var(--noite);}
+button:hover{border-color:var(--ouro);}
+
+.bloco{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:clamp(18px,3vw,26px);margin-bottom:20px;}
+.bloco > h2{margin-bottom:6px;}
+.bloco .nota{font-size:.88rem;color:var(--suave);}
+
+.numeros{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:20px 0 4px;}
+.num{border-left:2px solid var(--ouro);padding-left:14px;}
+.num .k{font-size:.78rem;letter-spacing:.06em;color:var(--suave);}
+.num .v{font-family:var(--d);font-size:1.9rem;line-height:1.1;}
+.num .v.alerta{color:var(--cereja);}
+.num .v.ok{color:var(--pistacio);}
+
+.rolagem{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem;}
+th,td{text-align:right;padding:11px 12px;border-bottom:1px solid rgba(26,18,16,.09);white-space:nowrap;}
+th:first-child,td:first-child{text-align:left;}
+thead th{font-size:.76rem;letter-spacing:.08em;color:var(--suave);font-weight:600;border-bottom:1.5px solid var(--linha);}
+tbody tr:hover{background:var(--creme);}
+td.neg{color:var(--cereja);font-weight:600;}
+td.pos{color:var(--pistacio);font-weight:600;}
+.pill{display:inline-block;font-size:.72rem;padding:3px 9px;border-radius:999px;background:var(--creme-2);color:var(--suave);}
+
+.barras{display:grid;gap:10px;margin-top:18px;}
+.barra{display:grid;grid-template-columns:130px 1fr 92px;gap:12px;align-items:center;font-size:.88rem;}
+.barra .t{height:22px;background:var(--creme-2);border-radius:3px;overflow:hidden;}
+.barra .t i{display:block;height:100%;background:var(--ouro);}
+.barra .t i.custo{background:var(--noite-2);}
+.barra .t i.taxa{background:var(--cereja);}
+.barra .val{text-align:right;font-variant-numeric:tabular-nums;}
+
+details{border-top:1px solid var(--linha);padding-top:14px;margin-top:8px;}
+summary{cursor:pointer;font-weight:600;font-size:.92rem;}
+details p, details li{font-size:.9rem;color:var(--suave);}
+ul{padding-left:18px;}
+.salvo{font-size:.82rem;color:var(--pistacio);min-height:1.2em;}
+.kit{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;background:var(--noite);color:var(--creme);padding:12px clamp(16px,4vw,40px);font-size:.84rem;}
+.kit a{color:var(--creme);text-decoration:none;opacity:.72;}
+.kit a:hover,.kit a[aria-current="page"]{opacity:1;color:var(--ouro-claro);}
+.kit .m{font-family:var(--d);font-size:1.15rem;opacity:1;margin-right:6px;}
+</style>
+</head>
+<body>
+<nav class="kit" aria-label="Kit interno">
+  <a class="m" href="projeto.html">Dourê</a>
+  <a href="projeto.html">Kit</a>
+  <a href="index.html">Site</a>
+  <a href="precificacao.html" aria-current="page">Precificação</a>
+  <a href="playbook.html">Playbook</a>
+  <a href="ficha-tecnica.html">Fichas</a>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="marca">Dourê</div>
+    <h1>Custo, preço e margem por canal</h1>
+    <p>Todos os valores abaixo são parâmetros editáveis, não números reais da operação. Troque pelos seus custos de fornecedor e o modelo recalcula na hora. O que ele mostra: quanto sobra de cada pote depois de ingrediente, embalagem, mão de obra, comissão de marketplace, imposto e marketing.</p>
+  </div>
+</header>
+
+<main class="wrap colunas">
+
+  <!-- ================= PAINEL DE PARÂMETROS ================= -->
+  <form class="painel" id="form" autocomplete="off">
+    <fieldset>
+      <legend>Produto de referência</legend>
+      <div class="linha"><label for="p_nome">Receita</label>
+        <select id="p_nome" style="grid-column:1/-1">
+          <option value="180">Dupla — 180 g</option>
+          <option value="80">Solo — 80 g</option>
+          <option value="350">Sofá — 350 g</option>
+          <option value="700">Mesa — 700 g</option>
+        </select></div>
+      <div class="linha"><label for="p_gramas">Peso final do pote <span class="un">gramas</span></label><input type="number" id="p_gramas" value="180" min="10" step="10"></div>
+      <div class="linha"><label for="p_preco">Preço de tabela <span class="un">R$, canal próprio</span></label><input type="number" id="p_preco" value="28.90" min="0" step="0.5"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Insumos</legend>
+      <div class="linha"><label for="i_milho">Milho mushroom <span class="un">R$/kg cru</span></label><input type="number" id="i_milho" value="18" step="0.5"></div>
+      <div class="linha"><label for="i_rend">Rendimento do milho <span class="un">× peso, cru→estourado</span></label><input type="number" id="i_rend" value="14" step="0.5"></div>
+      <div class="linha"><label for="i_acucar">Açúcar / caramelo <span class="un">R$/kg</span></label><input type="number" id="i_acucar" value="7" step="0.5"></div>
+      <div class="linha"><label for="i_acucar_g">Açúcar por 100 g de produto <span class="un">gramas</span></label><input type="number" id="i_acucar_g" value="38" step="1"></div>
+      <div class="linha"><label for="i_cob">Cobertura / chocolate <span class="un">R$/kg</span></label><input type="number" id="i_cob" value="46" step="1"></div>
+      <div class="linha"><label for="i_cob_g">Cobertura por 100 g <span class="un">gramas</span></label><input type="number" id="i_cob_g" value="18" step="1"></div>
+      <div class="linha"><label for="i_top">Topping / castanha <span class="un">R$/kg</span></label><input type="number" id="i_top" value="62" step="1"></div>
+      <div class="linha"><label for="i_top_g">Topping por 100 g <span class="un">gramas</span></label><input type="number" id="i_top_g" value="6" step="1"></div>
+      <div class="linha"><label for="i_manteiga">Gordura, sal e extras <span class="un">R$ por 100 g</span></label><input type="number" id="i_manteiga" value="0.55" step="0.05"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Embalagem por unidade</legend>
+      <div class="linha"><label for="e_pote">Pote ou saco <span class="un">R$</span></label><input type="number" id="e_pote" value="2.10" step="0.1"></div>
+      <div class="linha"><label for="e_rotulo">Rótulo e lacre <span class="un">R$</span></label><input type="number" id="e_rotulo" value="0.85" step="0.05"></div>
+      <div class="linha"><label for="e_sacola">Sacola, cartão e brinde <span class="un">R$</span></label><input type="number" id="e_sacola" value="1.20" step="0.1"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Produção</legend>
+      <div class="linha"><label for="m_hora">Custo da hora de trabalho <span class="un">R$, já com encargos</span></label><input type="number" id="m_hora" value="22" step="1"></div>
+      <div class="linha"><label for="m_lote">Potes por lote <span class="un">unidades</span></label><input type="number" id="m_lote" value="22" step="1"></div>
+      <div class="linha"><label for="m_tempo">Minutos por lote <span class="un">do fogo à etiqueta</span></label><input type="number" id="m_tempo" value="45" step="5"></div>
+      <div class="linha"><label for="m_energia">Gás e energia por lote <span class="un">R$</span></label><input type="number" id="m_energia" value="3.50" step="0.5"></div>
+      <div class="linha"><label for="m_perda">Perda e refação <span class="un">% da produção</span></label><input type="number" id="m_perda" value="6" step="0.5"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Impostos e marketing</legend>
+      <div class="linha"><label for="t_imposto">Imposto sobre a venda <span class="un">% — Simples, faixa inicial</span></label><input type="number" id="t_imposto" value="6" step="0.5"></div>
+      <div class="linha"><label for="t_mkt">Marketing <span class="un">% do faturamento</span></label><input type="number" id="t_mkt" value="8" step="0.5"></div>
+      <div class="linha"><label for="t_fixo">Custo fixo mensal <span class="un">R$ — cozinha, contador, software</span></label><input type="number" id="t_fixo" value="4800" step="100"></div>
+      <div class="linha"><label for="t_pedidos">Pedidos por mês <span class="un">cenário</span></label><input type="number" id="t_pedidos" value="450" step="25"></div>
+      <div class="linha"><label for="t_itens">Itens por pedido <span class="un">média</span></label><input type="number" id="t_itens" value="1.6" step="0.1"></div>
+    </fieldset>
+
+    <div class="acoes">
+      <button type="button" class="primario" id="salvar">Salvar parâmetros</button>
+      <button type="button" id="restaurar">Voltar ao padrão</button>
+    </div>
+    <div class="salvo" id="salvo"></div>
+  </form>
+
+  <!-- ================= RESULTADOS ================= -->
+  <div>
+    <div class="bloco">
+      <h2>Custo de um pote</h2>
+      <p class="nota">Tudo que sai do caixa antes de o produto encontrar um canal de venda.</p>
+      <div class="numeros" id="n_custo"></div>
+      <div class="barras" id="b_custo"></div>
+    </div>
+
+    <div class="bloco">
+      <h2>O mesmo pote em cada canal</h2>
+      <p class="nota">As taxas de marketplace vêm das condições públicas do iFood em 2026 e estão editáveis na tabela de canais abaixo. O preço por canal pode ser diferente: no iFood ele precisa absorver a comissão.</p>
+      <div class="rolagem">
+        <table id="t_canais">
+          <thead><tr><th>Canal</th><th>Taxa</th><th>Preço</th><th>Receita líquida</th><th>Custo</th><th>Margem R$</th><th>Margem %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <details>
+        <summary>Como o preço de cada canal foi definido</summary>
+        <p>O preço do canal próprio é o de tabela. Os canais com comissão recebem um acréscimo calculado para preservar a mesma margem de contribuição em reais, arredondado para o preço psicológico mais próximo terminado em ,90. É a prática padrão do setor e é legítima: o cliente paga a conveniência do app. O limite é o bom senso — uma diferença acima de ~20% entre o app e o seu site faz o cliente perceber e desconfiar.</p>
+      </details>
+    </div>
+
+    <div class="bloco">
+      <h2>Cenário do mês</h2>
+      <p class="nota">Mix assumido: metade do volume no iFood, o resto dividido entre canal próprio, WhatsApp e retirada. Edite o mix na tabela.</p>
+      <div class="numeros" id="n_mes"></div>
+      <div class="rolagem">
+        <table id="t_mix">
+          <thead><tr><th>Canal</th><th>% do volume</th><th>Pedidos</th><th>Faturamento</th><th>Margem de contribuição</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <h2>Ponto de equilíbrio</h2>
+      <div class="numeros" id="n_be"></div>
+      <p class="nota" id="txt_be"></p>
+      <details>
+        <summary>O que este modelo ainda não considera</summary>
+        <ul>
+          <li>Investimento inicial — panela de cobre, seladora, balança, estoque inicial, registro de marca, licença sanitária.</li>
+          <li>Custo de aquisição por campanha paga. Aqui o marketing entra como percentual do faturamento, não como CAC por cliente novo.</li>
+          <li>Descontos e patrocinado dentro do iFood, que na prática somam de 3 a 8 pontos ao custo do canal quando você entra em campanha.</li>
+          <li>Mensalidade do iFood — R$ 110 no Plano Básico e R$ 150 no Plano Entrega acima de R$ 1.800 de faturamento no app. Some ao custo fixo.</li>
+          <li>Pró-labore. Se você não se paga, a margem que aparece aqui é otimista.</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</main>
+
+<script>
+const CHAVE = "doure:precificacao:v1";
+
+/* Canais. taxa = % sobre o valor bruto do pedido. Valores conferem com as
+   condições públicas do iFood em 2026: Básico 12% + 3,2% de pagamento online,
+   Entrega 23% + 3,2%. Editáveis porque variam por região e categoria. */
+let CANAIS = [
+  {id:"ifood_entrega", nome:"iFood — Plano Entrega", taxa:26.2, mix:35, frete:0,    obs:"iFood entrega"},
+  {id:"ifood_basico",  nome:"iFood — Plano Básico",  taxa:15.2, mix:15, frete:6.50, obs:"entrega própria"},
+  {id:"site",          nome:"Site próprio",          taxa:3.5,  mix:15, frete:6.50, obs:"gateway de pagamento"},
+  {id:"whatsapp",      nome:"WhatsApp",              taxa:1.0,  mix:25, frete:6.50, obs:"Pix, sem comissão"},
+  {id:"retirada",      nome:"Retirada no balcão",    taxa:1.0,  mix:10, frete:0,    obs:"Pix"}
+];
+
+const CAMPOS = ["p_gramas","p_preco","i_milho","i_rend","i_acucar","i_acucar_g","i_cob","i_cob_g","i_top","i_top_g","i_manteiga","e_pote","e_rotulo","e_sacola","m_hora","m_lote","m_tempo","m_energia","m_perda","t_imposto","t_mkt","t_fixo","t_pedidos","t_itens"];
+const PADRAO = {};
+CAMPOS.forEach(c => PADRAO[c] = document.getElementById(c).value);
+
+const v  = id => parseFloat(document.getElementById(id).value) || 0;
+const brl = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const pct = n => n.toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1}) + "%";
+
+/* ---------- custo de um pote ---------- */
+function custo(){
+  const g = v("p_gramas"), f = g/100;
+  const milho   = (g / Math.max(v("i_rend"),1) / 1000) * v("i_milho");
+  const acucar  = (v("i_acucar_g")*f/1000) * v("i_acucar");
+  const cob     = (v("i_cob_g")*f/1000)    * v("i_cob");
+  const top     = (v("i_top_g")*f/1000)    * v("i_top");
+  const extras  = v("i_manteiga") * f;
+  const insumo  = milho + acucar + cob + top + extras;
+  const emb     = v("e_pote") + v("e_rotulo") + v("e_sacola");
+  const lote    = Math.max(v("m_lote"),1);
+  const mao     = (v("m_hora")/60) * v("m_tempo") / lote;
+  const energia = v("m_energia") / lote;
+  const bruto   = insumo + emb + mao + energia;
+  const perda   = bruto * (v("m_perda")/100);
+  return {insumo, emb, mao:mao+energia, perda, total: bruto + perda,
+          detalhe:{milho, acucar, cob, top, extras}};
+}
+
+/* ---------- preço por canal preservando margem em R$ ---------- */
+function precoCanal(c, base, cu){
+  if(c.taxa <= 3.5) return base;
+  const alvoLiquido = base * (1 - 3.5/100);          // líquido do canal próprio
+  const bruto = alvoLiquido / (1 - c.taxa/100);
+  return Math.max(base, Math.round(bruto - 0.10) + 0.90);
+}
+
+function linhaCanal(c, cu){
+  const base = v("p_preco");
+  const preco = precoCanal(c, base, cu);
+  const liq   = preco * (1 - c.taxa/100);
+  const custoTotal = cu.total + preco*(v("t_imposto")/100) + preco*(v("t_mkt")/100);
+  const margem = liq - custoTotal;
+  return {c, preco, liq, custoTotal, margem, mpct: preco ? margem/preco*100 : 0};
+}
+
+function render(){
+  const cu = custo();
+
+  document.getElementById("n_custo").innerHTML = [
+    ["Insumos", brl(cu.insumo)],
+    ["Embalagem", brl(cu.emb)],
+    ["Mão de obra e energia", brl(cu.mao)],
+    ["Perda e refação", brl(cu.perda)],
+    ["Custo total do pote", brl(cu.total)]
+  ].map(([k,x]) => `<div class="num"><div class="k">${k}</div><div class="v">${x}</div></div>`).join("");
+
+  const maior = Math.max(cu.insumo, cu.emb, cu.mao, cu.perda) || 1;
+  document.getElementById("b_custo").innerHTML = [
+    ["Insumos", cu.insumo, "custo"], ["Embalagem", cu.emb, ""],
+    ["Trabalho e energia", cu.mao, "custo"], ["Perda", cu.perda, "taxa"]
+  ].map(([k,x,cl]) =>
+    `<div class="barra"><span>${k}</span><span class="t"><i class="${cl}" style="width:${(x/maior*100).toFixed(1)}%"></i></span><span class="val">${brl(x)}</span></div>`).join("");
+
+  /* canais */
+  const linhas = CANAIS.map(c => linhaCanal(c, cu));
+  document.querySelector("#t_canais tbody").innerHTML = linhas.map(l => `
+    <tr>
+      <td>${l.c.nome}<br><span class="pill">${l.c.obs}</span></td>
+      <td><input type="number" step="0.1" value="${l.c.taxa}" data-taxa="${l.c.id}" style="width:74px"></td>
+      <td>${brl(l.preco)}</td>
+      <td>${brl(l.liq)}</td>
+      <td>${brl(l.custoTotal)}</td>
+      <td class="${l.margem>0?'pos':'neg'}">${brl(l.margem)}</td>
+      <td class="${l.mpct>=35?'pos':l.mpct>0?'':'neg'}">${pct(l.mpct)}</td>
+    </tr>`).join("");
+
+  /* mês */
+  const pedidos = v("t_pedidos"), itens = v("t_itens");
+  let fat = 0, mc = 0;
+  const mixHTML = CANAIS.map(c => {
+    const l = linhas.find(x => x.c.id === c.id);
+    const ped = pedidos * (c.mix/100);
+    const un  = ped * itens;
+    const f   = un * l.preco;
+    const m   = un * l.margem;
+    fat += f; mc += m;
+    return `<tr>
+      <td>${c.nome}</td>
+      <td><input type="number" step="5" value="${c.mix}" data-mix="${c.id}" style="width:70px"></td>
+      <td>${Math.round(ped)}</td>
+      <td>${brl(f)}</td>
+      <td class="${m>0?'pos':'neg'}">${brl(m)}</td>
+    </tr>`;
+  }).join("");
+  document.querySelector("#t_mix tbody").innerHTML = mixHTML;
+
+  const fixo = v("t_fixo");
+  const lucro = mc - fixo;
+  const ticket = pedidos ? fat/pedidos : 0;
+  document.getElementById("n_mes").innerHTML = [
+    ["Faturamento", brl(fat), ""],
+    ["Ticket médio", brl(ticket), ""],
+    ["Margem de contribuição", brl(mc), ""],
+    ["Resultado após custo fixo", brl(lucro), lucro>0?"ok":"alerta"]
+  ].map(([k,x,cl]) => `<div class="num"><div class="k">${k}</div><div class="v ${cl}">${x}</div></div>`).join("");
+
+  /* ponto de equilíbrio */
+  const mcUn = (pedidos*itens) ? mc/(pedidos*itens) : 0;
+  const unBE  = mcUn > 0 ? Math.ceil(fixo/mcUn) : Infinity;
+  const pedBE = itens ? Math.ceil(unBE/itens) : Infinity;
+  document.getElementById("n_be").innerHTML = [
+    ["Margem por unidade", brl(mcUn)],
+    ["Unidades para empatar", isFinite(unBE)? unBE.toLocaleString("pt-BR") : "—"],
+    ["Pedidos para empatar", isFinite(pedBE)? pedBE.toLocaleString("pt-BR") : "—"],
+    ["Pedidos por dia", isFinite(pedBE)? Math.ceil(pedBE/26).toLocaleString("pt-BR") : "—"]
+  ].map(([k,x]) => `<div class="num"><div class="k">${k}</div><div class="v">${x}</div></div>`).join("");
+
+  document.getElementById("txt_be").textContent = isFinite(pedBE)
+    ? `Com esse mix e esses custos, a operação empata em ${pedBE} pedidos no mês — cerca de ${Math.ceil(pedBE/26)} por dia útil de operação. Acima disso, cada pedido adiciona ${brl(mcUn*itens)} ao resultado.`
+    : "A margem por unidade está zerada ou negativa: o preço não cobre o custo mais taxas. Suba o preço, reduza o custo do pote ou corte a dependência do canal mais caro.";
+
+  ligarTabelas();
+}
+
+function ligarTabelas(){
+  document.querySelectorAll("[data-taxa]").forEach(i => i.oninput = () => {
+    const c = CANAIS.find(x => x.id === i.dataset.taxa); c.taxa = parseFloat(i.value)||0; render();
+  });
+  document.querySelectorAll("[data-mix]").forEach(i => i.oninput = () => {
+    const c = CANAIS.find(x => x.id === i.dataset.mix); c.mix = parseFloat(i.value)||0; render();
+  });
+}
+
+/* sincroniza tamanho -> gramas e sugere preço de tabela */
+const TABELA = {80:16.90,180:28.90,350:46.90,700:79.90};
+document.getElementById("p_nome").onchange = e => {
+  document.getElementById("p_gramas").value = e.target.value;
+  document.getElementById("p_preco").value = TABELA[e.target.value];
+  render();
+};
+
+document.getElementById("form").addEventListener("input", e => {
+  if(e.target.id !== "p_nome") render();
+});
+
+/* persistência local, por navegador. Falha em silêncio se bloqueada. */
+function carregar(){
+  try{
+    const d = JSON.parse(localStorage.getItem(CHAVE) || "null");
+    if(!d) return;
+    CAMPOS.forEach(c => { if(d.campos && d.campos[c] != null) document.getElementById(c).value = d.campos[c]; });
+    if(d.canais) CANAIS = CANAIS.map(c => ({...c, ...(d.canais[c.id]||{})}));
+    document.getElementById("salvo").textContent = "Parâmetros salvos neste navegador carregados.";
+  }catch(err){ /* sem storage: segue com os padrões */ }
+}
+document.getElementById("salvar").onclick = () => {
+  const campos = {}; CAMPOS.forEach(c => campos[c] = document.getElementById(c).value);
+  const canais = {}; CANAIS.forEach(c => canais[c.id] = {taxa:c.taxa, mix:c.mix});
+  try{
+    localStorage.setItem(CHAVE, JSON.stringify({campos, canais}));
+    document.getElementById("salvo").textContent = "Salvo neste navegador.";
+  }catch(err){
+    document.getElementById("salvo").textContent = "Não foi possível salvar: o navegador bloqueou o armazenamento local.";
+  }
+};
+document.getElementById("restaurar").onclick = () => {
+  CAMPOS.forEach(c => document.getElementById(c).value = PADRAO[c]);
+  CANAIS = [
+    {id:"ifood_entrega", nome:"iFood — Plano Entrega", taxa:26.2, mix:35, frete:0,    obs:"iFood entrega"},
+    {id:"ifood_basico",  nome:"iFood — Plano Básico",  taxa:15.2, mix:15, frete:6.50, obs:"entrega própria"},
+    {id:"site",          nome:"Site próprio",          taxa:3.5,  mix:15, frete:6.50, obs:"gateway de pagamento"},
+    {id:"whatsapp",      nome:"WhatsApp",              taxa:1.0,  mix:25, frete:6.50, obs:"Pix, sem comissão"},
+    {id:"retirada",      nome:"Retirada no balcão",    taxa:1.0,  mix:10, frete:0,    obs:"Pix"}
+  ];
+  try{ localStorage.removeItem(CHAVE); }catch(err){}
+  document.getElementById("salvo").textContent = "Valores padrão restaurados.";
+  render();
+};
+
+carregar();
+render();
+</script>
+</body>
+</html>

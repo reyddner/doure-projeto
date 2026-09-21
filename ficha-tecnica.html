@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dourê — Fichas técnicas</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#1A1210;--ouro:#C08A2E;--ouro-claro:#E8C06B;--creme:#F3EAD8;--creme-2:#EADFC8;
+  --pistacio:#6E8B4E;--cereja:#9E2F2A;--tinta:#1A1210;--suave:#5C4A42;--linha:rgba(26,18,16,.16);
+  --d:"Bodoni Moda",Georgia,serif;--u:"Archivo",system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);
+}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--creme);color:var(--tinta);font-family:var(--u);font-size:16px;line-height:1.55;}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:2px;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px);}
+h1,h2,h3{font-family:var(--d);font-weight:400;line-height:1.05;margin:0;}
+h1{font-size:clamp(2rem,6vw,3.1rem);}
+h2{font-size:1.5rem;margin-bottom:8px;}
+p{margin:0 0 .9em;max-width:64ch;}
+a{color:inherit;}
+
+.kit{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;background:var(--noite);color:var(--creme);padding:12px clamp(16px,4vw,40px);font-size:.84rem;}
+.kit a{color:var(--creme);text-decoration:none;opacity:.72;}
+.kit a:hover,.kit a[aria-current="page"]{opacity:1;color:var(--ouro-claro);}
+.kit .m{font-family:var(--d);font-size:1.15rem;opacity:1;margin-right:6px;}
+
+header{background:var(--noite);color:var(--creme);padding:36px 0 34px;}
+header p{color:rgba(243,234,216,.7);margin-top:12px;}
+header .aviso{font-size:.82rem;color:var(--ouro-claro);letter-spacing:.08em;margin-bottom:12px;}
+
+main{padding:clamp(24px,4vw,44px) 0 80px;}
+.layout{display:grid;gap:20px;}
+@media(min-width:960px){.layout{grid-template-columns:260px 1fr;align-items:start;}}
+.lista{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:10px;}
+.lista button{display:block;width:100%;text-align:left;font-family:var(--u);font-size:.92rem;padding:11px 12px;border:0;background:transparent;cursor:pointer;border-radius:4px;}
+.lista button[aria-current="true"]{background:var(--noite);color:var(--creme);}
+.lista .st{display:block;font-size:.74rem;color:var(--suave);margin-top:2px;}
+.lista button[aria-current="true"] .st{color:var(--ouro-claro);}
+
+form{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:clamp(18px,3vw,26px);}
+.grade{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin:16px 0;}
+label{display:flex;flex-direction:column;gap:6px;font-size:.86rem;}
+label span{color:var(--suave);font-size:.76rem;}
+input,textarea,select{font-family:var(--u);font-size:.95rem;padding:10px;min-height:42px;border:1px solid var(--linha);border-radius:4px;background:#fff;}
+textarea{min-height:90px;resize:vertical;}
+.acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+button.btn{font-family:var(--u);font-weight:600;padding:11px 18px;min-height:44px;border-radius:999px;border:1.5px solid var(--linha);background:transparent;cursor:pointer;}
+button.primario{background:var(--noite);color:var(--creme);border-color:var(--noite);}
+.nums{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:18px 0;}
+.num{border-left:2px solid var(--ouro);padding-left:12px;}
+.num .k{font-size:.76rem;color:var(--suave);}
+.num .v{font-family:var(--d);font-size:1.6rem;}
+.msg{font-size:.84rem;color:var(--pistacio);min-height:1.2em;}
+</style>
+</head>
+<body>
+<nav class="kit" aria-label="Kit interno">
+  <a class="m" href="projeto.html">Dourê</a>
+  <a href="projeto.html">Kit</a>
+  <a href="index.html">Site</a>
+  <a href="precificacao.html">Precificação</a>
+  <a href="playbook.html">Playbook</a>
+  <a href="ficha-tecnica.html" aria-current="page">Fichas</a>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="aviso">USO INTERNO · NÃO PUBLICAR</div>
+    <h1>Fichas técnicas</h1>
+    <p>Anote o que a panela realmente fez. Temperatura, tempo, rendimento e perda entram aqui. O simulador só deixa de ser palpite quando estas fichas estiverem preenchidas.</p>
+  </div>
+</header>
+
+<main class="wrap layout">
+  <aside class="lista" id="nav" aria-label="Receitas"></aside>
+  <form id="form" autocomplete="off">
+    <h2 id="titulo">Receita</h2>
+    <p id="desc"></p>
+    <div class="grade">
+      <label>Data do teste <input type="date" id="data"></label>
+      <label>Ponto <span>°C no caramelo</span><input type="number" id="temp" step="1" min="0"></label>
+      <label>Tempo do lote <span>minutos</span><input type="number" id="minutos" step="1" min="0"></label>
+      <label>Milho cru <span>gramas</span><input type="number" id="milho" step="1" min="0"></label>
+      <label>Produto final <span>gramas</span><input type="number" id="final" step="1" min="0"></label>
+      <label>Potes obtidos <span>unidades</span><input type="number" id="potes" step="1" min="0"></label>
+      <label>Perda observada <span>%</span><input type="number" id="perda" step="0.5" min="0"></label>
+      <label>Custo do lote <span>R$, insumos</span><input type="number" id="custo" step="0.5" min="0"></label>
+    </div>
+    <label>Notas de ponto e correção<textarea id="notas" placeholder="Ex.: a 118 °C o caramelo ainda cola; travar em 121 °C."></textarea></label>
+    <div class="nums" id="nums"></div>
+    <div class="acoes">
+      <button type="button" class="btn primario" id="salvar">Salvar ficha</button>
+      <button type="button" class="btn" id="exportar">Exportar JSON</button>
+    </div>
+    <p class="msg" id="msg"></p>
+  </form>
+</main>
+
+<script>
+const CHAVE = "doure:fichas:v1";
+const RECEITAS = [
+  {sku:"PIP-OUR", nome:"Ouro Velho", desc:"Caramelo de panela com flor de sal. Âncora da casa."},
+  {sku:"PIP-NEV", nome:"Neve", desc:"Chocolate branco, leite em pó e raspas de limão siciliano."},
+  {sku:"PIP-MEI", nome:"Meia-Noite", desc:"Chocolate 70%, nibs de cacau e sal."},
+  {sku:"PIP-RUI", nome:"Ruína", desc:"Doce de leite, caju caramelizado e linha de chocolate."},
+  {sku:"PIP-P33", nome:"Pistácio 33", desc:"Pistache verdadeiro e chocolate branco. 33 potes/semana."},
+  {sku:"PIP-BRA", nome:"Brasa", desc:"Páprica defumada, queijo e pimenta no fim."},
+  {sku:"PIP-PAR", nome:"Parma", desc:"Parmesão curado, alho tostado e ervas."},
+  {sku:"PIP-EDI", nome:"Edição de Estação", desc:"Receita nova a cada três meses."}
+];
+const CAMPOS = ["data","temp","minutos","milho","final","potes","perda","custo","notas"];
+let sku = RECEITAS[0].sku;
+
+const brl = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+function banco(){
+  try{ return JSON.parse(localStorage.getItem(CHAVE) || "{}"); }
+  catch(e){ return {}; }
+}
+function medida(f){ return f && Number(f.final) > 0 && Number(f.potes) > 0; }
+
+function nav(){
+  const dados = banco();
+  document.getElementById("nav").innerHTML = RECEITAS.map(r => {
+    const ok = medida(dados[r.sku]);
+    return `<button type="button" data-sku="${r.sku}" ${r.sku===sku?'aria-current="true"':""}>${r.nome}<span class="st">${ok?"Medida":"Ainda sem medição"}</span></button>`;
+  }).join("");
+  document.querySelectorAll("#nav button").forEach(b => b.onclick = () => { sku = b.dataset.sku; carregar(); });
+}
+
+function carregar(){
+  const r = RECEITAS.find(x => x.sku === sku);
+  document.getElementById("titulo").textContent = r.nome;
+  document.getElementById("desc").textContent = r.desc + " · " + r.sku;
+  const f = banco()[sku] || {};
+  CAMPOS.forEach(c => { document.getElementById(c).value = f[c] ?? ""; });
+  document.getElementById("msg").textContent = "";
+  nav();
+  derivado();
+}
+
+function ler(){
+  const o = {sku};
+  CAMPOS.forEach(c => o[c] = document.getElementById(c).value);
+  return o;
+}
+
+function derivado(){
+  const f = ler();
+  const milho = Number(f.milho)||0, fin = Number(f.final)||0, potes = Number(f.potes)||0, custo = Number(f.custo)||0;
+  const rend = milho ? (fin/milho) : 0;
+  const gPote = potes ? fin/potes : 0;
+  const cPote = potes ? custo/potes : 0;
+  document.getElementById("nums").innerHTML = [
+    ["Rendimento (final ÷ cru)", rend ? rend.toFixed(1)+"×" : "—"],
+    ["Gramas por pote", gPote ? Math.round(gPote)+" g" : "—"],
+    ["Custo de insumo por pote", cPote ? brl(cPote) : "—"]
+  ].map(([k,v]) => `<div class="num"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
+}
+
+document.getElementById("form").addEventListener("input", derivado);
+document.getElementById("salvar").onclick = () => {
+  const dados = banco();
+  dados[sku] = ler();
+  try{
+    localStorage.setItem(CHAVE, JSON.stringify(dados));
+    document.getElementById("msg").textContent = "Ficha salva neste navegador.";
+  }catch(e){
+    document.getElementById("msg").textContent = "Não foi possível salvar neste navegador.";
+  }
+  nav();
+};
+document.getElementById("exportar").onclick = () => {
+  const blob = new Blob([JSON.stringify(banco(), null, 2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "doure-fichas-tecnicas.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+carregar();
+</script>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dourê — Pequenos luxos, todo dia</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="Dourê é uma casa de pipocas e doces autorais feitos em pequenos lotes. Peça pelo iFood ou WhatsApp em Goiânia. Em breve em Bela Vista de Goiás. Caixas, kits e presentes que chegam quentinhos.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dourê">
+<meta property="og:title" content="Dourê — Pequenos luxos, todo dia">
+<meta property="og:description" content="Pipocas e doces autorais em pequenos lotes. Entrega rápida em Goiânia. Em breve em Bela Vista de Goiás.">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Dourê","servesCuisine":"Pipoca gourmet, doces e presentes","priceRange":"$$","description":"Casa de pipocas e doces autorais feitos em pequenos lotes, com entrega por delivery.","address":{"@type":"PostalAddress","addressLocality":"Goiânia","addressRegion":"GO","addressCountry":"BR"},"areaServed":[{"@type":"City","name":"Goiânia"},{"@type":"City","name":"Bela Vista de Goiás"}],"potentialAction":{"@type":"OrderAction","target":"https://www.ifood.com.br"}}
+</script>
+<style>
+:root{
+  --noite:#1A1210;
+  --noite-2:#241916;
+  --ouro:#C08A2E;
+  --ouro-claro:#E8C06B;
+  --creme:#F3EAD8;
+  --creme-2:#EADFC8;
+  --pistacio:#6E8B4E;
+  --cereja:#9E2F2A;
+  --tinta:#1A1210;
+  --tinta-suave:#5C4A42;
+  --linha:rgba(26,18,16,.14);
+
+  --fonte-display:"Bodoni Moda",Georgia,"Times New Roman",serif;
+  --fonte-ui:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+
+  --max:1160px;
+  --gut:clamp(20px,5vw,56px);
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+/* A identidade é fixa: a marca não inverte com o tema do leitor. */
+:root:not([data-theme="light"]){color-scheme:light;}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
+body{
+  margin:0;background:var(--creme);color:var(--tinta);
+  font-family:var(--fonte-ui);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+:focus-visible{outline:3px solid var(--ouro-claro);outline-offset:3px;border-radius:2px;}
+
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut);}
+section{padding:clamp(64px,10vw,124px) 0;}
+
+h1,h2,h3,.display{font-family:var(--fonte-display);font-weight:400;letter-spacing:-.01em;line-height:1.02;margin:0;}
+h2{font-size:clamp(2.1rem,6.4vw,4rem);}
+h3{font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.15;}
+p{margin:0 0 1em;max-width:62ch;}
+.lead{font-size:clamp(1.05rem,2.3vw,1.2rem);color:var(--tinta-suave);}
+
+/* ---------- barra ---------- */
+.topo{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
+  background:rgba(26,18,16,.94);backdrop-filter:saturate(1.2) blur(8px);
+  color:var(--creme);border-bottom:1px solid rgba(243,234,216,.12);
+}
+.topo-in{display:flex;align-items:center;gap:20px;height:64px;}
+.marca{font-family:var(--fonte-display);font-size:1.5rem;letter-spacing:.04em;text-decoration:none;line-height:1;}
+.marca span{color:var(--ouro-claro);}
+.nav{display:none;margin-left:auto;gap:26px;font-size:.92rem;}
+.nav a{text-decoration:none;opacity:.82;padding:6px 0;border-bottom:1px solid transparent;}
+.nav a:hover{opacity:1;border-bottom-color:var(--ouro);}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--fonte-ui);font-weight:600;font-size:.98rem;
+  padding:15px 26px;border-radius:999px;border:1.5px solid transparent;
+  text-decoration:none;cursor:pointer;min-height:52px;transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn-ifood{background:var(--cereja);color:#fff;}
+.btn-ifood:hover{background:#B83A34;}
+.btn-linha{background:transparent;color:inherit;border-color:currentColor;}
+.btn-linha:hover{background:currentColor;color:var(--noite);}
+.btn-ouro{background:var(--ouro);color:var(--noite);}
+.btn-ouro:hover{background:var(--ouro-claro);}
+.topo .btn{margin-left:auto;padding:11px 20px;min-height:44px;font-size:.9rem;}
+@media(min-width:900px){.nav{display:flex;}.topo .btn{margin-left:0;}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--noite);color:var(--creme);padding:clamp(56px,11vw,110px) 0 clamp(52px,8vw,88px);overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(180deg,transparent,rgba(243,234,216,.08));pointer-events:none;}
+.hero-grid{display:grid;gap:clamp(34px,6vw,64px);align-items:center;}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;}}
+.selo{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;letter-spacing:.14em;color:var(--ouro-claro);margin-bottom:22px;}
+.selo::before{content:"";width:34px;height:1px;background:var(--ouro);}
+.hero h1{font-size:clamp(3.1rem,13vw,7.2rem);line-height:.92;}
+.hero h1 em{font-style:italic;}
+.hero p{color:rgba(243,234,216,.76);font-size:clamp(1.05rem,2.6vw,1.22rem);margin-top:22px;max-width:44ch;}
+.hero-acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+.hero-nota{margin-top:26px;font-size:.88rem;color:rgba(243,234,216,.55);max-width:40ch;}
+
+/* pote de pipoca desenhado */
+.pote{width:100%;max-width:420px;margin:0 auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.45));}
+
+/* faixa de ritmo */
+.faixa{background:var(--ouro);color:var(--noite);font-weight:600;font-size:.9rem;padding:14px 0;}
+.faixa-in{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:center;text-align:center;}
+.faixa-in span{display:inline-flex;align-items:center;gap:9px;}
+.faixa-in span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--noite);}
+
+/* ---------- blocos de texto ---------- */
+.dupla{display:grid;gap:clamp(28px,5vw,60px);}
+@media(min-width:860px){.dupla{grid-template-columns:.9fr 1.1fr;align-items:start;}}
+.cab{max-width:34ch;}
+.cab .sub{color:var(--tinta-suave);margin-top:16px;}
+
+/* ---------- coleção ---------- */
+.colecao{background:var(--creme-2);}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 34px;}
+.chip{
+  font-family:var(--fonte-ui);font-size:.9rem;font-weight:500;
+  padding:10px 18px;border-radius:999px;border:1.5px solid var(--linha);
+  background:transparent;color:var(--tinta-suave);cursor:pointer;min-height:44px;
+}
+.chip[aria-pressed="true"]{background:var(--noite);color:var(--creme);border-color:var(--noite);}
+.grade{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+.card{
+  background:var(--creme);border:1px solid var(--linha);border-radius:4px;
+  display:flex;flex-direction:column;overflow:hidden;position:relative;
+}
+.card-topo{position:relative;aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden;}
+.card-topo svg{width:62%;height:auto;}
+.etiqueta{
+  position:absolute;top:12px;left:12px;font-size:.68rem;letter-spacing:.12em;
+  background:var(--noite);color:var(--creme);padding:5px 10px;border-radius:2px;
+}
+.etiqueta.viral{background:var(--pistacio);}
+.etiqueta.hero{background:var(--ouro);color:var(--noite);}
+.card-corpo{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.card h3{font-size:1.32rem;}
+.card .desc{font-size:.92rem;color:var(--tinta-suave);margin:0;flex:1;}
+.card .pe{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:6px;padding-top:12px;border-top:1px solid var(--linha);}
+.preco{font-family:var(--fonte-display);font-size:1.35rem;}
+.gram{font-size:.8rem;color:var(--tinta-suave);}
+.vazio{padding:40px 0;color:var(--tinta-suave);}
+
+/* ---------- tamanhos ---------- */
+.tamanhos{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:34px;}
+.tam{border:1px solid var(--linha);border-radius:4px;padding:20px 18px;background:var(--creme);}
+.tam .nome{font-family:var(--fonte-display);font-size:1.5rem;}
+.tam .g{font-size:.82rem;color:var(--tinta-suave);margin:4px 0 12px;}
+.tam .v{font-weight:600;}
+
+/* ---------- presentes / escuro ---------- */
+.escuro{background:var(--noite);color:var(--creme);}
+.escuro .lead,.escuro .cab .sub{color:rgba(243,234,216,.7);}
+.escuro .card{background:var(--noite-2);border-color:rgba(243,234,216,.16);}
+.escuro .card .desc,.escuro .gram{color:rgba(243,234,216,.66);}
+.escuro .card .pe{border-top-color:rgba(243,234,216,.16);}
+
+/* ---------- experiência ---------- */
+.passos{display:grid;gap:2px;margin-top:38px;background:var(--linha);border:1px solid var(--linha);border-radius:4px;overflow:hidden;}
+@media(min-width:760px){.passos{grid-template-columns:repeat(4,1fr);}}
+.passo{background:var(--creme);padding:26px 22px;}
+.passo .n{font-family:var(--fonte-display);font-size:2.3rem;color:var(--ouro);line-height:1;}
+.passo h3{font-size:1.1rem;margin:10px 0 8px;}
+.passo p{font-size:.92rem;color:var(--tinta-suave);margin:0;}
+
+/* ---------- b2b ---------- */
+.b2b{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:36px;}
+.caixa{border:1px solid rgba(243,234,216,.2);border-radius:4px;padding:28px 24px;}
+.caixa h3{margin-bottom:10px;}
+.caixa p{font-size:.95rem;color:rgba(243,234,216,.7);}
+.caixa a{font-weight:600;text-decoration:none;color:var(--ouro-claro);border-bottom:1px solid currentColor;padding-bottom:2px;}
+
+/* ---------- prova ---------- */
+.notas{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:34px;}
+.nota{border-left:2px solid var(--ouro);padding:4px 0 4px 18px;}
+.nota p{font-family:var(--fonte-display);font-size:1.15rem;font-style:italic;margin:0 0 8px;}
+.nota cite{font-style:normal;font-size:.84rem;color:var(--tinta-suave);}
+
+/* ---------- pedido ---------- */
+.pedido{background:var(--ouro);color:var(--noite);text-align:center;}
+.pedido h2{max-width:16ch;margin:0 auto;}
+.pedido p{margin:20px auto 0;color:rgba(26,18,16,.75);}
+.pedido .hero-acoes{justify-content:center;}
+.pedido .btn-linha:hover{background:var(--noite);color:var(--ouro);}
+
+/* ---------- rodapé ---------- */
+footer{background:var(--noite);color:rgba(243,234,216,.62);padding:64px 0 48px;font-size:.92rem;}
+.rod-grid{display:grid;gap:34px;}
+@media(min-width:760px){.rod-grid{grid-template-columns:1.3fr 1fr 1fr;}}
+footer h4{font-family:var(--fonte-ui);font-size:.78rem;letter-spacing:.12em;color:var(--creme);margin:0 0 14px;font-weight:600;}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;}
+footer a{text-decoration:none;}
+footer a:hover{color:var(--ouro-claro);}
+.rod-marca{font-family:var(--fonte-display);font-size:2rem;color:var(--creme);}
+.rod-fim{margin-top:44px;padding-top:22px;border-top:1px solid rgba(243,234,216,.14);font-size:.8rem;display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;}
+
+/* barra fixa mobile */
+.barra-mob{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;gap:10px;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));
+  background:rgba(26,18,16,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(243,234,216,.14);
+}
+.barra-mob .btn{flex:1;padding:14px 12px;font-size:.92rem;}
+body{padding-bottom:84px;}
+@media(min-width:900px){.barra-mob{display:none;}body{padding-bottom:0;}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="#topo">Dour<span>ê</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#colecao">Coleção</a>
+      <a href="#presentes">Presentes</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#historia">História</a>
+      <a href="#empresas">Empresas</a>
+    </nav>
+    <a class="btn btn-ifood" href="#pedir" data-evt="cta_topo">Peça agora</a>
+  </div>
+</header>
+
+<main id="topo">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="selo">Pequenos lotes · Goiânia</span>
+      <h1>Pequenos<br>luxos,<br><em>todo dia.</em></h1>
+      <p>Pipocas e doces autorais, feitos no dia e entregues ainda crocantes. Começamos pelo milho. Não vamos parar nele.</p>
+      <div class="hero-acoes">
+        <a class="btn btn-ifood" href="#pedir" data-evt="cta_hero_ifood">Pedir pelo iFood</a>
+        <a class="btn btn-linha" href="#colecao">Ver a coleção</a>
+      </div>
+      <p class="hero-nota">Entrega em até 60 min em Goiânia. Em breve em Bela Vista de Goiás. Pedidos de presente e corporativos com 48h de antecedência.</p>
+    </div>
+    <div>
+      <svg class="pote" viewBox="0 0 400 420" role="img" aria-label="Pote de pipoca Dourê com pipocas caramelizadas transbordando">
+        <defs>
+          <linearGradient id="lat" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8E6320"/><stop offset=".28" stop-color="#E8C06B"/>
+            <stop offset=".62" stop-color="#C08A2E"/><stop offset="1" stop-color="#7A531A"/>
+          </linearGradient>
+          <radialGradient id="pip" cx=".35" cy=".3">
+            <stop offset="0" stop-color="#FFF6E2"/><stop offset="1" stop-color="#E3C489"/>
+          </radialGradient>
+          <radialGradient id="pip2" cx=".35" cy=".3">
+            <stop offset="0" stop-color="#F0D6A0"/><stop offset="1" stop-color="#C79A4E"/>
+          </radialGradient>
+        </defs>
+        <g id="nuvem"></g>
+        <path d="M96 190 h208 l-26 200 a18 18 0 0 1 -18 16 h-120 a18 18 0 0 1 -18 -16 z" fill="url(#lat)"/>
+        <path d="M96 190 h208 l-3 24 h-202 z" fill="#1A1210" opacity=".25"/>
+        <text x="200" y="300" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-size="52" fill="#1A1210" letter-spacing="2">Dourê</text>
+        <rect x="140" y="322" width="120" height="2" fill="#1A1210" opacity=".5"/>
+        <text x="200" y="348" text-anchor="middle" font-family="Archivo, sans-serif" font-size="13" fill="#1A1210" opacity=".7" letter-spacing="4">LOTE PEQUENO</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="faixa">
+  <div class="wrap faixa-in">
+    <span>Feito no dia do pedido</span>
+    <span>Milho mushroom selecionado</span>
+    <span>Caramelo de panela, não de pote</span>
+    <span>Embalagem que aguenta o trajeto</span>
+  </div>
+</div>
+
+<section id="colecao" class="colecao">
+  <div class="wrap">
+    <div class="dupla">
+      <div class="cab">
+        <h2>A coleção</h2>
+        <p class="sub">Sete receitas fixas e uma edição que muda a cada estação. Cada lote sai da panela em no máximo 4 kg — é o que dá pra caramelizar sem queimar.</p>
+      </div>
+      <div>
+        <div class="filtros" role="group" aria-label="Filtrar coleção">
+          <button class="chip" data-f="todos" aria-pressed="true">Tudo</button>
+          <button class="chip" data-f="doce" aria-pressed="false">Doces</button>
+          <button class="chip" data-f="salgado" aria-pressed="false">Salgadas</button>
+          <button class="chip" data-f="hero" aria-pressed="false">Ícones</button>
+          <button class="chip" data-f="edicao" aria-pressed="false">Edição limitada</button>
+        </div>
+        <div class="grade" id="grade"></div>
+        <p class="vazio" id="vazio" hidden>Nenhuma receita nesse filtro por enquanto.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:clamp(56px,8vw,90px)">Escolha o tamanho da noite</h3>
+    <div class="tamanhos" id="tamanhos"></div>
+  </div>
+</section>
+
+<section id="presentes" class="escuro">
+  <div class="wrap">
+    <div class="dupla">
+      <div class="cab">
+        <h2>Para dar de presente</h2>
+        <p class="sub">A caixa fechada já é o embrulho. Cartão escrito à mão incluído — você manda o texto no checkout ou no WhatsApp.</p>
+      </div>
+      <div class="grade" id="kits"></div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <div class="cab">
+      <h2>O que chega na sua porta</h2>
+      <p class="sub">A pipoca é metade. A outra metade é abrir.</p>
+    </div>
+    <div class="passos">
+      <div class="passo"><div class="n">1</div><h3>A caixa</h3><p>Papelão rígido creme, lacre dourado com o selo do lote e a data de produção escrita à mão.</p></div>
+      <div class="passo"><div class="n">2</div><h3>O bilhete</h3><p>Um cartão com o nome de quem produziu o seu lote naquele dia. Sem texto genérico.</p></div>
+      <div class="passo"><div class="n">3</div><h3>O extra</h3><p>Uma amostra de 40 g de um sabor que você ainda não pediu. Muda a cada pedido.</p></div>
+      <div class="passo"><div class="n">4</div><h3>O convite</h3><p>QR no fundo da caixa: marca a Dourê no story e o próximo pedido vem com a Solo por nossa conta.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="historia" class="colecao">
+  <div class="wrap dupla">
+    <div class="cab"><h2>Por que Dourê</h2></div>
+    <div>
+      <p class="lead">Dourar é o que acontece quando o açúcar para de ser açúcar e vira outra coisa. É um ponto exato, curto, que só quem está olhando a panela pega.</p>
+      <p>A Dourê nasceu dessa obsessão com o ponto. Começamos com uma panela de cobre, uma balança e sete receitas que testamos até cansar. A pipoca foi a primeira porque é o produto mais honesto que existe: não tem onde esconder erro. Se o caramelo passou do ponto, você sente.</p>
+      <p>Não somos uma marca de pipoca. Somos uma casa de pequenos luxos comestíveis — e a pipoca é o primeiro capítulo. Depois vêm os doces, as caixas de presente, as edições de fim de ano. A panela é a mesma.</p>
+    </div>
+  </div>
+</section>
+
+<section id="empresas" class="escuro">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Volume, evento e empresa</h2>
+      <p class="sub">Fora do app. Orçamento em até 1 dia útil, entrega programada, nota fiscal.</p>
+    </div>
+    <div class="b2b">
+      <div class="caixa">
+        <h3>Kits corporativos</h3>
+        <p>Fim de ano, onboarding, agradecimento a cliente. Caixa com a sua marca no lacre a partir de 30 unidades.</p>
+        <a href="#pedir" data-evt="lead_corporativo">Pedir orçamento</a>
+      </div>
+      <div class="caixa">
+        <h3>Festas e casamentos</h3>
+        <p>Bar de pipoca montado no local ou potes individuais com etiqueta personalizada. A partir de 50 porções.</p>
+        <a href="#pedir" data-evt="lead_eventos">Falar sobre o evento</a>
+      </div>
+      <div class="caixa">
+        <h3>Revenda</h3>
+        <p>Cafés, cinemas de rua, lojas de presente e hotéis. Tabela de atacado e material de ponto de venda.</p>
+        <a href="#pedir" data-evt="lead_revenda">Ver condições</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cab"><h2>O que dizem</h2><p class="sub">Avaliações reais entram aqui assim que a loja abrir no iFood. Até lá, ficam os testes com a vizinhança.</p></div>
+    <div class="notas">
+      <div class="nota"><p>“Pedi pra assistir um filme sozinha e comi o pote de 350 g em 20 minutos. Não me orgulho.”</p><cite>— Teste de bairro, Setor Bueno</cite></div>
+      <div class="nota"><p>“O caramelo com flor de sal não é doce demais. É o único que eu consigo comer até o fim.”</p><cite>— Teste de bairro, Setor Marista</cite></div>
+      <div class="nota"><p>“Mandei de presente e a pessoa me mandou foto da caixa antes de abrir.”</p><cite>— Teste de bairro, Jardim Goiás</cite></div>
+    </div>
+  </div>
+</section>
+
+<section id="pedir" class="pedido">
+  <div class="wrap">
+    <h2>Chega crocante ou a gente refaz.</h2>
+    <p>Terça a domingo, das 14h às 22h.</p>
+    <div class="hero-acoes">
+      <a class="btn btn-ifood" href="#" data-evt="cta_final_ifood" data-canal="ifood">Pedir pelo iFood</a>
+      <a class="btn btn-linha" href="#" data-evt="cta_final_whats" data-canal="whatsapp">Pedir pelo WhatsApp</a>
+    </div>
+    <p style="font-size:.86rem;margin-top:24px">Presentes, eventos e pedidos acima de 10 unidades: só pelo WhatsApp.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="rod-grid">
+      <div>
+        <div class="rod-marca">Dourê</div>
+        <p style="margin-top:12px;max-width:34ch">Casa de pipocas e doces autorais. Goiânia, GO. Em breve em Bela Vista de Goiás. CNPJ a definir.</p>
+      </div>
+      <div>
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="#colecao">Coleção</a></li>
+          <li><a href="#presentes">Presentes</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#empresas">Empresas e eventos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Falar com a gente</h4>
+        <ul>
+          <li><a href="#pedir" data-canal="whatsapp">WhatsApp</a></li>
+          <li><a href="#" data-canal="instagram">@doure.br no Instagram</a></li>
+          <li><a href="#pedir" data-canal="ifood">Loja no iFood</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rod-fim">
+      <span>© 2026 Dourê</span>
+      <span>Contém glúten em alguns sabores. Tabela nutricional em cada embalagem.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="barra-mob">
+  <a class="btn btn-ifood" href="#pedir" data-evt="cta_barra_ifood">iFood</a>
+  <a class="btn btn-ouro" href="#pedir" data-evt="cta_barra_whats">WhatsApp</a>
+</div>
+
+<script>
+/* ---------------------------------------------------------------
+   CONFIGURAÇÃO — trocar pelos valores reais quando existirem.
+   Nada aqui inventa integração: são os destinos externos da marca.
+----------------------------------------------------------------*/
+const CONFIG = {
+  ifood:     "",                     // ex.: https://www.ifood.com.br/delivery/goiania-go/doure
+  whatsapp:  "",                     // ex.: https://wa.me/5511999999999
+  instagram: "",                     // ex.: https://instagram.com/doure.br
+  utm:       "?utm_source=site&utm_medium=cta"
+};
+
+/* ---------------------------------------------------------------
+   CATÁLOGO — fonte única. O mesmo formato alimenta site, iFood e
+   simulador de margem (campos: sku, nome, tipo, tags, preco, gramas).
+----------------------------------------------------------------*/
+const CATALOGO = [
+  {sku:"PIP-OUR", nome:"Ouro Velho",   tipo:"doce",    tags:["hero"],   gramas:180, preco:28.90, cor:["#E8C06B","#B07A22"], desc:"Caramelo de panela com flor de sal. A receita que define a casa — e a única que nunca sai do cardápio."},
+  {sku:"PIP-NEV", nome:"Neve",         tipo:"doce",    tags:["hero","viral"], gramas:180, preco:31.90, cor:["#FFFCF4","#DCCDB2"], desc:"Chocolate branco, leite em pó e raspas de limão siciliano. Branca, brilhante, impossível de fotografar mal."},
+  {sku:"PIP-MEI", nome:"Meia-Noite",   tipo:"doce",    tags:["hero"],   gramas:180, preco:33.90, cor:["#4A2C1C","#1A1210"], desc:"Chocolate 70%, nibs de cacau e sal. Amarga o suficiente pra você comer devagar."},
+  {sku:"PIP-RUI", nome:"Ruína",        tipo:"doce",    tags:["viral"],  gramas:180, preco:34.90, cor:["#C88A4A","#8C5320"], desc:"Doce de leite, castanha-de-caju caramelizada e uma linha de chocolate por cima. O nome é um aviso."},
+  {sku:"PIP-P33", nome:"Pistácio 33",  tipo:"doce",    tags:["viral","edicao"], gramas:180, preco:39.90, cor:["#A9C07C","#6E8B4E"], desc:"Pistache verdadeiro e chocolate branco. Produção limitada — 33 potes por semana, e acaba."},
+  {sku:"PIP-BRA", nome:"Brasa",        tipo:"salgado", tags:[],         gramas:180, preco:27.90, cor:["#E0793F","#A63A16"], desc:"Páprica defumada, queijo e um fundo de pimenta que só aparece no fim."},
+  {sku:"PIP-PAR", nome:"Parma",        tipo:"salgado", tags:[],         gramas:180, preco:29.90, cor:["#E8DCC0","#B79F6A"], desc:"Parmesão curado, alho tostado e ervas. A única que a gente recomenda com vinho."},
+  {sku:"PIP-EDI", nome:"Edição de Estação", tipo:"doce", tags:["edicao"], gramas:180, preco:36.90, cor:["#D98A8A","#9E2F2A"], desc:"Uma receita nova a cada três meses, feita com a fruta ou o doce do momento. Nunca volta igual."}
+];
+
+const TAMANHOS = [
+  {nome:"Solo",  g:"80 g",  v:"R$ 16,90", nota:"Para uma pessoa e um episódio."},
+  {nome:"Dupla", g:"180 g", v:"R$ 28,90", nota:"O tamanho padrão da casa."},
+  {nome:"Sofá",  g:"350 g", v:"R$ 46,90", nota:"Filme inteiro, duas pessoas."},
+  {nome:"Mesa",  g:"700 g", v:"R$ 79,90", nota:"Mesa cheia ou semana inteira."}
+];
+
+const KITS = [
+  {sku:"KIT-CX4", nome:"Caixa Dourê",     gramas:320, preco:62.90, cor:["#E8C06B","#8E6320"], desc:"Quatro Solos de 80 g, um de cada ícone da casa, na caixa rígida com lacre dourado.", etiqueta:"Mais pedido"},
+  {sku:"KIT-CIN", nome:"Kit Cinema",      gramas:510, preco:69.90, cor:["#4A2C1C","#1A1210"], desc:"Um Sofá doce, um Solo salgado e dois copos de papel com o selo da casa.", etiqueta:""},
+  {sku:"KIT-LAT", nome:"Lata Ouro Velho", gramas:400, preco:89.90, cor:["#E8C06B","#B07A22"], desc:"Lata metálica reutilizável com 400 g do caramelo com flor de sal. Vai fechada, com cartão escrito à mão.", etiqueta:"Presente"},
+  {sku:"KIT-NAT", nome:"Caixa de Fim de Ano", gramas:800, preco:149.90, cor:["#9E2F2A","#5A1A17"], desc:"Seis potes, dois deles exclusivos da edição de dezembro. Pedido com 48h de antecedência.", etiqueta:"Sazonal"}
+];
+
+/* ---------- desenho de pipoca em SVG, colorido por sabor ---------- */
+function cluster(cor, seed){
+  let r = seed*9301 % 233280, out = "";
+  const rnd = () => (r = (r*9301+49297) % 233280) / 233280;
+  for(let i=0;i<7;i++){
+    const cx = 50 + (rnd()-.5)*58, cy = 50 + (rnd()-.5)*54, s = 13 + rnd()*9;
+    out += `<g transform="translate(${cx.toFixed(1)} ${cy.toFixed(1)})">`;
+    for(let j=0;j<5;j++){
+      const a = j/5*Math.PI*2 + rnd(), rr = s*(.5+rnd()*.35);
+      out += `<circle cx="${(Math.cos(a)*s*.42).toFixed(1)}" cy="${(Math.sin(a)*s*.42).toFixed(1)}" r="${rr.toFixed(1)}" fill="${j%2?cor[1]:cor[0]}" opacity="${(.72+rnd()*.28).toFixed(2)}"/>`;
+    }
+    out += `</g>`;
+  }
+  return `<svg viewBox="0 0 100 100" aria-hidden="true">${out}</svg>`;
+}
+
+const brl = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+
+function cardHTML(p, i){
+  const et = p.etiqueta ? `<span class="etiqueta">${p.etiqueta}</span>`
+    : p.tags?.includes("hero") ? `<span class="etiqueta hero">Ícone da casa</span>`
+    : p.tags?.includes("edicao") ? `<span class="etiqueta viral">Edição limitada</span>` : "";
+  return `<article class="card">
+    <div class="card-topo" style="background:linear-gradient(150deg,${p.cor[0]}22,${p.cor[1]}33)">${et}${cluster(p.cor,i+3)}</div>
+    <div class="card-corpo">
+      <h3>${p.nome}</h3>
+      <p class="desc">${p.desc}</p>
+      <div class="pe"><span class="preco">${brl(p.preco)}</span><span class="gram">${p.gramas} g</span></div>
+    </div>
+  </article>`;
+}
+
+function render(filtro){
+  const lista = CATALOGO.filter(p =>
+    filtro === "todos" ? true :
+    filtro === "doce" || filtro === "salgado" ? p.tipo === filtro :
+    p.tags.includes(filtro));
+  document.getElementById("grade").innerHTML = lista.map(cardHTML).join("");
+  document.getElementById("vazio").hidden = lista.length > 0;
+}
+
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed","false"));
+  b.setAttribute("aria-pressed","true");
+  render(b.dataset.f);
+}));
+
+render("todos");
+document.getElementById("kits").innerHTML = KITS.map(cardHTML).join("");
+document.getElementById("tamanhos").innerHTML = TAMANHOS.map(t =>
+  `<div class="tam"><div class="nome">${t.nome}</div><div class="g">${t.g}</div><div class="v">${t.v}</div><p class="g" style="margin:8px 0 0">${t.nota}</p></div>`).join("");
+
+/* pipocas soltas saindo do pote no hero */
+document.getElementById("nuvem").innerHTML = (()=>{
+  let s = "";
+  const pos = [[200,120,1.4],[150,150,1.1],[252,148,1.15],[112,176,.9],[290,174,.95],[178,96,.85],[226,92,.8],[132,118,.7],[272,116,.75],[200,62,.6]];
+  pos.forEach(([x,y,k],i)=>{
+    s += `<g transform="translate(${x} ${y}) scale(${k})">`;
+    for(let j=0;j<6;j++){
+      const a = j/6*Math.PI*2;
+      s += `<circle cx="${(Math.cos(a)*13).toFixed(1)}" cy="${(Math.sin(a)*13).toFixed(1)}" r="${(9+((i*7+j*3)%5)).toFixed(1)}" fill="url(#${j%2?'pip2':'pip'})"/>`;
+    }
+    s += `</g>`;
+  });
+  return s;
+})();
+
+/* ---------------------------------------------------------------
+   Destinos externos. Se a URL ainda não estiver configurada, o
+   botão explica o que falta em vez de fingir que funciona.
+----------------------------------------------------------------*/
+function destino(canal){
+  const base = CONFIG[canal];
+  if(!base) return null;
+  return canal === "whatsapp" ? base : base + CONFIG.utm + "&utm_campaign=" + canal;
+}
+document.querySelectorAll("[data-canal]").forEach(el => {
+  const url = destino(el.dataset.canal);
+  if(url){ el.href = url; el.target = "_blank"; el.rel = "noopener"; }
+  else el.addEventListener("click", e => {
+    e.preventDefault();
+    alert("Link do " + el.dataset.canal + " ainda não configurado.\n\nAbra o código e preencha CONFIG." + el.dataset.canal + " com a URL real da loja.");
+  });
+});
+
+/* Eventos de conversão — prontos para GA4 / Meta Pixel quando os IDs existirem. */
+function evento(nome, dados){
+  (window.dataLayer = window.dataLayer || []).push({event:nome, ...dados});
+  if(typeof fbq === "function") fbq("trackCustom", nome, dados);
+}
+document.querySelectorAll("[data-evt]").forEach(el =>
+  el.addEventListener("click", () => evento(el.dataset.evt, {canal: el.dataset.canal || "site"})));
+</script>
+</body>
+</html>

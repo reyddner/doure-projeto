@@ -1,0 +1,17 @@
+# Dependências / sistema
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Ambiente e ferramentas locais
+.env
+.env.*
+.vercel
+.kilo/
+
+# Backup original
+*.zip
+
+# Pasta de imagens geradas localmente (opcional)
+imagens-ia/

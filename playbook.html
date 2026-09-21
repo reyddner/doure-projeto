@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dourê — Playbook de marca e negócio</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="Estratégia completa da Dourê: marca, naming, posicionamento, catálogo, preço, iFood, conteúdo, lançamento, operação e franquia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#1A1210;--noite-2:#241916;--ouro:#C08A2E;--ouro-claro:#E8C06B;
+  --creme:#F3EAD8;--creme-2:#EADFC8;--pistacio:#6E8B4E;--cereja:#9E2F2A;
+  --tinta:#1A1210;--suave:#5C4A42;--linha:rgba(26,18,16,.16);
+  --d:"Bodoni Moda",Georgia,serif;--u:"Archivo",system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){color-scheme:light;}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:calc(24px + env(safe-area-inset-top,0px));}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{margin:0;background:var(--creme);color:var(--tinta);font-family:var(--u);font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:2px;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,40px);}
+h1,h2,h3,h4{font-family:var(--d);font-weight:400;line-height:1.06;margin:0;letter-spacing:-.005em;}
+h1{font-size:clamp(2.4rem,8vw,4.6rem);}
+h2{font-size:clamp(1.8rem,4.6vw,2.7rem);margin:0 0 6px;}
+h3{font-size:clamp(1.2rem,2.6vw,1.5rem);margin:30px 0 8px;}
+h4{font-family:var(--u);font-size:.95rem;font-weight:700;margin:22px 0 6px;}
+p{margin:0 0 1em;max-width:70ch;}
+ul,ol{padding-left:20px;margin:0 0 1em;max-width:70ch;}
+li{margin-bottom:.4em;}
+strong{font-weight:600;}
+em{font-style:italic;}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em;background:var(--creme-2);padding:1px 5px;border-radius:3px;}
+
+header.capa{background:var(--noite);color:var(--creme);padding:calc(60px + env(safe-area-inset-top,0px)) 0 60px;}
+header.capa .eyebrow{font-family:var(--d);font-size:1.3rem;color:var(--ouro-claro);letter-spacing:.06em;margin-bottom:26px;}
+header.capa p{color:rgba(243,234,216,.72);max-width:56ch;margin-top:20px;font-size:1.05rem;}
+.meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:30px;font-size:.85rem;color:rgba(243,234,216,.55);}
+
+.layout{display:grid;gap:clamp(24px,4vw,48px);padding:clamp(30px,5vw,56px) 0 100px;}
+@media(min-width:1040px){.layout{grid-template-columns:230px 1fr;}
+  nav.toc{position:sticky;top:calc(20px + env(safe-area-inset-top,0px));max-height:calc(100vh - 44px);overflow-y:auto;}}
+nav.toc ol{list-style:none;padding:0;margin:0;font-size:.88rem;}
+nav.toc li{margin:0;}
+nav.toc a{display:block;padding:6px 0 6px 12px;color:var(--suave);text-decoration:none;border-left:2px solid var(--linha);}
+nav.toc a:hover{color:var(--tinta);border-left-color:var(--ouro);}
+nav.toc .grupo{font-size:.72rem;letter-spacing:.1em;color:var(--tinta);font-weight:700;margin:20px 0 6px;font-family:var(--u);}
+
+section.cap{padding:clamp(34px,5vw,56px) 0;border-top:1px solid var(--linha);}
+section.cap:first-child{border-top:0;padding-top:0;}
+.cap-n{font-family:var(--u);font-size:.74rem;letter-spacing:.14em;color:var(--ouro);font-weight:700;margin-bottom:10px;}
+.sub{color:var(--suave);font-size:1.02rem;max-width:64ch;margin-bottom:22px;}
+
+.caixa{background:#fff;border:1px solid var(--linha);border-radius:5px;padding:clamp(18px,3vw,26px);margin:22px 0;}
+.caixa.escura{background:var(--noite);color:var(--creme);border-color:var(--noite);}
+.caixa.escura p,.caixa.escura li{color:rgba(243,234,216,.8);}
+.caixa.ouro{background:var(--ouro);border-color:var(--ouro);color:var(--noite);}
+.caixa h3{margin-top:0;}
+.caixa .rotulo{font-size:.74rem;letter-spacing:.12em;font-weight:700;color:var(--ouro);margin-bottom:8px;}
+.caixa.ouro .rotulo,.caixa.escura .rotulo{color:inherit;opacity:.65;}
+
+.cols{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+.cols .caixa{margin:0;}
+
+.rolagem{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0;}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:620px;background:#fff;}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid rgba(26,18,16,.1);vertical-align:top;}
+thead th{font-size:.72rem;letter-spacing:.09em;color:var(--suave);font-weight:700;border-bottom:1.5px solid var(--linha);position:sticky;top:0;background:#fff;}
+td.num{width:44px;color:var(--ouro);font-family:var(--d);font-size:1.05rem;}
+td.fmt{white-space:nowrap;}
+.pill{display:inline-block;font-size:.7rem;padding:2px 8px;border-radius:999px;background:var(--creme-2);color:var(--suave);}
+.pill.v{background:#D9E6C6;color:#3E5227;}
+.pill.o{background:#F2DFB6;color:#6B4A0F;}
+
+.notaz{font-size:.85rem;color:var(--suave);border-left:2px solid var(--ouro);padding-left:14px;margin:18px 0;max-width:66ch;}
+
+.filtroCat{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0;}
+.filtroCat button{font-family:var(--u);font-size:.82rem;font-weight:500;padding:8px 14px;min-height:40px;border-radius:999px;border:1.5px solid var(--linha);background:transparent;color:var(--suave);cursor:pointer;}
+.filtroCat button[aria-pressed="true"]{background:var(--noite);color:var(--creme);border-color:var(--noite);}
+
+.linhaTempo{display:grid;gap:0;margin:22px 0;}
+.fase{display:grid;gap:4px 18px;grid-template-columns:78px 1fr;padding:16px 0;border-bottom:1px solid var(--linha);}
+.fase .q{font-family:var(--d);font-size:1.3rem;color:var(--ouro);}
+.fase h4{margin:0;}
+.fase p{margin:4px 0 0;font-size:.92rem;color:var(--suave);}
+
+.paleta{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0;}
+.cor{width:96px;}
+.cor i{display:block;height:64px;border-radius:4px;border:1px solid var(--linha);}
+.cor span{display:block;font-size:.74rem;color:var(--suave);margin-top:6px;}
+.cor b{display:block;font-size:.8rem;font-weight:600;}
+
+.check{list-style:none;padding:0;}
+.check li{padding-left:26px;position:relative;}
+.check li::before{content:"";position:absolute;left:0;top:.55em;width:11px;height:11px;border-radius:2px;border:1.5px solid var(--ouro);}
+.check li.feito::before{background:var(--ouro);}
+.check li.falta::before{border-color:var(--cereja);}
+
+footer{background:var(--noite);color:rgba(243,234,216,.6);padding:50px 0 60px;font-size:.88rem;}
+footer .rod-marca{font-family:var(--d);font-size:1.8rem;color:var(--creme);margin-bottom:10px;}
+.kit{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;background:#120C0B;color:var(--creme);padding:12px clamp(16px,4vw,40px);font-size:.84rem;}
+.kit a{color:var(--creme);text-decoration:none;opacity:.72;}
+.kit a:hover,.kit a[aria-current="page"]{opacity:1;color:var(--ouro-claro);}
+.kit .m{font-family:var(--d);font-size:1.15rem;opacity:1;margin-right:6px;}
+</style>
+</head>
+<body>
+<nav class="kit" aria-label="Kit interno">
+  <a class="m" href="projeto.html">Dourê</a>
+  <a href="projeto.html">Kit</a>
+  <a href="index.html">Site</a>
+  <a href="precificacao.html">Precificação</a>
+  <a href="playbook.html" aria-current="page">Playbook</a>
+  <a href="ficha-tecnica.html">Fichas</a>
+</nav>
+
+<header class="capa">
+  <div class="wrap">
+    <div class="eyebrow">Dourê</div>
+    <h1>Playbook de<br>marca e negócio</h1>
+    <p>Como sair de uma panela de caramelo para uma casa de food &amp; gifting replicável. Estratégia, catálogo, preço, conteúdo, operação e o caminho até a franquia.</p>
+    <div class="meta">
+      <span>Versão 1.0 · setembro de 2026</span>
+      <span>Praça inicial: Goiânia, GO</span>
+      <span>Próxima praça: Bela Vista de Goiás</span>
+      <span>Canal de largada: iFood + WhatsApp</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap layout">
+
+<nav class="toc" aria-label="Índice">
+  <div class="grupo">Fundação</div>
+  <ol>
+    <li><a href="#c1">1. Leitura de mercado</a></li>
+    <li><a href="#c2">2. A tese da marca</a></li>
+    <li><a href="#c3">3. Naming — 36 opções</a></li>
+    <li><a href="#c4">4. Slogans</a></li>
+    <li><a href="#c5">5. Posicionamento e personas</a></li>
+  </ol>
+  <div class="grupo">Produto</div>
+  <ol>
+    <li><a href="#c6">6. Arquitetura em 8 fases</a></li>
+    <li><a href="#c7">7. Catálogo e produtos-ícone</a></li>
+    <li><a href="#c8">8. Cardápio para o iFood</a></li>
+    <li><a href="#c9">9. Preço e margem</a></li>
+    <li><a href="#c10">10. Naming de produto</a></li>
+  </ol>
+  <div class="grupo">Marca</div>
+  <ol>
+    <li><a href="#c11">11. Três direções visuais</a></li>
+    <li><a href="#c12">12. Identidade escolhida</a></li>
+    <li><a href="#c13">13. Unboxing</a></li>
+  </ol>
+  <div class="grupo">Crescimento</div>
+  <ol>
+    <li><a href="#c14">14. Instagram</a></li>
+    <li><a href="#c15">15. Os 100 primeiros posts</a></li>
+    <li><a href="#c16">16. Os 30 primeiros Reels</a></li>
+    <li><a href="#c17">17. Lançamento</a></li>
+    <li><a href="#c18">18. Aquisição e recompra</a></li>
+    <li><a href="#c19">19. Fidelidade</a></li>
+    <li><a href="#c20">20. Calendário comercial</a></li>
+  </ol>
+  <div class="grupo">Escala</div>
+  <ol>
+    <li><a href="#c21">21. Operação</a></li>
+    <li><a href="#c22">22. KPIs</a></li>
+    <li><a href="#c23">23. Arquitetura de dados</a></li>
+    <li><a href="#c24">24. Franchise readiness</a></li>
+    <li><a href="#c25">25. O que falta decidir</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- ============ 1 ============ -->
+<section class="cap" id="c1">
+  <div class="cap-n">CAPÍTULO 1</div>
+  <h2>Leitura de mercado</h2>
+  <p class="sub">O que a pesquisa mostrou, e o que isso muda nas decisões abaixo.</p>
+
+  <div class="cols">
+    <div class="caixa">
+      <div class="rotulo">TAMANHO</div>
+      <p>O mercado brasileiro de pipoca gourmet é estimado em cerca de R$ 1,2 bilhão ao ano, crescendo perto de 8% ao ano. O ticket médio do consumidor subiu de aproximadamente R$ 8 em 2019 para R$ 18 em 2025 — a premiumização já aconteceu, o cliente já aceita pagar.</p>
+    </div>
+    <div class="caixa">
+      <div class="rotulo">PROVA DE ESCALA</div>
+      <p>A Baurucas saiu de uma carrocinha com R$ 3,8 mil de investimento em 2018 para 43 unidades, fábrica própria e projeção de R$ 45 milhões em 2026. Redes como Mais Pipoca (240+ unidades) e Mr. Pipoca (180+) já consolidaram o modelo de quiosque em shopping.</p>
+    </div>
+    <div class="caixa">
+      <div class="rotulo">FAIXA DE PREÇO</div>
+      <p>O grosso do mercado vende entre R$ 25 e R$ 60 por embalagens de 200 a 500 g. No topo, marcas como Pipow cobram R$ 167 por um balde de 1 kg e a Chocolat du Jour vende 310 g por R$ 165. Há muito espaço entre o comum e o luxo.</p>
+    </div>
+  </div>
+
+  <h3>As cinco leituras que orientam tudo neste documento</h3>
+  <ol>
+    <li><strong>O produto não é o diferencial; a marca é.</strong> Caramelo com flor de sal existe em toda cidade. O que separa uma operação de R$ 8 mil/mês de uma de R$ 800 mil/mês é identidade, embalagem e consistência — não receita secreta.</li>
+    <li><strong>O território já disputado é o quiosque de shopping.</strong> As grandes redes brigam ali. O delivery de pipoca premium com identidade forte e presenteabilidade é território menos ocupado, e é onde entramos.</li>
+    <li><strong>O gargalo de margem é o marketplace, não o insumo.</strong> Milho custa R$ 9–22/kg e rende ~14×. O insumo é barato. O iFood tira de 15,2% (Plano Básico) a 26,2% (Plano Entrega) do bruto. Quem não planeja para isso vende muito e não lucra.</li>
+    <li><strong>Pipoca é impulso; presente é planejamento.</strong> São dois negócios com margens e sazonalidades diferentes dentro da mesma cozinha. A marca precisa servir aos dois desde o dia um — por isso o nome não pode ser "pipoca".</li>
+    <li><strong>Depender só do iFood é risco estrutural.</strong> O CADE notificou o iFood em maio de 2026 por indícios de punição a restaurantes que aderiram a plataforma concorrente, e a disputa sobre exclusividade foi reaberta em junho. WhatsApp já responde por cerca de 26% do faturamento de delivery no país. O plano abaixo usa o iFood como aquisição e migra recompra para canal próprio.</li>
+  </ol>
+
+  <div class="notaz">Premissa declarada: assumi Goiânia como praça inicial, com expansão em seguida para Bela Vista de Goiás, operação dark kitchen / cozinha residencial legalizada, sem loja física, com o fundador na produção. Se a praça ou o formato for outro, os números de preço e o mix de canais mudam — a estrutura, não.</div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="cap" id="c2">
+  <div class="cap-n">CAPÍTULO 2</div>
+  <h2>A tese da marca</h2>
+  <p class="sub">A decisão que define os próximos dez anos: o que exatamente estamos construindo.</p>
+
+  <div class="caixa escura">
+    <div class="rotulo">TESE</div>
+    <p style="font-family:var(--d);font-size:clamp(1.2rem,3.2vw,1.65rem);line-height:1.35;color:var(--creme);max-width:44ch;">Não é uma marca de pipoca. É uma casa de pequenos luxos comestíveis — indulgência e presente — que estreia pela categoria mais barata de produzir e mais fácil de encantar.</p>
+  </div>
+
+  <p>A pipoca é o produto de entrada perfeito por três razões frias: custo de insumo baixíssimo com percepção alta, validade seca de 15 a 30 dias (não perece como confeitaria fresca), e apelo visual imediato. Ela financia o aprendizado de marca, embalagem e operação com risco mínimo.</p>
+  <p>Mas a pipoca tem um teto. O ticket médio dela sozinha trava em algum lugar entre R$ 30 e R$ 50, a frequência de recompra é baixa (não é um item semanal) e a sazonalidade é fraca. Doces, kits e presentes quebram os três limites: ticket maior, ocasiões datadas, compra recorrente por motivo social.</p>
+
+  <h3>O eixo que amarra tudo</h3>
+  <p>Toda decisão desta marca responde a uma pergunta: <em>isso faz alguém querer dar isso a outra pessoa?</em> Presenteabilidade é o que transforma um snack em um negócio com margem, sazonalidade e boca a boca embutido. A pipoca tem que ser boa. A caixa tem que ser um presente.</p>
+
+  <div class="cols">
+    <div class="caixa"><h4>O que a marca vende</h4><p>Um momento pequeno e bem feito: o intervalo, o filme, o "pensei em você". O produto é o veículo.</p></div>
+    <div class="caixa"><h4>O que a marca não vende</h4><p>Volume barato, promoção permanente, "a maior pipoca pelo menor preço". Esse jogo já tem dono e é uma corrida até o fundo.</p></div>
+    <div class="caixa"><h4>Como a marca cresce</h4><p>Por categoria adjacente (doces, chocolate, kits), não por desconto. Cada categoria nova usa a mesma cozinha, a mesma caixa e o mesmo cliente.</p></div>
+  </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="cap" id="c3">
+  <div class="cap-n">CAPÍTULO 3</div>
+  <h2>Naming — 36 opções analisadas</h2>
+  <p class="sub">Nenhum nome contém "pipoca", "pop", "corn" ou "milho". Essa foi a regra de corte, e ela eliminou mais de metade das ideias iniciais.</p>
+
+  <div class="filtroCat" role="group" aria-label="Filtrar categorias de nome">
+    <button data-nf="todos" aria-pressed="true">Todos</button>
+    <button data-nf="A" aria-pressed="false">A · Premium</button>
+    <button data-nf="B" aria-pressed="false">B · Divertidos</button>
+    <button data-nf="C" aria-pressed="false">C · Modernos</button>
+    <button data-nf="D" aria-pressed="false">D · Brasileiros</button>
+    <button data-nf="E" aria-pressed="false">E · Internacionais</button>
+    <button data-nf="F" aria-pressed="false">F · Inventados</button>
+  </div>
+  <div class="rolagem"><table id="tNomes">
+    <thead><tr><th>Nome</th><th>Cat.</th><th>Raiz e leitura</th><th>Força</th><th>Risco</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+
+  <h3>Shortlist — os cinco que sobreviveram aos critérios</h3>
+  <p>Os critérios de corte, nesta ordem de peso: (1) não trava a expansão para doces e presentes; (2) é pronunciável e grafável de primeira por um brasileiro ouvindo pelo telefone; (3) tem distintividade suficiente para registro no INPI; (4) cabe em 12 mm de altura num lacre de caixa e ainda é legível; (5) não colide com marca conhecida na mesma classe.</p>
+
+  <div class="rolagem"><table>
+    <thead><tr><th>Nome</th><th>Por que entra</th><th>Por que pode não ser</th><th>Submarcas</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dourê</strong></td><td>"Dourar" é o ato central da receita e uma promessa de ponto exato. Soa premium sem ser estrangeiro. Inventado o bastante para registrar. Cinco letras, lindo em serifada.</td><td>Não diz o que é — exige investimento em contexto no primeiro ano. Acento circunflexo complica busca e digitação.</td><td>Dourê Pipoca · Dourê Doces · Dourê Box · Dourê Presentes · Dourê Kids</td></tr>
+      <tr><td><strong>Crocantê</strong></td><td>Comunica o benefício (crocância) com uma virada afrancesada. Memorável de primeira audição. Puxa qualquer produto crocante.</td><td>Perto demais de "crocante", palavra comum — distintividade fraca no INPI e fácil de copiar. Trava em produtos não crocantes (brigadeiro, sorvete).</td><td>Crocantê Doces · Crocantê Gifts</td></tr>
+      <tr><td><strong>Nuvo</strong></td><td>Quatro letras, internacional, evoca "nuvem" (a forma da pipoca) e "novo". Domínio curto, logo simples, escala para qualquer categoria.</td><td>Já existe marca internacional de bebida com esse nome e dezenas de empresas de tecnologia. Genérico demais para um produto sensorial.</td><td>Nuvo Pop · Nuvo Sweets · Nuvo Box</td></tr>
+      <tr><td><strong>Mimô</strong></td><td>"Mimo" em português brasileiro já significa exatamente o que a marca vende: o agrado pequeno. Presenteabilidade embutida no nome.</td><td>Palavra comum e muito usada em confeitaria e papelaria — alto risco de colisão de registro e de parecer marca de brechó.</td><td>Mimô Doces · Mimô Presentes · Caixa Mimô</td></tr>
+      <tr><td><strong>Estoura</strong></td><td>Verbo, energia, duplo sentido ("estourou" = virou sucesso). Alto potencial viral e muito brasileiro.</td><td>Ainda amarrado ao ato de estourar — enfraquece quando o produto for um brownie. Tom mais popular que premium.</td><td>Estoura Doces · Estoura Box</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="caixa ouro">
+    <div class="rotulo">RECOMENDAÇÃO</div>
+    <h3 style="margin-top:0;font-size:2rem">Dourê</h3>
+    <p>É o único da lista que é simultaneamente premium, registrável, expansível para qualquer categoria de doce e enraizado numa verdade real do produto — o ponto do caramelo. Crocantê é o segundo lugar e a melhor escolha se a prioridade for comunicação imediata em vez de construção de marca. Nuvo é a escolha se houver ambição internacional de curto prazo.</p>
+  </div>
+
+  <div class="notaz"><strong>Verificação obrigatória antes de investir um real em embalagem.</strong> Eu não consegui confirmar disponibilidade jurídica nem de domínio. Antes de registrar: busca no INPI nas classes NCL 30 (pipoca, doces, chocolate) e 35 (comércio), consulta em registro.br para <code>doure.com.br</code>, <code>doure.com</code>, <code>douredoces.com.br</code>, e checagem dos @ no Instagram, TikTok, Facebook e YouTube. Alternativas se <code>@doure</code> estiver ocupado, na ordem: <code>@doure.br</code>, <code>@somosdoure</code>, <code>@casadoure</code>, <code>@doure.oficial</code>. Reserve todos de uma vez, no mesmo dia.</div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="cap" id="c4">
+  <div class="cap-n">CAPÍTULO 4</div>
+  <h2>Slogans</h2>
+  <p class="sub">Cinquenta escritos, organizados por registro. O teste de cada um: funciona impresso em 6 mm num lacre e também numa fachada de 3 metros?</p>
+  <div class="cols" id="slogans"></div>
+
+  <h3>As três combinações completas</h3>
+  <div class="rolagem"><table>
+    <thead><tr><th>Nome</th><th>Slogan</th><th>Posicionamento em uma frase</th><th>Onde brilha</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dourê</strong></td><td>Pequenos luxos, todo dia.</td><td>A casa que transforma coisas simples em presente.</td><td>Embalagem, presente, corporativo, franquia. É o que recomendo.</td></tr>
+      <tr><td>Dourê</td><td>Chega crocante ou a gente refaz.</td><td>A marca que garante o ponto.</td><td>iFood e anúncio — promessa concreta converte melhor que promessa poética. Use como headline de campanha, não como assinatura.</td></tr>
+      <tr><td>Crocantê</td><td>O barulho certo.</td><td>A marca que domina a crocância.</td><td>Reels e TikTok — ASMR é o formato nativo da categoria.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="notaz">Assinatura oficial: <strong>Dourê — Pequenos luxos, todo dia.</strong> A segunda frase vira promessa de serviço na loja do iFood e na resposta padrão do WhatsApp; a terceira fica no repertório de campanha.</div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="cap" id="c5">
+  <div class="cap-n">CAPÍTULO 5</div>
+  <h2>Posicionamento e personas</h2>
+
+  <div class="caixa">
+    <div class="rotulo">DECLARAÇÃO DE POSICIONAMENTO</div>
+    <p style="max-width:58ch">Para quem quer transformar uma noite comum em algo um pouco melhor — ou dizer algo a alguém sem precisar de discurso — a <strong>Dourê</strong> é a casa de indulgências feitas em pequenos lotes que chega em casa no mesmo dia. Diferente das redes de quiosque, que vendem volume padronizado em shopping, e das confeitarias de luxo, que vendem exclusividade a preço proibitivo, a Dourê entrega qualidade de confeitaria com a conveniência do delivery e uma embalagem que já é presente.</p>
+  </div>
+
+  <h3>Categoria declarada</h3>
+  <p>Marca de indulgências e presentes para delivery. No iFood, o cadastro fica em <em>Doces &amp; Bolos</em> com o nome de loja <strong>"Dourê — Pipoca Gourmet &amp; Doces"</strong>: o nome da marca constrói equity, o descritor resolve a busca.</p>
+
+  <h3>Personas prioritárias</h3>
+  <div class="cols">
+    <div class="caixa">
+      <div class="rotulo">PRIORIDADE 1 · ~45% DO VOLUME</div>
+      <h4>Camila, 29 — a noite de domingo</h4>
+      <p>Mora sozinha ou com o parceiro no Setor Marista ou no Bueno. Pede delivery de 2 a 4 vezes por semana. Compra por impulso, à noite, no sofá, decidindo em menos de 90 segundos dentro do app. Não compara preço: compara foto.</p>
+      <p><strong>O que ela precisa ver:</strong> primeira foto impecável, descrição curta, faixa de R$ 25–35, entrega em menos de 50 minutos.</p>
+    </div>
+    <div class="caixa">
+      <div class="rotulo">PRIORIDADE 2 · ~30% DO VOLUME, TICKET 2,5×</div>
+      <h4>Rafael, 36 — o presente de última hora</h4>
+      <p>Esqueceu o aniversário, quer agradecer alguém, quer mandar algo para a mãe em outro bairro. Precisa que pareça caro e chegue hoje. Sensível a "isso serve como presente?", não a preço.</p>
+      <p><strong>O que ele precisa ver:</strong> caixa fechada na foto, cartão personalizável, opção de mandar para outro endereço, entrega agendada.</p>
+    </div>
+    <div class="caixa">
+      <div class="rotulo">PRIORIDADE 3 · ~15% DO VOLUME, TICKET 10×</div>
+      <h4>Juliana, 41 — compra pela empresa</h4>
+      <p>RH ou marketing de empresa média. Compra 40 kits em dezembro, 30 em onboarding, 25 num evento. Precisa de nota fiscal, prazo firme e possibilidade de personalizar.</p>
+      <p><strong>O que ela precisa ver:</strong> página de empresas, orçamento em 24h, portfólio de caixas já entregues.</p>
+    </div>
+    <div class="caixa">
+      <div class="rotulo">PRIORIDADE 4 · ~10%, ALTA SAZONALIDADE</div>
+      <h4>Festas e eventos</h4>
+      <p>Aniversário infantil, chá de bebê, casamento pequeno. Compra 50 a 200 porções com 2 a 4 semanas de antecedência. Alta margem, previsível, ótimo para preencher os dias fracos de semana.</p>
+    </div>
+  </div>
+
+  <h3>Quem não é o público</h3>
+  <p>Quem procura a pipoca mais barata do app, quem compra para revender em festa sem identidade, e quem quer 1 kg por R$ 25. Recusar esse cliente é uma decisão de posicionamento, não um descuido: atendê-lo destrói a margem e a percepção de valor simultaneamente.</p>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="cap" id="c6">
+  <div class="cap-n">CAPÍTULO 6</div>
+  <h2>Arquitetura do negócio em 8 fases</h2>
+  <p class="sub">Cada fase só abre quando a anterior tem números. Os gatilhos abaixo são a regra, não a vontade.</p>
+  <div class="linhaTempo" id="fases"></div>
+  <div class="notaz">O caminho <strong>0 → 1 → 10 → 50 → 100</strong> unidades é uma possibilidade, não uma previsão. A maioria das marcas de alimentação para nas primeiras três unidades, e isso é um resultado legítimo. O que este documento garante é que, se a escala vier, a arquitetura não precisará ser refeita.</div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="cap" id="c7">
+  <div class="cap-n">CAPÍTULO 7</div>
+  <h2>Catálogo e produtos-ícone</h2>
+  <p class="sub">Oito receitas. Sete fixas, uma rotativa. Menos SKU significa menos perda, mais consistência e mais chance de o cliente lembrar o nome do que comeu.</p>
+
+  <h3>Os cinco ícones da casa</h3>
+  <div class="rolagem"><table>
+    <thead><tr><th>Nome</th><th>Papel</th><th>Receita</th><th>Por que existe</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ouro Velho</strong></td><td><span class="pill o">Âncora</span></td><td>Caramelo de panela com flor de sal</td><td>Define a marca e o nome. Menor custo de insumo, maior margem, agrada quase todo mundo. Nunca sai do cardápio, nunca entra em promoção.</td></tr>
+      <tr><td><strong>Neve</strong></td><td><span class="pill v">Viral</span></td><td>Chocolate branco, leite em pó, raspas de limão siciliano</td><td>Branca e brilhante: é o produto mais fotogênico do catálogo. Existe para gerar foto, não só venda.</td></tr>
+      <tr><td><strong>Meia-Noite</strong></td><td><span class="pill">Premium</span></td><td>Chocolate 70%, nibs de cacau, sal</td><td>Sustenta a percepção de valor e atrai o público adulto que acha pipoca doce enjoativa.</td></tr>
+      <tr><td><strong>Ruína</strong></td><td><span class="pill v">Viral</span></td><td>Doce de leite, castanha-de-caju caramelizada, fio de chocolate</td><td>O nome faz o marketing sozinho. Produto de maior indulgência e maior ticket entre os doces.</td></tr>
+      <tr><td><strong>Pistácio 33</strong></td><td><span class="pill o">Escassez real</span></td><td>Pistache e chocolate branco</td><td>33 potes por semana, de verdade, porque o pistache é caro e o rendimento manual é esse. Escassez honesta gera urgência sem mentira.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Estrutura completa do catálogo</h3>
+  <div class="rolagem"><table>
+    <thead><tr><th>Camada</th><th>Produtos</th><th>Faixa</th><th>Função no negócio</th></tr></thead>
+    <tbody>
+      <tr><td>Entrada</td><td>Solo 80 g — qualquer sabor</td><td>R$ 16,90</td><td>Baixa a barreira do primeiro pedido e serve de brinde no unboxing.</td></tr>
+      <tr><td>Padrão</td><td>Dupla 180 g</td><td>R$ 27,90–39,90</td><td>O tamanho que a maioria compra. Onde a margem é calibrada.</td></tr>
+      <tr><td>Premium</td><td>Sofá 350 g · Mesa 700 g</td><td>R$ 46,90–79,90</td><td>Melhor margem por grama: a embalagem custa quase o mesmo e o insumo escala linear.</td></tr>
+      <tr><td>Combos</td><td>Kit Cinema (Sofá + Solo salgado + 2 copos)</td><td>R$ 69,90</td><td>Sobe ticket sem desconto: agrega itens de custo baixo e alta percepção.</td></tr>
+      <tr><td>Kits</td><td>Caixa Dourê (4 × 80 g)</td><td>R$ 62,90</td><td>Resolve a indecisão de sabor e apresenta 4 receitas de uma vez — acelera a descoberta do favorito.</td></tr>
+      <tr><td>Presentes</td><td>Lata Ouro Velho 400 g · Caixa de Fim de Ano</td><td>R$ 89,90–149,90</td><td>Onde mora a margem real. Lata é reutilizável e vira mídia na estante de quem recebeu.</td></tr>
+      <tr><td>Edições</td><td>Edição de Estação, trocada a cada 3 meses</td><td>R$ 36,90</td><td>Dá motivo de volta ao cliente antigo e conteúdo novo ao Instagram sem inventar campanha.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Tabela de tamanhos</h3>
+  <p>Solo 80 g · Dupla 180 g · Sofá 350 g · Mesa 700 g. Os nomes descrevem a ocasião, não o volume — o cliente escolhe pela cena que imagina, não pela grama. Isso também sobrevive à expansão: uma "Dupla" de brownie faz sentido.</p>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="cap" id="c8">
+  <div class="cap-n">CAPÍTULO 8</div>
+  <h2>Cardápio para o iFood</h2>
+  <p class="sub">O app não é uma vitrine, é uma esteira. O cliente decide em menos de 90 segundos, com o polegar, no escuro. A estrutura abaixo é desenhada para esse comportamento.</p>
+
+  <div class="rolagem"><table>
+    <thead><tr><th>Ordem</th><th>Categoria no app</th><th>O que entra</th><th>Por quê</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Mais pedidos</td><td>Ouro Velho Dupla, Caixa Dourê, Kit Cinema</td><td>Prova social é o primeiro filtro de decisão. Fixar os três itens de melhor margem aqui direciona o impulso.</td></tr>
+      <tr><td>2</td><td>Experimente primeiro</td><td>Solo 80 g de todos os sabores</td><td>Captura o cliente que acha R$ 30 caro para um teste. Custo de aquisição baixíssimo.</td></tr>
+      <tr><td>3</td><td>Combos e kits</td><td>Kit Cinema, Caixa Dourê, Dupla + Dupla</td><td>Fica antes dos itens avulsos de propósito: quem vê o combo primeiro ancora o preço mais alto.</td></tr>
+      <tr><td>4</td><td>Pipocas doces</td><td>Ouro Velho, Neve, Meia-Noite, Ruína, Pistácio 33</td><td>O miolo do catálogo.</td></tr>
+      <tr><td>5</td><td>Pipocas salgadas</td><td>Brasa, Parma</td><td>Atende o cliente que rejeita doce e viabiliza pedidos de duas pessoas com gostos opostos.</td></tr>
+      <tr><td>6</td><td>Para presentear</td><td>Lata Ouro Velho, Caixa de Fim de Ano</td><td>Categoria que quase nenhum concorrente de pipoca tem no app. É a nossa diferenciação visível.</td></tr>
+      <tr><td>7</td><td>Edição limitada</td><td>Pistácio 33, Edição de Estação</td><td>Escassez real gera retorno recorrente ao cardápio.</td></tr>
+      <tr><td>8</td><td>Bebidas</td><td>Refrigerante, água com gás, suco</td><td>Margem alta, custo zero de produção, sobe o ticket em R$ 8–12 por pedido.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>As regras táticas do app</h3>
+  <ul>
+    <li><strong>Foto quadrada, produto no canto inferior, fundo escuro.</strong> O feed do iFood é claro; um card escuro para o polegar.</li>
+    <li><strong>Descrição de no máximo 120 caracteres</strong>, com textura no início: "Caramelo de panela, quebra no dente, flor de sal no fim." Ninguém lê o segundo parágrafo.</li>
+    <li><strong>Preços terminados em ,90</strong> e nunca dois itens com o mesmo preço na mesma categoria — diferença de preço ajuda a decidir.</li>
+    <li><strong>Um único item em promoção por vez</strong>, sempre o Solo. Descontar o âncora destrói o preço de referência da marca.</li>
+    <li><strong>Frete grátis acima de R$ 55</strong>, calibrado para ficar logo acima do ticket médio. É o empurrão mais barato para subir o ticket.</li>
+    <li><strong>Observação do pedido como canal</strong>: "quer o cartão escrito à mão? escreva a mensagem aqui." Converte pedido comum em presente sem mudar a operação.</li>
+  </ul>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="cap" id="c9">
+  <div class="cap-n">CAPÍTULO 9</div>
+  <h2>Preço e margem</h2>
+  <p class="sub">O modelo completo está no simulador que acompanha este playbook. Aqui ficam as decisões de posicionamento.</p>
+
+  <h3>Os três posicionamentos avaliados</h3>
+  <div class="rolagem"><table>
+    <thead><tr><th>Estratégia</th><th>Dupla 180 g</th><th>Lógica</th><th>Veredito</th></tr></thead>
+    <tbody>
+      <tr><td>Acessível</td><td>R$ 17–21</td><td>Volume, ganhar ranking no app por número de pedidos.</td><td><strong>Não.</strong> Com 26,2% de comissão no Plano Entrega, um pote de R$ 19 deixa cerca de R$ 3 de margem antes do custo fixo. É trabalhar de graça para o marketplace.</td></tr>
+      <tr><td>Intermediário</td><td>R$ 27–34</td><td>Preço no centro da faixa de mercado, margem que aguenta comissão e marketing.</td><td><strong>Sim, para o catálogo corrente.</strong> Cobre o custo com folga e ainda cabe no impulso de domingo à noite.</td></tr>
+      <tr><td>Premium</td><td>R$ 45+</td><td>Percepção de luxo, ticket alto, volume baixo.</td><td><strong>Sim, mas só nas linhas de presente.</strong> Lata, caixa de fim de ano e corporativo vivem aqui. Aplicar isso ao pote do dia a dia mata o volume de entrada.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="caixa ouro">
+    <div class="rotulo">DECISÃO</div>
+    <p><strong>Intermediário-alto no catálogo corrente, premium nos presentes.</strong> Isso dá dois patamares de percepção dentro da mesma marca, e é exatamente a estrutura que sustenta a expansão para doces e corporativo depois.</p>
+  </div>
+
+  <h3>Preço por canal</h3>
+  <p>O mesmo produto tem preços diferentes por canal, e isso é legítimo — o app cobra uma conveniência real. A regra: o preço no iFood absorve a comissão preservando a margem em reais, arredondado para ,90, com teto de 20% acima do canal próprio. Acima disso o cliente percebe e a confiança cai.</p>
+  <div class="rolagem"><table>
+    <thead><tr><th>Canal</th><th>Custo do canal</th><th>Dupla 180 g</th><th>Papel estratégico</th></tr></thead>
+    <tbody>
+      <tr><td>iFood — Plano Entrega</td><td>~26,2% (23% + 3,2%)</td><td>R$ 36,90</td><td>Aquisição. Trate como mídia paga com produto incluso, não como canal de lucro.</td></tr>
+      <tr><td>iFood — Plano Básico</td><td>~15,2% (12% + 3,2%)</td><td>R$ 32,90</td><td>Migrar para cá assim que o raio de entrega e o volume justificarem entregador próprio. São 11 pontos de margem.</td></tr>
+      <tr><td>Site próprio</td><td>~3,5% gateway</td><td>R$ 28,90</td><td>Destino da recompra. Aqui mora a margem.</td></tr>
+      <tr><td>WhatsApp / Pix</td><td>~1%</td><td>R$ 28,90</td><td>Presente, corporativo e cliente fiel. Canal de relacionamento, não de descoberta.</td></tr>
+      <tr><td>Retirada</td><td>~1%</td><td>R$ 25,90</td><td>Desconto explícito para treinar o cliente a vir buscar. Margem máxima.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="notaz">As taxas acima refletem as condições públicas do iFood em 2026 e variam por região e categoria. Confirme no Portal do Parceiro antes de fechar a tabela de preços. Lembre também da mensalidade — R$ 110 no Básico e R$ 150 no Entrega acima de R$ 1.800 de faturamento no app.</div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="cap" id="c10">
+  <div class="cap-n">CAPÍTULO 10</div>
+  <h2>Sistema de naming de produto</h2>
+  <p class="sub">Uma lógica que precisa aguentar 200 SKUs sem virar "Pipoca Chocolate 2".</p>
+
+  <p>Todo produto Dourê recebe <strong>um substantivo ou expressão curta em português que nomeia uma sensação, uma cor ou um momento</strong> — nunca o ingrediente. O ingrediente fica na linha de descrição, onde o cliente procura por ele.</p>
+
+  <div class="rolagem"><table>
+    <thead><tr><th>Eixo</th><th>Regra</th><th>Existentes</th><th>Banco para expansão</th></tr></thead>
+    <tbody>
+      <tr><td>Cor e luz</td><td>O nome descreve o que se vê no pote.</td><td>Ouro Velho, Neve, Meia-Noite</td><td>Âmbar, Cinza, Bronze, Aurora, Breu, Marfim</td></tr>
+      <tr><td>Consequência</td><td>O nome descreve o que acontece com quem come.</td><td>Ruína</td><td>Recaída, Perdição, Insônia, Silêncio, Desculpa</td></tr>
+      <tr><td>Número e lote</td><td>Nome + número indica produção limitada real.</td><td>Pistácio 33</td><td>Cacau 12, Safra 04, Lote 7</td></tr>
+      <tr><td>Calor e fogo</td><td>Reservado para a linha salgada.</td><td>Brasa, Parma</td><td>Fumaça, Carvão, Lenha, Cinza Quente</td></tr>
+      <tr><td>Coleções</td><td>Prefixo que agrupa lançamentos.</td><td>Edição de Estação</td><td>Coleção Inverno, Coleção Festa, Dourê Kids, Dourê Noir</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>A regra de ouro: se o nome pode ser usado para um brownie, um chocolate e uma pipoca sem soar errado, ele está certo. "Ruína" passa. "Pipoca de Doce de Leite" não passa.</p>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="cap" id="c11">
+  <div class="cap-n">CAPÍTULO 11</div>
+  <h2>Três direções visuais</h2>
+  <p class="sub">Desenvolvidas até o ponto de decisão, depois comparadas por critérios explícitos.</p>
+
+  <div class="cols">
+    <div class="caixa">
+      <div class="rotulo">DIREÇÃO A</div>
+      <h3 style="margin-top:0">Confeitaria noturna</h3>
+      <p><strong>Nome:</strong> Dourê · <strong>Slogan:</strong> Pequenos luxos, todo dia.</p>
+      <div class="paleta">
+        <div class="cor"><i style="background:#1A1210"></i><b>Noite</b><span>#1A1210</span></div>
+        <div class="cor"><i style="background:#C08A2E"></i><b>Ouro velho</b><span>#C08A2E</span></div>
+        <div class="cor"><i style="background:#F3EAD8"></i><b>Papel</b><span>#F3EAD8</span></div>
+        <div class="cor"><i style="background:#6E8B4E"></i><b>Pistácio</b><span>#6E8B4E</span></div>
+      </div>
+      <p><strong>Tipografia:</strong> didone de alto contraste (Bodoni Moda) no logotipo e nos nomes de produto; grotesca larga (Archivo) em tudo que é funcional.</p>
+      <p><strong>Fotografia:</strong> fundo escuro, luz lateral dura, uma única fonte de luz. O produto brilha, o entorno some.</p>
+      <p><strong>Embalagem:</strong> pote kraft com janela, lacre dourado numerado, caixa rígida creme.</p>
+      <p><strong>Loja futura:</strong> vitrine preta, letreiro em latão, balcão de mármore, luz pontual em cada pote.</p>
+    </div>
+    <div class="caixa">
+      <div class="rotulo">DIREÇÃO B</div>
+      <h3 style="margin-top:0">Festa de rua</h3>
+      <p><strong>Nome:</strong> Estoura · <strong>Slogan:</strong> Não dá pra comer só um.</p>
+      <div class="paleta">
+        <div class="cor"><i style="background:#E8452C"></i><b>Coral</b><span>#E8452C</span></div>
+        <div class="cor"><i style="background:#FFD23F"></i><b>Amarelo</b><span>#FFD23F</span></div>
+        <div class="cor"><i style="background:#2B6CB0"></i><b>Azul</b><span>#2B6CB0</span></div>
+        <div class="cor"><i style="background:#FFF8E8"></i><b>Creme</b><span>#FFF8E8</span></div>
+      </div>
+      <p><strong>Tipografia:</strong> sans gorda e arredondada, com o logotipo em arco.</p>
+      <p><strong>Fotografia:</strong> luz dura de flash, fundo colorido chapado, mãos em cena, movimento.</p>
+      <p><strong>Embalagem:</strong> saco listrado, adesivo redondo, tudo muito barato de produzir.</p>
+      <p><strong>Loja futura:</strong> quiosque colorido, painel de neon, fila visível como parte do espetáculo.</p>
+    </div>
+    <div class="caixa">
+      <div class="rotulo">DIREÇÃO C</div>
+      <h3 style="margin-top:0">Despensa nórdica</h3>
+      <p><strong>Nome:</strong> Nuvo · <strong>Slogan:</strong> Crisp. Simple. Daily.</p>
+      <div class="paleta">
+        <div class="cor"><i style="background:#F7F5F0"></i><b>Osso</b><span>#F7F5F0</span></div>
+        <div class="cor"><i style="background:#2F2F2C"></i><b>Grafite</b><span>#2F2F2C</span></div>
+        <div class="cor"><i style="background:#C8B8A0"></i><b>Areia</b><span>#C8B8A0</span></div>
+        <div class="cor"><i style="background:#3D5A4A"></i><b>Pinho</b><span>#3D5A4A</span></div>
+      </div>
+      <p><strong>Tipografia:</strong> uma única grotesca neutra em três pesos, muito espaço em branco.</p>
+      <p><strong>Fotografia:</strong> luz difusa de janela, fundo de papel, produto centralizado, sombra suave.</p>
+      <p><strong>Embalagem:</strong> saco branco fosco, tipografia pequena, selo de cor por sabor.</p>
+      <p><strong>Loja futura:</strong> madeira clara, prateleira aberta, parece uma mercearia escandinava.</p>
+    </div>
+  </div>
+
+  <h3>Comparação</h3>
+  <div class="rolagem"><table>
+    <thead><tr><th>Critério</th><th>A · Confeitaria noturna</th><th>B · Festa de rua</th><th>C · Despensa nórdica</th></tr></thead>
+    <tbody>
+      <tr><td>Memorabilidade</td><td>Alta — o contraste escuro/dourado é raro na categoria.</td><td>Alta, mas por barulho; satura rápido.</td><td>Média — bonito e esquecível.</td></tr>
+      <tr><td>Diferenciação no iFood</td><td>Muito alta. O feed do app é branco e colorido; um card escuro para o polegar.</td><td>Baixa. É o que quase toda marca de doce no app já faz.</td><td>Média. Some no fundo branco do app.</td></tr>
+      <tr><td>Expansão de categoria</td><td>Alta. Chocolate, doces e presentes cabem sem ajuste.</td><td>Média. Trava em produtos premium.</td><td>Alta, mas sem calor emocional para presente.</td></tr>
+      <tr><td>Replicabilidade em franquia</td><td>Alta — a paleta é fechada e fácil de auditar.</td><td>Média — depende de execução caótica e criativa.</td><td>Muito alta, porém genérica demais para proteger.</td></tr>
+      <tr><td>Redes sociais</td><td>Alta em foto; exige mais luz técnica em vídeo.</td><td>Muito alta em Reels e TikTok.</td><td>Média.</td></tr>
+      <tr><td>Percepção de valor</td><td>Alta — sustenta R$ 90 numa lata.</td><td>Baixa — puxa o preço para baixo.</td><td>Média-alta.</td></tr>
+      <tr><td>Custo de produção</td><td>Médio-alto — impressão dourada e caixa rígida custam.</td><td>Baixo.</td><td>Baixo.</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>Escolha: A.</strong> É a única que resolve simultaneamente os dois problemas centrais — destacar num feed claro e sustentar preço de presente. O custo maior de embalagem é real e está previsto no simulador. A energia da direção B não se perde: ela vira o tom de voz do Instagram, não a identidade impressa.</p>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="cap" id="c12">
+  <div class="cap-n">CAPÍTULO 12</div>
+  <h2>Identidade escolhida</h2>
+
+  <h3>Logotipo</h3>
+  <p>Logotipo tipográfico em Bodoni Moda, letras espaçadas em 4%, com o circunflexo do "ê" desenhado ligeiramente mais largo que o padrão — é a única liberdade que a marca toma com a letra, e é o detalhe que vira assinatura. Versão reduzida: o monograma <strong>D</strong> com o mesmo circunflexo acima, usado em lacre, favicon e etiqueta de 12 mm.</p>
+
+  <h3>Símbolo</h3>
+  <p>Nenhum ícone de pipoca no logotipo. O símbolo da marca é o <strong>selo de lote</strong>: um círculo com a data e o número do lote, escrito à mão sobre o lacre. Muda a cada dia, prova que o produto é fresco e não pode ser falsificado por concorrente. É a marca em forma de operação.</p>
+
+  <h3>Aplicações, do menor ao maior</h3>
+  <div class="rolagem"><table>
+    <thead><tr><th>Peça</th><th>Especificação</th></tr></thead>
+    <tbody>
+      <tr><td>Etiqueta de sabor</td><td>40 × 25 mm, papel kraft, nome do produto em Bodoni 9 pt, ingrediente em Archivo 6 pt, faixa de cor do sabor à esquerda.</td></tr>
+      <tr><td>Lacre</td><td>Adesivo dourado 35 mm com o monograma vazado e espaço em branco para o selo de lote manuscrito.</td></tr>
+      <tr><td>Pote 180 g</td><td>PET transparente com fundo kraft, cinta de papel de 60 mm cobrindo um terço da altura.</td></tr>
+      <tr><td>Caixa de presente</td><td>Papelão rígido 1,5 mm, creme por fora, noite por dentro. A abertura revela o interior escuro — o contraste é o momento do unboxing.</td></tr>
+      <tr><td>Sacola de entrega</td><td>Kraft com alça, monograma em um lado, "Pequenos luxos, todo dia" no outro, em 14 pt.</td></tr>
+      <tr><td>Uniforme</td><td>Avental preto, monograma bordado em fio dourado no peito. Nada mais.</td></tr>
+      <tr><td>Fachada futura</td><td>Letras em latão escovado sobre fundo preto fosco, iluminação frontal quente. Legível a 30 metros.</td></tr>
+      <tr><td>Veículo / outdoor</td><td>Fundo noite, produto ocupando 60% da área, uma única frase. Nunca listar sabores em mídia grande.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Tom de voz</h3>
+  <p>Direto, seco e um pouco irônico. Frases curtas. Nunca usa "delicioso", "irresistível", "sabor inigualável" — descreve textura, temperatura e consequência. Não usa emoji em embalagem; usa com parcimônia no Instagram. Admite o que é: "é doce, é caro, e você vai comer o pote inteiro."</p>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="cap" id="c13">
+  <div class="cap-n">CAPÍTULO 13</div>
+  <h2>Unboxing</h2>
+  <p class="sub">O objetivo declarado: abrir → fotografar → postar → marcar. Cada elemento abaixo existe para empurrar um desses quatro passos.</p>
+
+  <div class="rolagem"><table>
+    <thead><tr><th>Elemento</th><th>Custo estimado</th><th>Qual passo ele serve</th></tr></thead>
+    <tbody>
+      <tr><td>Caixa creme por fora, noite por dentro</td><td>R$ 3,20</td><td>Abrir. O contraste é o momento fotogênico.</td></tr>
+      <tr><td>Lacre dourado com selo de lote manuscrito</td><td>R$ 0,45</td><td>Fotografar. Prova de artesanal, impossível de industrializar.</td></tr>
+      <tr><td>Cartão com o nome de quem produziu</td><td>R$ 0,30</td><td>Postar. Vira história para contar, não propaganda.</td></tr>
+      <tr><td>Amostra de 40 g de sabor não pedido</td><td>R$ 1,10</td><td>Recompra. Custa pouco e cria o desejo da próxima compra.</td></tr>
+      <tr><td>QR no fundo: story marcando a Dourê rende um Solo grátis</td><td>R$ 0,05 + prêmio</td><td>Marcar. É o mecanismo de indicação embutido.</td></tr>
+      <tr><td>Papel de seda e cartão manuscrito (só presentes)</td><td>R$ 1,80</td><td>Presenteabilidade. O que justifica o preço da linha de presente.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Custo total do unboxing padrão: cerca de R$ 5,10 por pedido. É caro e é proposital — é o investimento de mídia mais barato da operação. Um story marcando a marca custa menos que qualquer clique pago.</p>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="cap" id="c14">
+  <div class="cap-n">CAPÍTULO 14</div>
+  <h2>Instagram</h2>
+
+  <div class="cols">
+    <div class="caixa">
+      <h4>Perfil</h4>
+      <p><strong>@doure.br</strong> (reservar também @doure, @somosdoure, @casadoure)</p>
+      <p><strong>Nome:</strong> Dourê · Pipoca &amp; Doces</p>
+      <p><strong>Foto:</strong> monograma D dourado sobre fundo noite. Legível em 32 px.</p>
+    </div>
+    <div class="caixa">
+      <h4>Bio</h4>
+      <p style="font-family:var(--d);font-size:1.05rem">Caramelo de panela, feito no dia.<br>Entrega em Goiânia · Em breve Bela Vista de Goiás<br>Pedidos ↓</p>
+      <p>Três linhas: o que é, onde chega, o que faz de diferente. O link vai para uma página com iFood, WhatsApp e site.</p>
+    </div>
+    <div class="caixa">
+      <h4>Destaques</h4>
+      <p>Sabores · Presentes · Como chega · Vocês dizem · Empresas · Onde pedir. Capas em fundo noite com o ícone em dourado, sem texto.</p>
+    </div>
+  </div>
+
+  <h3>Ritmo e mix</h3>
+  <ul>
+    <li><strong>Feed:</strong> 4 posts por semana. Mix alvo: 40% desejo/produto, 20% bastidor, 15% interação, 15% prova social, 10% oferta.</li>
+    <li><strong>Reels:</strong> 3 por semana, é o único formato que ainda entrega alcance para conta nova.</li>
+    <li><strong>Stories:</strong> todo dia de operação, mínimo 3 — produção, pedido saindo, enquete.</li>
+    <li><strong>Hashtags:</strong> 5 a 8, nunca 30. <code>#pipocagourmet</code> <code>#doceriagoiania</code> <code>#deliverygoiania</code> <code>#presentecriativo</code> + a de bairro (<code>#setormarista</code>, <code>#setorbueno</code>) e, na expansão, <code>#belavistadegoias</code>.</li>
+    <li><strong>CTA padrão:</strong> "Link na bio" só funciona para quem já quer. O CTA real é "comenta QUERO que eu te mando o link" — dispara comentário, que dispara alcance.</li>
+  </ul>
+
+  <h3>Crescimento nos primeiros 90 dias</h3>
+  <p>Zero anúncio nos primeiros 30 dias. A conta precisa de sinal orgânico antes de receber tráfego pago, ou o custo por seguidor fica caro e a audiência vem fria. O plano: 20 microinfluenciadores de bairro (3 a 15 mil seguidores, foco em comida e maternidade no Marista, Bueno e Jardim Goiás) recebendo a Caixa Dourê sem contrapartida exigida. Depois, R$ 20/dia em impulsionamento apenas dos Reels que já performaram organicamente.</p>
+</section>
+
+<!-- ============ 15 ============ -->
+<section class="cap" id="c15">
+  <div class="cap-n">CAPÍTULO 15</div>
+  <h2>Os 100 primeiros posts</h2>
+  <p class="sub">Numerados na ordem de publicação sugerida, cobrindo aproximadamente as primeiras 25 semanas. Filtre por categoria.</p>
+  <div class="filtroCat" id="filtroPosts" role="group" aria-label="Filtrar posts"></div>
+  <div class="rolagem"><table id="tPosts">
+    <thead><tr><th>#</th><th>Formato</th><th>Título</th><th>Conceito e execução</th><th>CTA</th><th>Objetivo</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+</section>
+
+<!-- ============ 16 ============ -->
+<section class="cap" id="c16">
+  <div class="cap-n">CAPÍTULO 16</div>
+  <h2>Os 30 primeiros Reels</h2>
+  <p class="sub">Cada um com hook de até 2 segundos, roteiro de cena e CTA. Nenhum começa com "conheça nossa pipoca".</p>
+  <div class="rolagem"><table id="tReels">
+    <thead><tr><th>#</th><th>Hook (0–2s)</th><th>Roteiro</th><th>Texto na tela</th><th>CTA</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+</section>
+
+<!-- ============ 17 ============ -->
+<section class="cap" id="c17">
+  <div class="cap-n">CAPÍTULO 17</div>
+  <h2>Lançamento</h2>
+  <div class="linhaTempo" id="lancamento"></div>
+</section>
+
+<!-- ============ 18 ============ -->
+<section class="cap" id="c18">
+  <div class="cap-n">CAPÍTULO 18</div>
+  <h2>Aquisição e recompra</h2>
+
+  <h3>A escada do cliente</h3>
+  <div class="rolagem"><table>
+    <thead><tr><th>Etapa</th><th>Gatilho</th><th>Mecanismo</th><th>Meta</th></tr></thead>
+    <tbody>
+      <tr><td>Descoberta → 1ª compra</td><td>Busca no iFood, Reel, indicação</td><td>Solo 80 g a R$ 16,90 como porta de entrada; foto do Ouro Velho como primeira imagem da loja.</td><td>Custo de aquisição abaixo de R$ 12</td></tr>
+      <tr><td>1ª → 2ª compra</td><td>Amostra grátis de sabor não pedido na caixa</td><td>QR no fundo da caixa leva ao WhatsApp com cupom de R$ 8 válido por 21 dias, só fora do app.</td><td>35% de retorno em 60 dias</td></tr>
+      <tr><td>2ª → recorrente</td><td>Edição de Estação e lançamentos</td><td>Lista de transmissão no WhatsApp avisando o novo sabor 48h antes do app.</td><td>2,5 pedidos por cliente/ano</td></tr>
+      <tr><td>Recorrente → fã</td><td>Reconhecimento</td><td>Cliente a partir do 5º pedido entra no "Lote Zero": prova as receitas em teste e vota. Zero custo, alto pertencimento.</td><td>50 pessoas no primeiro ano</td></tr>
+      <tr><td>Fã → indicação</td><td>Presente</td><td>Indicou e o amigo comprou: os dois ganham uma Dupla. A recompensa vai para os dois, senão vira cupom, não indicação.</td><td>15% dos pedidos vindos de indicação</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Canais, por ordem de prioridade real</h3>
+  <ol>
+    <li><strong>iFood orgânico</strong> — ranking sobe com nota, tempo de preparo e taxa de conclusão. Nos primeiros 60 dias, prepare rápido e aceite todo pedido; o algoritmo pesa isso mais que qualquer campanha.</li>
+    <li><strong>Reels</strong> — o único canal com alcance gratuito relevante para conta nova.</li>
+    <li><strong>Embalagem</strong> — cada caixa entregue é uma mídia que já foi paga.</li>
+    <li><strong>Microinfluenciadores de bairro</strong> — 20 caixas custam menos que R$ 800 e rendem mais alcance qualificado que R$ 2.000 em anúncio frio.</li>
+    <li><strong>WhatsApp</strong> — não adquire, mas é onde a margem é recuperada.</li>
+    <li><strong>Tráfego pago</strong> — só depois do dia 30, só reimpulsionando conteúdo já validado, raio de 5 km.</li>
+    <li><strong>Google</strong> — perfil de empresa e SEO local para "pipoca gourmet perto de mim". Volume baixo, intenção altíssima.</li>
+  </ol>
+</section>
+
+<!-- ============ 19 ============ -->
+<section class="cap" id="c19">
+  <div class="cap-n">CAPÍTULO 19</div>
+  <h2>Fidelidade</h2>
+  <p class="sub">Simples o bastante para caber numa planilha no primeiro ano.</p>
+  <p><strong>Fase 1 — cartela digital.</strong> A cada 5 pedidos fora do app, o 6º vem com uma Dupla grátis. Controle por telefone numa planilha ou no CRM do WhatsApp. Sem app, sem pontos, sem cadastro.</p>
+  <p><strong>Fase 2 — aniversário.</strong> Data coletada no primeiro pedido pelo WhatsApp. No dia, uma mensagem e um Solo grátis em qualquer pedido daquela semana. É o disparo de recompra mais barato que existe.</p>
+  <p><strong>Fase 3 — Lote Zero.</strong> Clube de acesso antecipado para quem passou de 5 pedidos: prova receitas em teste, vota, recebe a Edição de Estação antes de todo mundo. Não custa dinheiro, custa atenção — e gera conteúdo.</p>
+  <p><strong>O que não fazer agora:</strong> pontos com conversão, níveis, assinatura mensal. Toda complexidade de fidelidade antes de 500 clientes recorrentes é energia gasta em cima de uma base que ainda não existe.</p>
+</section>
+
+<!-- ============ 20 ============ -->
+<section class="cap" id="c20">
+  <div class="cap-n">CAPÍTULO 20</div>
+  <h2>Calendário comercial</h2>
+  <div class="rolagem"><table>
+    <thead><tr><th>Mês</th><th>Data</th><th>Produto</th><th>Ângulo</th></tr></thead>
+    <tbody>
+      <tr><td>Jan</td><td>Volta às aulas / verão</td><td>Edição de Estação cítrica</td><td>Mês fraco. Foco em recompra e em conteúdo, não em campanha.</td></tr>
+      <tr><td>Fev</td><td>Carnaval</td><td>Kit Bloco — Solos em sacola de mão</td><td>Formato portátil e salgado. Volume, ticket baixo.</td></tr>
+      <tr><td>Mar/Abr</td><td>Páscoa</td><td>Caixa de Páscoa com pipoca de chocolate + ovo pequeno</td><td>Primeira grande prova da tese de presente. Reservar com 3 semanas.</td></tr>
+      <tr><td>Mai</td><td>Dia das Mães</td><td>Lata Ouro Velho com cartão manuscrito</td><td>A data mais lucrativa do primeiro semestre. Planejar com 45 dias.</td></tr>
+      <tr><td>Jun</td><td>Namorados + Festa Junina</td><td>Caixa Dois · Kit Arraiá (paçoca, amendoim, doce de leite)</td><td>Dois públicos opostos no mesmo mês. Junina é o pico histórico da categoria.</td></tr>
+      <tr><td>Jul</td><td>Férias e frio</td><td>Meia-Noite e chocolate quente</td><td>Combo de inverno. Bom mês para testar a expansão para doces.</td></tr>
+      <tr><td>Ago</td><td>Dia dos Pais</td><td>Caixa Amarga — Meia-Noite + Parma + cerveja</td><td>Reposicionar a marca para público masculino adulto.</td></tr>
+      <tr><td>Set</td><td>Vazio</td><td>Aniversário da marca</td><td>Criar a própria data. Edição comemorativa e oferta só para a base.</td></tr>
+      <tr><td>Out</td><td>Dia das Crianças + Halloween</td><td>Dourê Kids · Edição Breu (preta)</td><td>Halloween cresce todo ano no Brasil e é o melhor mês visual do calendário.</td></tr>
+      <tr><td>Nov</td><td>Black Friday</td><td>Kit triplo com preço de kit, não desconto no avulso</td><td>Nunca descontar o âncora. Ofertar volume, preservar o preço de referência.</td></tr>
+      <tr><td>Dez</td><td>Natal + corporativo</td><td>Caixa de Fim de Ano · kits corporativos</td><td>Pode representar 25 a 35% do faturamento do ano. Prospecção corporativa começa em <strong>setembro</strong>, não em dezembro.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============ 21 ============ -->
+<section class="cap" id="c21">
+  <div class="cap-n">CAPÍTULO 21</div>
+  <h2>Operação</h2>
+  <p class="sub">O que precisa estar documentado antes de existir uma segunda pessoa na cozinha — e por consequência, antes de existir uma segunda unidade.</p>
+
+  <div class="rolagem"><table>
+    <thead><tr><th>Documento</th><th>Conteúdo mínimo</th><th>Quando</th></tr></thead>
+    <tbody>
+      <tr><td>Ficha técnica por receita</td><td>Gramatura de cada insumo, rendimento, ponto do caramelo em °C, tempo de cada etapa, foto do resultado correto e do resultado errado.</td><td>Antes do 1º pedido</td></tr>
+      <tr><td>Manual de produção</td><td>Sequência de lote, ordem de produção por sabor (claro antes de escuro), limpeza entre lotes, o que fazer quando o caramelo cristaliza.</td><td>Antes do 1º pedido</td></tr>
+      <tr><td>Controle de estoque</td><td>Insumo, unidade, estoque mínimo, fornecedor primário e secundário, lead time, preço da última compra.</td><td>Antes do 1º pedido</td></tr>
+      <tr><td>Padrão de montagem</td><td>Foto de cada tamanho montado, ordem de colocação na caixa, posição do lacre e da etiqueta.</td><td>Antes do 1º pedido</td></tr>
+      <tr><td>Validade e armazenamento</td><td>Doce coberto 15 dias, caramelo seco 30 dias, salgado 20 dias. Temperatura, umidade, embalagem hermética. Confirmar com análise laboratorial antes de imprimir na etiqueta.</td><td>Antes do 1º pedido</td></tr>
+      <tr><td>Manual de atendimento</td><td>Respostas padrão do WhatsApp, política de refação, como responder avaliação de 1 a 3 estrelas, prazo máximo de resposta.</td><td>Mês 1</td></tr>
+      <tr><td>Manual da marca</td><td>Logotipo, paleta, tipografia, fotografia, tom de voz, o que nunca fazer.</td><td>Mês 2</td></tr>
+      <tr><td>Manual de marketing</td><td>Calendário, pilares de conteúdo, especificação de foto, como lançar um sabor.</td><td>Mês 4</td></tr>
+      <tr><td>Manual de franquia</td><td>Layout, investimento, território, royalties, treinamento, auditoria.</td><td>Só depois de 3 unidades próprias lucrativas</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Equipamento mínimo</h3>
+  <p>Panela de cobre ou inox de fundo grosso (5 L), pipoqueira industrial a gás, termômetro culinário digital, balança de 0,1 g, seladora de indução ou de calor, prateleira de resfriamento, potes herméticos de armazenagem, etiquetadora térmica. Nenhum item acima passa de R$ 2.500 individualmente.</p>
+</section>
+
+<!-- ============ 22 ============ -->
+<section class="cap" id="c22">
+  <div class="cap-n">CAPÍTULO 22</div>
+  <h2>KPIs</h2>
+  <div class="rolagem"><table>
+    <thead><tr><th>Indicador</th><th>Como calcular</th><th>Meta no ano 1</th><th>Por que importa</th></tr></thead>
+    <tbody>
+      <tr><td>Margem de contribuição</td><td>(preço líquido − custo variável) ÷ preço</td><td>≥ 45% no canal próprio, ≥ 32% no iFood</td><td>É o número que decide se a marca sobrevive. Abaixo de 30% no app, a operação trabalha para o marketplace.</td></tr>
+      <tr><td>Ticket médio</td><td>faturamento ÷ pedidos</td><td>R$ 52 no mês 3, R$ 64 no mês 12</td><td>Subir ticket é mais barato que conquistar cliente novo.</td></tr>
+      <tr><td>Taxa de recompra em 60 dias</td><td>clientes com 2+ pedidos ÷ clientes</td><td>35%</td><td>Abaixo de 20%, o problema é produto ou entrega, não marketing.</td></tr>
+      <tr><td>Nota no iFood</td><td>média das avaliações</td><td>≥ 4,8</td><td>Abaixo de 4,6 o ranking desaba e o custo de aquisição triplica.</td></tr>
+      <tr><td>Custo de aquisição</td><td>gasto de marketing ÷ clientes novos</td><td>≤ R$ 12</td><td>Precisa ser menor que a margem do primeiro pedido, ou cada cliente novo dá prejuízo.</td></tr>
+      <tr><td>Participação do canal próprio</td><td>faturamento fora do iFood ÷ total</td><td>25% no mês 6, 40% no mês 12</td><td>Mede a redução de dependência do marketplace — o maior risco estrutural do negócio.</td></tr>
+      <tr><td>Desperdício</td><td>produção descartada ÷ produção total</td><td>≤ 5%</td><td>Perda em caramelo é quase sempre erro de ponto, ou seja, falta de padrão documentado.</td></tr>
+      <tr><td>Tempo de produção por lote</td><td>minutos ÷ potes</td><td>≤ 2,5 min/pote</td><td>Define quanto a operação aguenta antes de precisar contratar.</td></tr>
+      <tr><td>Participação dos 3 maiores SKUs</td><td>—</td><td>≤ 60%</td><td>Acima disso, a marca é um produto só e o risco é concentrado.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============ 23 ============ -->
+<section class="cap" id="c23">
+  <div class="cap-n">CAPÍTULO 23</div>
+  <h2>Arquitetura de dados</h2>
+  <p class="sub">O modelo abaixo já contempla múltiplas unidades desde a primeira tabela, sem implementar complexidade que não será usada agora. A regra: toda tabela transacional carrega <code>unidade_id</code> desde o dia um, mesmo com uma única unidade.</p>
+
+  <div class="rolagem"><table>
+    <thead><tr><th>Entidade</th><th>Campos centrais</th><th>Pensada para</th></tr></thead>
+    <tbody>
+      <tr><td><code>unidade</code></td><td>id, nome, tipo (própria/franquia), cidade, regiao_id, status, data_abertura</td><td>A franquia inteira depende dessa tabela existir desde o começo.</td></tr>
+      <tr><td><code>usuario</code></td><td>id, unidade_id, papel (admin/gestor/operador/franqueado), permissões</td><td>Franqueado vê a própria unidade; franqueadora vê o consolidado.</td></tr>
+      <tr><td><code>produto</code></td><td>id, sku, nome, categoria, tipo, ativo, peso_g, foto, descricao_app</td><td>Catálogo único; disponibilidade é por unidade, não por produto.</td></tr>
+      <tr><td><code>produto_unidade</code></td><td>produto_id, unidade_id, disponivel, preco_override</td><td>Preço regional e sabor exclusivo de unidade sem duplicar o catálogo.</td></tr>
+      <tr><td><code>preco_canal</code></td><td>produto_id, canal (ifood/site/whats/retirada/evento), preco, vigencia</td><td>Preço diferente por canal é regra, não exceção.</td></tr>
+      <tr><td><code>insumo</code> / <code>fornecedor</code></td><td>insumo: id, nome, unidade_medida, custo_atual, estoque_min · fornecedor: id, nome, contato, lead_time</td><td>Alimenta o cálculo de custo e o alerta de compra.</td></tr>
+      <tr><td><code>receita</code> / <code>receita_item</code></td><td>receita: produto_id, rendimento, tempo_min · item: insumo_id, gramatura</td><td>É a ficha técnica. Sem ela não existe franquia.</td></tr>
+      <tr><td><code>estoque_movimento</code></td><td>unidade_id, insumo_id, tipo (entrada/saída/perda), qtd, motivo, data</td><td>Rastreia desperdício por causa, não só por total.</td></tr>
+      <tr><td><code>pedido</code> / <code>pedido_item</code></td><td>pedido: unidade_id, canal, cliente_id, valor, taxa_canal, status, data · item: produto_id, qtd, preco_unit, custo_unit</td><td>Gravar o custo no momento da venda é o que permite calcular margem histórica de verdade.</td></tr>
+      <tr><td><code>cliente</code></td><td>id, telefone, nome, aniversario, origem, unidade_primeira, consentimento_lgpd</td><td>Telefone como chave: é o identificador que atravessa iFood, WhatsApp e site.</td></tr>
+      <tr><td><code>campanha</code></td><td>id, nome, canal, utm, investimento, periodo</td><td>Amarra gasto de marketing a pedido para calcular o custo de aquisição real.</td></tr>
+      <tr><td><code>royalty</code></td><td>unidade_id, competencia, base, percentual, valor, status</td><td>Fica vazia por anos. Criar depois exigiria reescrever o modelo de pedido.</td></tr>
+      <tr><td><code>documento</code></td><td>id, tipo (manual/ficha/contrato), versao, unidade_escopo, arquivo</td><td>Onde os manuais do capítulo 21 vivem, versionados.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Integrações — o que é real e o que falta</h3>
+  <ul>
+    <li><strong>iFood.</strong> Existe API de Merchant e Order para parceiros homologados. Exige conta de parceiro aprovada, <code>client_id</code> e <code>client_secret</code>. Até lá, a importação de pedidos é manual ou por exportação de relatório. O site não integra com o iFood: ele apenas direciona, com UTM na URL.</li>
+    <li><strong>WhatsApp.</strong> A API oficial (Cloud API) exige número verificado, conta Business e aprovação de templates de mensagem. Antes disso, link <code>wa.me</code> e atendimento manual resolvem.</li>
+    <li><strong>Analytics.</strong> GA4 e Meta Pixel ficam como placeholder configurável no site — os eventos <code>cta_hero_ifood</code>, <code>cta_final_whats</code>, <code>lead_corporativo</code> já disparam para <code>dataLayer</code>. Basta colar o ID quando existir. Nenhum ID foi inventado.</li>
+    <li><strong>Pagamento no site próprio.</strong> Só faz sentido depois do mês 6. Antes disso, WhatsApp + Pix tem custo menor e conversão parecida.</li>
+  </ul>
+</section>
+
+<!-- ============ 24 ============ -->
+<section class="cap" id="c24">
+  <div class="cap-n">CAPÍTULO 24</div>
+  <h2>Franchise readiness</h2>
+  <p class="sub">O que já está padronizado e o que ainda impede franquear. Uma marca não franqueia quando quer; franqueia quando o segundo operador consegue reproduzir o resultado do primeiro sem o fundador na cozinha.</p>
+
+  <div class="cols">
+    <div class="caixa">
+      <h4>Pronto</h4>
+      <ul class="check">
+        <li class="feito">Nome, posicionamento e arquitetura de marca expansível</li>
+        <li class="feito">Sistema de naming de produto que aguenta 200 SKUs</li>
+        <li class="feito">Identidade visual com regras de aplicação do lacre à fachada</li>
+        <li class="feito">Estrutura de catálogo e de cardápio para marketplace</li>
+        <li class="feito">Modelo de custo e preço parametrizável por canal</li>
+        <li class="feito">Modelo de dados multi-unidade desde a primeira tabela</li>
+        <li class="feito">Calendário comercial anual</li>
+        <li class="feito">Plano de conteúdo dos primeiros 6 meses</li>
+      </ul>
+    </div>
+    <div class="caixa">
+      <h4>Falta</h4>
+      <ul class="check">
+        <li class="falta">Registro de marca no INPI — bloqueia qualquer franquia</li>
+        <li class="falta">Fichas técnicas com gramatura e ponto medido em temperatura</li>
+        <li class="falta">Validade confirmada por análise laboratorial</li>
+        <li class="falta">Rotulagem conforme RDC 429/2020 (nutricional frontal) e RDC 727/2022</li>
+        <li class="falta">Licença sanitária e CNPJ com CNAE correto</li>
+        <li class="falta">Contrato de fornecimento com pelo menos dois fornecedores por insumo crítico</li>
+        <li class="falta">Três unidades próprias com 12 meses de resultado auditado</li>
+        <li class="falta">Circular de Oferta de Franquia (Lei 13.966/2019), entregue 10 dias antes da assinatura</li>
+        <li class="falta">Programa de treinamento com avaliação e certificação</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>A visão 0 → 100</h3>
+  <div class="rolagem"><table>
+    <thead><tr><th>Estágio</th><th>O que existe</th><th>Gatilho para o próximo</th></tr></thead>
+    <tbody>
+      <tr><td>0 → 1</td><td>Cozinha única, fundador produzindo, iFood + WhatsApp.</td><td>12 meses de lucro consistente e 4,8 no app.</td></tr>
+      <tr><td>1 → 3</td><td>Produção central abastecendo 2 pontos de retirada ou quiosques. Primeiro funcionário treinado por manual, não por convivência.</td><td>As 3 unidades lucram sem o fundador na cozinha.</td></tr>
+      <tr><td>3 → 10</td><td>Cozinha central vira microfábrica; unidades recebem produto pronto e fazem só montagem e venda. É o modelo que mais funciona na categoria.</td><td>Marca registrada, COF pronta, margem replicada em unidade operada por terceiro.</td></tr>
+      <tr><td>10 → 50</td><td>Franquia com território, royalty e auditoria. Fábrica própria. Equipe de expansão.</td><td>Capacidade fabril e logística interestadual.</td></tr>
+      <tr><td>50 → 100</td><td>Linha industrializada em varejo (a categoria que o capítulo 6 chama de Fase 7), marca com reconhecimento nacional.</td><td>Decisão de capital: crescer com caixa próprio ou com investidor.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============ 25 ============ -->
+<section class="cap" id="c25">
+  <div class="cap-n">CAPÍTULO 25</div>
+  <h2>O que falta decidir</h2>
+  <p class="sub">Premissas que assumi para poder avançar, e que você pode derrubar a qualquer momento — a estrutura aguenta.</p>
+  <div class="rolagem"><table>
+    <thead><tr><th>Assumi</th><th>Impacto se mudar</th></tr></thead>
+    <tbody>
+      <tr><td>Praça: Goiânia, com expansão para Bela Vista de Goiás</td><td>Muda a tabela de preço em até 20% e o mix de canais. A estrutura permanece.</td></tr>
+      <tr><td>Formato: cozinha própria, sem loja física</td><td>Loja física adiciona aluguel ao custo fixo e muda o ponto de equilíbrio. Adiciona também um canal de margem máxima.</td></tr>
+      <tr><td>Fundador na produção nos primeiros 6 meses</td><td>Se houver equipe desde o início, o custo de mão de obra por pote sobe e o preço precisa subir junto.</td></tr>
+      <tr><td>Posicionamento intermediário-alto</td><td>Descer para acessível inviabiliza o Plano Entrega do iFood. Subir para premium puro reduz o volume de entrada.</td></tr>
+      <tr><td>Nome Dourê</td><td>Se o INPI ou o domínio barrar, Crocantê é o plano B e não exige refazer nada além do logotipo e da paleta secundária.</td></tr>
+      <tr><td>Capital inicial não informado</td><td>Todo o plano acima cabe em uma operação enxuta, mas embalagem premium tem pedido mínimo de fornecedor — normalmente 500 a 1.000 unidades por item.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="caixa escura">
+    <div class="rotulo">PRÓXIMOS SETE DIAS</div>
+    <ol style="margin-bottom:0">
+      <li>Busca de anterioridade no INPI nas classes 30 e 35 para Dourê e Crocantê.</li>
+      <li>Registrar domínios e reservar todos os @ no mesmo dia.</li>
+      <li>Cotar embalagem com três fornecedores: pote 180 g, caixa rígida, lacre dourado.</li>
+      <li>Preencher o simulador com custos reais de fornecedor e travar a tabela de preços.</li>
+      <li>Produzir as sete receitas e medir rendimento, tempo e ponto de verdade — use as <a href="ficha-tecnica.html">fichas técnicas</a>. Os números do simulador são estimativas até isso acontecer.</li>
+      <li>Fotografar os cinco ícones em fundo escuro. Sem fotos boas, nada do resto funciona.</li>
+      <li>Abrir a conta do Instagram e publicar os posts 1 a 6 antes de abrir a loja no iFood.</li>
+    </ol>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="rod-marca">Dourê</div>
+    <p>Playbook v1.0 · Todos os números de custo são parâmetros, não medições. Todas as taxas de marketplace devem ser confirmadas no Portal do Parceiro antes de virarem tabela de preço. <a href="projeto.html" style="color:var(--ouro-claro)">Voltar ao kit interno</a>.</p>
+  </div>
+</footer>
+
+<script>
+/* ========== NOMES ========== */
+const NOMES = [
+["Dourê","F","De 'dourar' — o ponto exato do caramelo","Premium, curto, registrável, expande para tudo","Não diz o que é; acento complica busca"],
+["Aurela","A","Aura + aurum (ouro)","Sofisticado, feminino, bonito em serifada","Soa a cosmético ou joalheria"],
+["Velour","A","Veludo em francês","Textura, luxo, internacional","Remete a tecido, não a comida"],
+["Dolcê","A","Dolce aportuguesado","Doce sem dizer doce, fácil de ler","Já muito usado em confeitaria brasileira"],
+["Lumê","A","Lume, luz, brasa","Curto, quente, memorável","Colide com marcas de vela e decoração"],
+["Ambrê","A","Âmbar — a cor do caramelo","Cor exata do produto, elegante","Pode soar a perfumaria"],
+["Crocantê","F","Crocante + croquant","Comunica o benefício, virada afrancesada","Perto de palavra comum: registro fraco"],
+["Nhac","B","Onomatopeia da mordida","Divertido, curtíssimo, muito brasileiro","Infantil demais para presente"],
+["Pluft","B","Som do estouro","Sonoro, gráfico, memorável","Associação com personagem de teatro infantil"],
+["Estoura","B","Verbo estourar / virar sucesso","Energia, duplo sentido, viral","Amarra ao ato de estourar"],
+["Crócri","B","Reduplicação de crocante","Fofo, fácil de lembrar, ótimo para infantil","Trava o posicionamento premium"],
+["Tufo","B","Tufo, moita, volume","Curto e concreto","Pouca carga emocional"],
+["Tumtum","B","Batida, ritmo","Divertido e sonoro","Não sugere comida"],
+["Nuvo","C","Nuvem + novo","4 letras, internacional, escala para tudo","Marca de bebida homônima; muitas empresas de tech"],
+["Lote","C","O lote de produção","Conceito operacional virando marca; honesto","Palavra comum demais"],
+["Grão","C","A matéria-prima antes de virar outra coisa","Simples, brasileiro, expansível para café e cacau","Genérico; muitos usos no mercado"],
+["Bocca","C","Boca em italiano","Direto, sensorial, internacional","Já usado por restaurantes"],
+["Prova","C","Provar, degustar, testar","Duplo sentido elegante, muito expansível","Abstrato; exige contexto"],
+["Casa Sete","C","Casa + número de coleção","Sugere marca com história e coleções","Longo para embalagem pequena"],
+["Dona Nuvem","D","Personagem + forma da pipoca","Afetivo, brasileiro, ótimo para storytelling","Longo; trava tom premium"],
+["Quitanda","D","Lugar de comprar coisas boas","Muito brasileiro, cabe em qualquer categoria","Já saturado em food service"],
+["Maré Doce","D","Maré + doce","Poético, brasileiro, bonito","Dois termos: difícil no app"],
+["Cabana","D","Aconchego, casa de madeira","Quente, acolhedor, expansível","Comum em cafeterias"],
+["Vovô Milho","D","Personagem tradicional","Afetivo, memorável","Trava em milho — descartado pela regra de corte"],
+["Benzinho","D","Termo de carinho brasileiro","Afetivo, presenteável, muito nosso","Pode soar infantil ou datado"],
+["Golden Hour","E","A hora dourada da luz","Cinematográfico, aspiracional, ótimo em foto","Em inglês; longo; muito usado"],
+["Maison Pop","E","Casa + pop","Sofisticado e divertido ao mesmo tempo","Contém 'pop' — trava expansão"],
+["Cloud Nine","E","Nuvem + felicidade","Internacional, positivo","Expressão genérica e muito usada"],
+["Velvet","E","Veludo","Textura, premium, curto","Marca já usada em vários setores"],
+["Morsel","E","Pedacinho em inglês","Preciso, elegante, pouco usado no Brasil","Brasileiro não pronuncia bem"],
+["Mimô","F","Mimo, o agrado pequeno","Presenteabilidade embutida no nome","Palavra comum; alto risco de colisão"],
+["Poppè","F","Pop + sufixo italiano","Divertido e premium ao mesmo tempo","Contém 'pop' — trava expansão"],
+["Caramelina","F","Caramelo + diminutivo","Doce, afetivo, descritivo","Trava em caramelo"],
+["Fofê","F","Fofo + sufixo","Afetivo, curto, brasileiro","Infantil demais"],
+["Dourada","F","Feminino de dourado","Bonito, brasileiro","Também é nome de peixe; ambíguo"],
+["Ourim","F","Ouro + sufixo inventado","Curto, registrável, premium","Soa a nome próprio ou cidade"]
+];
+function renderNomes(f){
+  document.querySelector("#tNomes tbody").innerHTML = NOMES
+    .filter(n => f === "todos" || n[1] === f)
+    .map(n => `<tr><td><strong>${n[0]}</strong></td><td><span class="pill">${n[1]}</span></td><td>${n[2]}</td><td>${n[3]}</td><td>${n[4]}</td></tr>`).join("");
+}
+document.querySelectorAll("[data-nf]").forEach(b => b.onclick = () => {
+  document.querySelectorAll("[data-nf]").forEach(x => x.setAttribute("aria-pressed","false"));
+  b.setAttribute("aria-pressed","true"); renderNomes(b.dataset.nf);
+});
+renderNomes("todos");
+
+/* ========== SLOGANS ========== */
+const SLOGANS = {
+"Premium":["Pequenos luxos, todo dia.","O ponto exato, todo dia.","Feito em lotes pequenos. De propósito.","Doçura com endereço.","A casa do caramelo.","Onde o açúcar vira outra coisa.","Nada aqui foi feito às pressas.","Uma coisa boa por dia já basta.","Vale a pena esperar o ponto.","Simples. Só que bem feito."],
+"Divertidos":["Não dá pra comer só um.","Avisa quem você não vai dividir.","Compre dois. Você sabe por quê.","A dieta começa amanhã de novo.","Culpa entregue em casa.","Crocante o suficiente pra incomodar o vizinho.","A gente fez pra você dividir. Boa sorte.","Sim, é doce. Sim, você vai comer tudo.","Perigoso perto da TV.","Vem com colher? Não. Vem com arrependimento."],
+"Emocionais":["Pensei em você e mandei isso.","Uma noite comum, melhorada.","Presente pequeno, gesto grande.","Pra dizer algo sem precisar falar.","O agrado que cabe na porta.","Feito por alguém, não por uma máquina.","Sua casa fica melhor com isso dentro.","Chega quentinho, como devia.","Das coisas que a gente lembra depois.","Porque hoje foi longo."],
+"Curtos":["Dourado por dentro.","O barulho certo.","Feito no dia.","Pequenos luxos.","Ponto exato.","Sem pressa.","Crocante. Ponto.","Lote pequeno.","Doce na medida.","Só o bom."],
+"Virais":["Chega crocante ou a gente refaz.","33 potes por semana. Depois acaba.","O caramelo que não gruda no dente.","Marca a gente no story e o próximo Solo é nosso.","Você não vai chegar no fundo do pote sozinho.","A gente escreve o cartão à mão. Você escolhe o que dizer.","Tem nome de quem fez no seu pedido.","Se não estourar tudo, a gente refaz.","O sabor que acaba toda sexta.","Aviso: já teve gente que pediu duas vezes na mesma noite."]
+};
+document.getElementById("slogans").innerHTML = Object.entries(SLOGANS).map(([k,v]) =>
+  `<div class="caixa"><div class="rotulo">${k.toUpperCase()}</div><ul style="margin:0;padding-left:18px;font-size:.93rem">${v.map(s=>`<li>${s}</li>`).join("")}</ul></div>`).join("");
+
+/* ========== FASES ========== */
+const FASES = [
+["Fase 1","Pipoca","Sete receitas, iFood e WhatsApp. O objetivo real não é faturar: é descobrir qual sabor vende, qual embalagem sobrevive ao trajeto e quanto tempo um lote leva.","Gatilho para a fase 2: 300 pedidos/mês e nota ≥ 4,7."],
+["Fase 2","Doces","Brownie, cookie e chocolate em barra usando os mesmos sabores dos ícones. Mesma cozinha, mesma caixa, cliente já conquistado.","Gatilho: 3 sabores de pipoca com venda estável e capacidade ociosa de produção."],
+["Fase 3","Kits","Combinações entre pipoca e doce. É o movimento de ticket médio com o menor custo de desenvolvimento do plano inteiro.","Gatilho: ticket médio estagnado por 2 meses."],
+["Fase 4","Presentes","Lata, caixa de datas, cartão manuscrito, entrega agendada para terceiro endereço. Margem premium, sazonalidade forte.","Gatilho: primeira data comemorativa depois do lançamento."],
+["Fase 5","Corporativo","Kits com o lacre da empresa cliente, a partir de 30 unidades, com nota fiscal e prazo firme. Um pedido corporativo equivale a 40 pedidos de app.","Gatilho: linha de presente validada e capacidade para 100 unidades numa semana."],
+["Fase 6","Eventos","Bar de pipoca montado no local e potes personalizados para festa. Receita previsível e ótima para ocupar dias fracos.","Gatilho: 3 pedidos espontâneos de festa."],
+["Fase 7","Produtos próprios","Linha com shelf life estendido para cafés, lojas de presente e mercados de bairro. Exige registro, rotulagem completa e produção maior.","Gatilho: demanda de revenda superando a capacidade da cozinha."],
+["Fase 8","Franquias","Cozinha central produzindo e unidades montando e vendendo. Só abre com o checklist do capítulo 24 completo.","Gatilho: 3 unidades próprias lucrativas por 12 meses sem o fundador na produção."]
+];
+document.getElementById("fases").innerHTML = FASES.map(([q,t,d,g]) =>
+  `<div class="fase"><span class="q">${q.replace("Fase ","")}</span><div><h4>${t}</h4><p>${d}</p><p style="color:var(--ouro);font-weight:600">${g}</p></div></div>`).join("");
+
+/* ========== LANÇAMENTO ========== */
+const LANC = [
+["−21d","Pré-lançamento","Conta no Instagram aberta sem revelar o produto. Só a panela, o som, o termômetro, as mãos. Nenhuma foto do pote pronto. Enquete: qual sabor você quer primeiro? Caixa de teste para 20 microinfluenciadores de bairro com pedido de sigilo até a data.","Meta: 400 seguidores e 20 caixas na rua antes de existir loja."],
+["Dia 0","Lançamento","Loja no iFood abre às 14h de uma sexta. Revelação do pote no Instagram no mesmo minuto. Primeiros 50 pedidos levam a Lata em miniatura. Stories a cada 2 horas mostrando a produção em tempo real.","Meta: 25 pedidos no primeiro fim de semana."],
+["Dias 1–7","Primeira semana","Todo pedido recebe mensagem no WhatsApp pedindo avaliação no app. Nenhum dia sem Reels. Responder 100% das avaliações em menos de 2h. Aceitar todo pedido, mesmo que apertado.","Meta: 15 avaliações e nota ≥ 4,8. O ranking do app se forma aqui."],
+["Dias 8–30","Primeiro mês","Testar horário de pico, tempo de preparo e o raio de entrega. Uma oferta apenas: Solo a R$ 12,90 para primeira compra. Primeira Edição de Estação anunciada.","Meta: 120 pedidos, identificar os 3 sabores vencedores."],
+["Dias 31–90","Trimestre","Cortar o sabor de pior giro sem dó. Lançar a linha de presente. Começar a migrar recompra para o WhatsApp com cupom exclusivo. Iniciar tráfego pago reimpulsionando Reels validados.","Meta: 300 pedidos/mês, 20% do faturamento fora do iFood."],
+["6 meses","Otimização","Reavaliar o plano do iFood — Básico com entregador próprio pode valer 11 pontos de margem. Renegociar insumos por volume. Contratar a primeira ajuda de produção e treinar por manual.","Meta: margem de contribuição ≥ 40% e fundador fora da produção 2 dias por semana."],
+["12 meses","Expansão","Avaliar segunda unidade ou microfábrica. Fechar o primeiro dezembro corporativo. Registro de marca concluído. Decidir entre crescer por unidade própria ou por revenda.","Meta: 12 meses de lucro e a documentação do capítulo 21 completa."]
+];
+document.getElementById("lancamento").innerHTML = LANC.map(([q,t,d,g]) =>
+  `<div class="fase"><span class="q" style="font-size:1rem">${q}</span><div><h4>${t}</h4><p>${d}</p><p style="color:var(--ouro);font-weight:600">${g}</p></div></div>`).join("");
+
+/* ========== 100 POSTS ========== */
+const P = [
+["Apresentação","Carrossel","Uma casa nova","5 telas: a panela, o termômetro, o pote, a caixa, o logotipo. Sem rosto, sem texto explicando — só objetos.","Segue a gente","Fundar a estética antes do produto"],
+["Apresentação","Reels","O que a gente decidiu não fazer","Lista em texto sobre imagem da cozinha: não usar caramelo pronto, não vender 1 kg por R$ 25, não copiar sabor de concorrente.","Salva esse","Posicionamento por negação"],
+["Apresentação","Imagem","Por que Dourê","Foto macro do caramelo virando no ponto, legenda explicando o nome em 3 linhas.","Comenta o que você entendeu","Fixar o nome"],
+["Apresentação","Carrossel","Os cinco ícones","Uma tela por sabor, fundo noite, nome em serifada grande, ingrediente em letra pequena.","Qual você provaria primeiro?","Apresentar catálogo"],
+["Apresentação","Imagem","O selo de lote","Close da mão escrevendo a data no lacre dourado.","","Prova de artesanal"],
+["Apresentação","Reels","Quem faz","O fundador em 20 segundos: por que largou o que largou, por que pipoca, o que quer construir.","","Humanizar antes de vender"],
+["Apresentação","Imagem","Onde estamos","Mapa estilizado do raio de entrega, sem endereço exato.","Chegamos aí?","Qualificar audiência local"],
+["Apresentação","Stories","Bastidor da primeira caixa","Sequência ao vivo da montagem da primeira caixa de verdade.","","Intimidade"],
+["Produto","Reels","O som do Ouro Velho","ASMR puro: caramelo quebrando, sem música, 8 segundos, loop.","","Alcance por retenção"],
+["Produto","Imagem","Neve contra fundo preto","Foto de alto contraste, luz lateral, chocolate branco brilhando.","","Foto-assinatura"],
+["Produto","Carrossel","Meia-Noite, tela a tela","Macro de nibs, macro do sal, o pote inteiro, quem é o público dela.","Pra quem acha pipoca doce demais","Nichar"],
+["Produto","Reels","Ruína em 6 segundos","Fio de chocolate caindo em câmera lenta sobre o doce de leite.","","Desejo puro"],
+["Produto","Imagem","Pistácio 33: os 33","Foto dos 33 potes da semana enfileirados.","Só isso. Depois acaba.","Escassez real"],
+["Produto","Carrossel","Brasa e Parma","Apresentar a linha salgada para quem rejeita doce.","Marca alguém que não come doce","Ampliar ocasião"],
+["Produto","Reels","Qual tamanho é o seu","Solo, Dupla, Sofá e Mesa lado a lado com a cena de cada um.","Qual é a sua noite?","Educar sobre o catálogo"],
+["Produto","Imagem","A Caixa Dourê aberta","Vista de cima, quatro potes, papel de seda, cartão.","","Vender o kit"],
+["Produto","Reels","A lata","Abrir, fechar, guardar na estante. Mostrar que ela sobrevive ao produto.","","Justificar o preço premium"],
+["Produto","Carrossel","O que tem dentro","Ingrediente por ingrediente de uma receita, com o preço de cada um.","","Transparência como argumento"],
+["Produto","Imagem","Comparação de textura","Macro lado a lado do caramelo nosso e do caramelo mole comum.","","Diferenciação técnica"],
+["Produto","Reels","Edição de Estação","Revelar a receita nova do trimestre em 12 segundos.","Disponível até acabar","Recompra"],
+["Produto","Imagem","O Kit Cinema","Montagem completa com os copos de papel.","","Combo"],
+["Produto","Carrossel","O que combina com o quê","Sugestão de sabor por bebida: vinho, cerveja, café, refrigerante.","Salva pra próxima","Aumentar itens por pedido"],
+["Desejo","Reels","Meia-noite, sozinho, com o pote","Cena escura, só a luz da TV, mão entrando no pote.","","Ocasião de consumo"],
+["Desejo","Imagem","O fundo do pote","Foto do pote quase vazio com legenda de duas palavras.","","Identificação"],
+["Desejo","Reels","Domingo, 21h","Sequência de cenas de domingo à noite terminando no pedido chegando.","","Criar o hábito"],
+["Desejo","Imagem","Chegando ainda quente","Foto da sacola na porta com a luz do corredor.","","Conveniência"],
+["Desejo","Reels","Câmera lenta do caramelo","Colher levantando o caramelo em fio contínuo.","","Retenção"],
+["Desejo","Carrossel","Cinco desculpas para pedir","Sexta, briga, promoção no trabalho, terça sem graça, visita inesperada.","Qual é a sua hoje?","Ampliar ocasiões"],
+["Desejo","Imagem","Duas mãos, um pote","Foto de duas pessoas disputando o mesmo pote.","","Emoção de compartilhar"],
+["Desejo","Reels","O primeiro pedaço","Close extremo da mordida, som alto, 5 segundos.","","ASMR"],
+["Desejo","Imagem","A caixa fechada na mesa","Presente não aberto, com o cartão em cima.","","Presenteabilidade"],
+["Desejo","Reels","Antes da TV ligar","Sequência: pote na mesa, controle na mão, luz apagando.","","Ritualizar"],
+["Desejo","Imagem","Chuva lá fora","Foto de janela molhada com o pote no primeiro plano.","","Sazonalidade emocional"],
+["Desejo","Reels","O que sobra depois","Caixa vazia, papel de seda amassado, cartão guardado.","","Memória do produto"],
+["Bastidores","Reels","Um lote inteiro em 30 segundos","Timelapse do milho cru ao pote lacrado.","","Prova de artesanal"],
+["Bastidores","Imagem","O termômetro em 148°C","Close do ponto exato com explicação de uma linha.","","Autoridade técnica"],
+["Bastidores","Reels","O que a gente joga fora","Mostrar um lote que passou do ponto indo para o lixo.","","Honestidade gera confiança"],
+["Bastidores","Carrossel","Onde compramos","Fornecedor do milho, do chocolate, da castanha — sem revelar preço.","","Cadeia transparente"],
+["Bastidores","Imagem","A prateleira de resfriamento","Dezenas de potes esperando.","","Escala visível"],
+["Bastidores","Reels","5h da manhã","Rotina do começo do dia em plano único.","","Esforço"],
+["Bastidores","Imagem","A caligrafia do lacre","Close da mão escrevendo, tinta dourada.","","Detalhe como diferencial"],
+["Bastidores","Reels","Testando a receita 14","Mostrar tentativa e erro de uma receita que ainda não entrou.","Qual a gente lança?","Interação e desenvolvimento"],
+["Bastidores","Carrossel","O dia em números","Quantos potes, quantos quilos, quantas horas.","","Transparência"],
+["Bastidores","Imagem","A pilha de caixas prontas","Pedidos do dia empilhados e etiquetados.","","Prova social sem depoimento"],
+["Educação","Carrossel","Por que milho mushroom","Diferença entre mushroom e borboleta, com foto dos dois.","","Autoridade"],
+["Educação","Reels","Caramelo cristaliza por quê","Explicação de 20 segundos com demonstração.","","Utilidade"],
+["Educação","Imagem","Como guardar","Pote fechado, lugar seco, nunca geladeira para o caramelo seco.","Salva esse","Salvamentos"],
+["Educação","Carrossel","Quanto tempo dura","Validade por tipo de cobertura, explicada.","","Confiança"],
+["Educação","Reels","Por que a sua pipoca de casa murcha","Explicar umidade e ponto, sem vender nada.","","Autoridade sem pitch"],
+["Educação","Imagem","O que é flor de sal","Diferença para sal comum, com macro dos cristais.","","Justificar preço"],
+["Educação","Carrossel","Leia o rótulo","Como ler ingredientes de pipoca industrializada.","","Diferenciação por contraste"],
+["Humor","Reels","A dieta e o pote","Cena de alguém escondendo o pote antes de alguém chegar.","","Compartilhamento"],
+["Humor","Imagem","Legenda sobre o pote vazio","Meme simples com foto do próprio produto.","Marca quem faz isso","Comentários"],
+["Humor","Reels","Dividindo com o namorado","Cena de disputa exagerada pelo último punhado.","Marca essa pessoa","Marcação"],
+["Humor","Carrossel","Tipos de pessoa comendo pipoca","Seis arquétipos ilustrados com o produto.","Qual é você?","Engajamento"],
+["Humor","Imagem","O aviso do pote","Texto de bula aplicado ao produto.","","Tom de voz"],
+["Humor","Reels","Quando o pedido demora 2 minutos a mais","Exagero cômico da ansiedade de delivery.","","Humanizar a marca"],
+["Humor","Imagem","O grupo da família","Print fictício de alguém pedindo pra trazer.","","Relacionável"],
+["Interação","Stories","Enquete de sabor","Duas opções de receita em teste, voto aberto.","Vota aí","Desenvolvimento participativo"],
+["Interação","Carrossel","Batalha de sabores","Ouro Velho contra Ruína, argumentos dos dois lados.","Comenta seu time","Comentários"],
+["Interação","Reels","Você escolhe o nome","Mostrar a receita nova sem nome e pedir sugestões.","Comenta o nome","Pertencimento"],
+["Interação","Imagem","Caixa misteriosa","Foto de uma caixa fechada, conteúdo revelado só nos comentários.","","Curiosidade"],
+["Interação","Stories","Caixa de perguntas","Responder dúvidas sobre produção, preço, entrega.","","Objeções"],
+["Interação","Carrossel","O que vem na próxima estação","Três pistas visuais da receita nova.","Adivinha","Antecipação"],
+["Interação","Reels","Desafio do último punhado","Mostrar o fundo do pote e perguntar quem já chegou lá.","","UGC"],
+["Prova social","Imagem","Print de avaliação 5 estrelas","Avaliação real do iFood sobre fundo noite.","","Confiança"],
+["Prova social","Carrossel","O que vocês escreveram","Cinco comentários reais, tratados graficamente.","","Prova acumulada"],
+["Prova social","Reels","Repost de cliente","Vídeo de cliente abrindo a caixa, com crédito.","","UGC"],
+["Prova social","Imagem","A nota no app","Print da nota média com o número de avaliações.","","Autoridade"],
+["Prova social","Carrossel","Antes e depois de uma crítica","Mostrar uma avaliação ruim e o que mudou por causa dela.","","Honestidade constrói mais que elogio"],
+["Prova social","Reels","Reação de quem provou pela primeira vez","Câmera na pessoa, não no produto.","","Autenticidade"],
+["Prova social","Imagem","O cliente número 500","Comemorar um marco com o pedido real.","","Marco público"],
+["Ofertas","Imagem","Solo por R$ 12,90 na primeira compra","Oferta de entrada, clara e com prazo.","Pede agora","Aquisição"],
+["Ofertas","Reels","Frete grátis acima de R$ 55","Explicar a mecânica sem parecer anúncio.","","Ticket médio"],
+["Ofertas","Carrossel","O kit sai mais barato que os avulsos","Mostrar a conta explicitamente.","","Ancoragem honesta"],
+["Ofertas","Imagem","Últimos potes da Edição","Contagem real do que sobrou.","","Escassez real"],
+["Ofertas","Stories","Cupom só para quem segue","Código exclusivo do Instagram, válido 48h.","","Converter seguidor em cliente"],
+["Ofertas","Reels","Indicou, os dois ganham","Explicar o programa de indicação em 15 segundos.","","Indicação"],
+["Ofertas","Imagem","Kit de Black Friday","Volume com preço de kit, sem descontar o âncora.","","Sazonal"],
+["Storytelling","Carrossel","O primeiro lote que deu errado","Contar o erro em detalhe e o que mudou.","","Vulnerabilidade"],
+["Storytelling","Reels","Por que largamos o que largávamos","História de origem em 45 segundos, uma tomada.","","Conexão"],
+["Storytelling","Imagem","A panela de cobre","Objeto com história, fotografado como retrato.","","Objeto-totem"],
+["Storytelling","Carrossel","Como escolhemos o nome","Mostrar a lista de nomes descartados.","","Bastidor de marca"],
+["Storytelling","Reels","O primeiro pedido de presente","Contar a história de um pedido específico, com permissão.","","Emoção"],
+["Storytelling","Imagem","Um ano atrás","Foto da cozinha no começo contra a de hoje.","","Progresso"],
+["Datas","Carrossel","Páscoa sem ovo de chocolate","Apresentar a alternativa de presente de Páscoa.","","Sazonal"],
+["Datas","Reels","Dia das Mães: o que ela realmente quer","Contraste bem-humorado com presentes ruins.","Encomende até dia X","Conversão"],
+["Datas","Imagem","Festa Junina","Kit Arraiá fotografado com bandeirinha, sem clichê.","","Pico da categoria"],
+["Datas","Carrossel","Dia dos Pais","Caixa Amarga, posicionada para quem não gosta de doce.","","Nicho"],
+["Datas","Reels","Halloween: Edição Breu","Pipoca preta, luz vermelha, 10 segundos.","","Viral sazonal"],
+["Datas","Imagem","Black Friday sem mentira","Declarar que não sobe preço antes para descer depois.","","Diferenciação ética"],
+["Datas","Carrossel","Kits corporativos de fim de ano","Portfólio para empresas, publicado em setembro.","Peça orçamento","Lead B2B"],
+["Datas","Reels","A caixa de Natal","Abertura completa da caixa de fim de ano.","Encomende até dia X","Pico anual"],
+["Viral","Reels","Quebrar o caramelo com o dedo","Som alto, close extremo, sem fala.","","ASMR"],
+["Viral","Reels","Derrubar 1 kg em câmera lenta","Pipoca voando contra fundo escuro.","","Espetáculo visual"],
+["Viral","Reels","Tentando comer só um","Cena cômica de autocontrole fracassando.","Marca quem não consegue","Marcações"],
+["Viral","Reels","O pote de 700 g contra uma pessoa","Desafio real, gravado do começo ao fim.","","Retenção longa"],
+["Viral","Reels","Ranking dos sabores pela nossa mãe","Alguém de fora provando e ranqueando sem filtro.","Concorda?","Polêmica leve"],
+["Viral","Reels","Isso não é pipoca de cinema","Comparação lado a lado, som e textura.","","Diferenciação"],
+["Viral","Reels","Fizemos a pipoca mais cara que conseguimos","Receita absurda com pistache e ouro comestível, uma unidade só.","","Espetáculo"],
+["Viral","Reels","Entregando na casa de quem comentou","Sair e entregar de graça para um comentário sorteado.","Comenta seu bairro","Alcance local"],
+["Viral","Reels","O que acontece se molhar","Experimento mostrando por que a embalagem importa.","","Curiosidade"],
+["Viral","Reels","30 potes em 30 segundos","Timelapse acelerado da montagem do dia.","","Escala"],
+["Viral","Reels","Escrevemos o cartão que você mandar","Ler mensagens dos comentários e escrever à mão.","Comenta sua mensagem","UGC e comentários"],
+["Viral","Reels","O sabor que a gente nunca vai lançar","Mostrar uma receita ruim e explicar por que foi cortada.","","Honestidade viral"]
+];
+const CATS = [...new Set(P.map(p => p[0]))];
+document.getElementById("filtroPosts").innerHTML =
+  `<button data-pf="todos" aria-pressed="true">Todos (${P.length})</button>` +
+  CATS.map(c => `<button data-pf="${c}" aria-pressed="false">${c} (${P.filter(p=>p[0]===c).length})</button>`).join("");
+function renderPosts(f){
+  document.querySelector("#tPosts tbody").innerHTML = P
+    .map((p,i) => [i+1, ...p])
+    .filter(p => f === "todos" || p[1] === f)
+    .map(p => `<tr><td class="num">${p[0]}</td><td class="fmt"><span class="pill">${p[2]}</span></td><td><strong>${p[3]}</strong><br><span class="pill">${p[1]}</span></td><td>${p[4]}</td><td>${p[5]||"—"}</td><td>${p[6]}</td></tr>`).join("");
+}
+document.querySelectorAll("[data-pf]").forEach(b => b.onclick = () => {
+  document.querySelectorAll("[data-pf]").forEach(x => x.setAttribute("aria-pressed","false"));
+  b.setAttribute("aria-pressed","true"); renderPosts(b.dataset.pf);
+});
+renderPosts("todos");
+
+/* ========== 30 REELS ========== */
+const R = [
+["“Esse é o som que a pipoca de cinema não faz.”","Close do caramelo sendo quebrado entre os dedos, áudio cru sem música, 3 cortes.","o som certo","Pede no link da bio"],
+["“148 graus. Nem 147, nem 150.”","Termômetro subindo, caramelo virando de cor, mão tirando do fogo no ponto.","o ponto exato","Comenta se você sabia disso"],
+["“A gente jogou 4 kg fora hoje.”","Lote queimado indo pro lixo, close do erro, corte para o lote certo.","por que joguei fora","Salva se você respeita isso"],
+["“Não peça isso se você não sabe dividir.”","Duas mãos disputando o mesmo pote, tom cômico.","boa sorte","Marca quem você não dividiria"],
+["“33 potes. Por semana. É isso.”","Os 33 potes de Pistácio enfileirados, câmera passando por cima.","acaba sexta","Pede antes de acabar"],
+["“Adivinha quanto custa o ingrediente mais caro daqui.”","Macro do pistache, revelação do preço por quilo no fim.","R$ ___ o quilo","Comenta seu palpite"],
+["“Isso demorou 45 minutos.”","Timelapse de um lote inteiro, do milho cru ao lacre escrito à mão.","um lote","Segue pra ver o próximo"],
+["“O caramelo cristalizou. De novo.”","Mostrar o erro, explicar a causa em 10 segundos, mostrar a correção.","por que acontece","Salva pra quando acontecer com você"],
+["“Ninguém chega no fundo desse pote sozinho.”","Câmera dentro do pote, mão entrando repetidas vezes até o fundo.","700 g","Aceita o desafio?"],
+["“A gente escreve o que você mandar.”","Ler comentários e escrever cada um à mão no cartão dourado.","escrevi o seu","Comenta sua mensagem"],
+["“Sua pipoca de casa murcha por causa disso.”","Demonstração de umidade com duas amostras lado a lado.","umidade","Salva esse"],
+["“Achamos que ninguém ia pedir salgada.”","Mostrar dados reais de venda da Brasa surpreendendo.","erramos","Comenta seu time"],
+["“Isso aqui custa R$ 89 e a gente vai explicar por quê.”","Abrir a lata, mostrar peso, embalagem e que ela é reutilizável.","o que tem dentro","Vale ou não vale?"],
+["“Pipoca preta.”","Edição Breu de Halloween, luz vermelha, fundo escuro, sem fala.","Breu","Disponível em outubro"],
+["“Cinco segundos assistindo isso e você vai pedir.”","Fio de chocolate caindo sobre doce de leite em câmera lenta extrema.","Ruína","Link na bio"],
+["“A primeira vez que alguém de fora provou.”","Câmera na reação de uma pessoa, não no produto.","reação real","Marca quem você quer ver provando"],
+["“Não, não é açúcar de confeiteiro.”","Macro da flor de sal caindo sobre o caramelo quente.","flor de sal","Comenta se você conhecia"],
+["“Fizemos a pipoca mais cara que a gente conseguiu.”","Receita absurda, uma unidade só, revelar o custo no fim.","uma unidade","Você pagaria?"],
+["“Esse sabor a gente cortou.”","Mostrar uma receita descartada e explicar exatamente por quê.","cortado","Concorda com o corte?"],
+["“5h04.”","Plano único do começo do dia na cozinha, sem música.","todo dia","Segue a rotina"],
+["“Domingo, 21h, e você não quer cozinhar.”","Sequência de cenas de domingo à noite terminando na sacola na porta.","a gente chega","Pede agora"],
+["“A caixa por fora é creme. Por dentro não.”","Abertura lenta da caixa revelando o interior escuro.","o contraste","Presente pronto"],
+["“Quanto sobra pra gente num pedido de R$ 30.”","Abrir a conta real: comissão, insumo, embalagem, o que sobra.","transparência","Salva esse"],
+["“Alguém pediu duas vezes na mesma noite.”","Print do pedido repetido, reação do fundador.","duas vezes","Já fez isso?"],
+["“Isso não é pipoca de cinema.”","Comparação lado a lado: som, textura, cor, tamanho do grão.","lado a lado","Qual você prefere?"],
+["“O que acontece se molhar.”","Experimento com a embalagem, mostrando por que ela existe.","por isso a caixa","Comenta se surpreendeu"],
+["“Vou entregar na casa de quem comentar.”","Sair de casa e entregar de graça para um comentário sorteado.","fui","Comenta seu bairro"],
+["“30 potes em 30 segundos.”","Timelapse acelerado da montagem dos pedidos do dia.","um dia","Segue pra ver amanhã"],
+["“A nossa mãe ranqueou os sabores.”","Alguém de fora provando os cinco e ranqueando sem filtro.","ranking sem filtro","Concorda com ela?"],
+["“Um ano atrás essa cozinha era isso.”","Foto antiga, corte para hoje, sem narração.","um ano","Obrigado por estar aqui"]
+];
+document.querySelector("#tReels tbody").innerHTML = R.map((r,i) =>
+  `<tr><td class="num">${i+1}</td><td><strong>${r[0]}</strong></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("");
+</script>
+</body>
+</html>
