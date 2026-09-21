@@ -22,42 +22,51 @@ body{margin:0;background:var(--creme);color:var(--tinta);font-family:var(--u);fo
 .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px);}
 h1,h2,h3{font-family:var(--d);font-weight:400;line-height:1.05;margin:0;}
 h1{font-size:clamp(2rem,6vw,3.1rem);}
-h2{font-size:1.5rem;margin-bottom:8px;}
-p{margin:0 0 .9em;max-width:64ch;}
+h2{font-size:1.45rem;margin:0 0 8px;}
+h3{font-family:var(--u);font-size:.78rem;letter-spacing:.1em;font-weight:700;color:var(--ouro);margin:22px 0 10px;}
+p{margin:0 0 .8em;max-width:68ch;}
 a{color:inherit;}
-
 .kit{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;background:var(--noite);color:var(--creme);padding:12px clamp(16px,4vw,40px);font-size:.84rem;}
 .kit a{color:var(--creme);text-decoration:none;opacity:.72;}
 .kit a:hover,.kit a[aria-current="page"]{opacity:1;color:var(--ouro-claro);}
 .kit .m{font-family:var(--d);font-size:1.15rem;opacity:1;margin-right:6px;}
-
 header{background:var(--noite);color:var(--creme);padding:36px 0 34px;}
 header p{color:rgba(243,234,216,.7);margin-top:12px;}
 header .aviso{font-size:.82rem;color:var(--ouro-claro);letter-spacing:.08em;margin-bottom:12px;}
-
 main{padding:clamp(24px,4vw,44px) 0 80px;}
 .layout{display:grid;gap:20px;}
-@media(min-width:960px){.layout{grid-template-columns:260px 1fr;align-items:start;}}
+@media(min-width:960px){.layout{grid-template-columns:250px 1fr;align-items:start;}
+  .lista{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;}}
 .lista{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:10px;}
-.lista button{display:block;width:100%;text-align:left;font-family:var(--u);font-size:.92rem;padding:11px 12px;border:0;background:transparent;cursor:pointer;border-radius:4px;}
+.lista button{display:block;width:100%;text-align:left;font-family:var(--u);font-size:.9rem;padding:10px 12px;border:0;background:transparent;cursor:pointer;border-radius:4px;}
 .lista button[aria-current="true"]{background:var(--noite);color:var(--creme);}
-.lista .st{display:block;font-size:.74rem;color:var(--suave);margin-top:2px;}
+.lista .st{display:block;font-size:.72rem;color:var(--suave);margin-top:2px;}
 .lista button[aria-current="true"] .st{color:var(--ouro-claro);}
-
-form{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:clamp(18px,3vw,26px);}
-.grade{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin:16px 0;}
-label{display:flex;flex-direction:column;gap:6px;font-size:.86rem;}
-label span{color:var(--suave);font-size:.76rem;}
-input,textarea,select{font-family:var(--u);font-size:.95rem;padding:10px;min-height:42px;border:1px solid var(--linha);border-radius:4px;background:#fff;}
-textarea{min-height:90px;resize:vertical;}
-.acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+.painel{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:clamp(18px,3vw,26px);}
+.premissa{font-size:.86rem;color:var(--suave);border-left:2px solid var(--ouro);padding-left:12px;margin:0 0 18px;}
+.grade{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:12px 0;}
+label{display:flex;flex-direction:column;gap:5px;font-size:.84rem;}
+label span{color:var(--suave);font-size:.74rem;}
+input,textarea{font-family:var(--u);font-size:.94rem;padding:9px 10px;min-height:40px;border:1px solid var(--linha);border-radius:4px;background:#fff;}
+textarea{min-height:88px;resize:vertical;}
+.acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
 button.btn{font-family:var(--u);font-weight:600;padding:11px 18px;min-height:44px;border-radius:999px;border:1.5px solid var(--linha);background:transparent;cursor:pointer;}
 button.primario{background:var(--noite);color:var(--creme);border-color:var(--noite);}
-.nums{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:18px 0;}
+.nums{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin:16px 0;}
 .num{border-left:2px solid var(--ouro);padding-left:12px;}
-.num .k{font-size:.76rem;color:var(--suave);}
-.num .v{font-family:var(--d);font-size:1.6rem;}
+.num .k{font-size:.74rem;color:var(--suave);}
+.num .v{font-family:var(--d);font-size:1.45rem;}
 .msg{font-size:.84rem;color:var(--pistacio);min-height:1.2em;}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 4px;}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(26,18,16,.1);vertical-align:top;}
+th{font-size:.72rem;letter-spacing:.08em;color:var(--suave);}
+td.r{text-align:right;font-variant-numeric:tabular-nums;}
+ol.proc{margin:0;padding-left:18px;font-size:.9rem;color:var(--suave);max-width:70ch;}
+ol.proc li{margin-bottom:.45em;}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;}
+.chip{font-size:.74rem;padding:4px 10px;border-radius:999px;background:var(--creme-2);color:var(--suave);}
+.chip.alerta{background:#F3D5D3;color:var(--cereja);}
+.meta{font-size:.84rem;color:var(--suave);margin:0 0 6px;}
 </style>
 </head>
 <body>
@@ -74,115 +83,262 @@ button.primario{background:var(--noite);color:var(--creme);border-color:var(--no
   <div class="wrap">
     <div class="aviso">USO INTERNO · NÃO PUBLICAR</div>
     <h1>Fichas técnicas</h1>
-    <p>Anote o que a panela realmente fez. Temperatura, tempo, rendimento e perda entram aqui. O simulador só deixa de ser palpite quando estas fichas estiverem preenchidas.</p>
+    <p>Premissa de projeto alinhada ao simulador: lote ≤ 4 kg, milho mushroom, Dupla 180 g, 22 potes, 45 min, perda 6%. Valores abaixo são ponto de partida de pesquisa — validar na panela em Goiânia e sobrescrever.</p>
   </div>
 </header>
 
 <main class="wrap layout">
   <aside class="lista" id="nav" aria-label="Receitas"></aside>
-  <form id="form" autocomplete="off">
+  <div class="painel">
     <h2 id="titulo">Receita</h2>
-    <p id="desc"></p>
-    <div class="grade">
-      <label>Data do teste <input type="date" id="data"></label>
-      <label>Ponto <span>°C no caramelo</span><input type="number" id="temp" step="1" min="0"></label>
-      <label>Tempo do lote <span>minutos</span><input type="number" id="minutos" step="1" min="0"></label>
-      <label>Milho cru <span>gramas</span><input type="number" id="milho" step="1" min="0"></label>
-      <label>Produto final <span>gramas</span><input type="number" id="final" step="1" min="0"></label>
-      <label>Potes obtidos <span>unidades</span><input type="number" id="potes" step="1" min="0"></label>
-      <label>Perda observada <span>%</span><input type="number" id="perda" step="0.5" min="0"></label>
-      <label>Custo do lote <span>R$, insumos</span><input type="number" id="custo" step="0.5" min="0"></label>
-    </div>
-    <label>Notas de ponto e correção<textarea id="notas" placeholder="Ex.: a 118 °C o caramelo ainda cola; travar em 121 °C."></textarea></label>
+    <p class="meta" id="desc"></p>
+    <p class="premissa" id="papel"></p>
+
+    <h3>MEDIÇÃO DO LOTE</h3>
+    <form id="form" autocomplete="off">
+      <div class="grade">
+        <label>Data do teste <input type="date" id="data"></label>
+        <label>Ponto crítico <span id="tempHint">°C</span><input type="number" id="temp" step="1" min="0"></label>
+        <label>Tempo do lote <span>minutos</span><input type="number" id="minutos" step="1" min="0"></label>
+        <label>Milho cru <span>gramas no lote</span><input type="number" id="milho" step="1" min="0"></label>
+        <label>Produto final <span>gramas no lote</span><input type="number" id="final" step="1" min="0"></label>
+        <label>Potes obtidos <span>unidades</span><input type="number" id="potes" step="1" min="0"></label>
+        <label>Perda observada <span>%</span><input type="number" id="perda" step="0.5" min="0"></label>
+        <label>Custo do lote <span>R$, só insumos</span><input type="number" id="custo" step="0.5" min="0"></label>
+      </div>
+      <label>Notas de ponto e correção<textarea id="notas"></textarea></label>
+    </form>
     <div class="nums" id="nums"></div>
+
+    <h3>FÓRMULA — POR 100 G DE PRODUTO ACABADO</h3>
+    <div class="rolagem"><table id="tIng"><thead><tr><th>Insumo</th><th class="r">g / 100 g</th><th class="r">g / pote 180 g</th><th class="r">g / lote</th></tr></thead><tbody></tbody></table></div>
+
+    <h3>PROCESSO</h3>
+    <ol class="proc" id="proc"></ol>
+
+    <h3>PONTOS CRÍTICOS DE CONTROLE</h3>
+    <ol class="proc" id="pcc"></ol>
+
+    <h3>EMBALAGEM, VALIDADE E ALÉRGENOS</h3>
+    <p class="meta" id="emb"></p>
+    <p class="meta" id="val"></p>
+    <div class="chips" id="alerg"></div>
+
     <div class="acoes">
-      <button type="button" class="btn primario" id="salvar">Salvar ficha</button>
+      <button type="button" class="btn primario" id="salvar">Salvar medição</button>
+      <button type="button" class="btn" id="restaurar">Voltar à premissa</button>
       <button type="button" class="btn" id="exportar">Exportar JSON</button>
     </div>
     <p class="msg" id="msg"></p>
-  </form>
+  </div>
 </main>
 
 <script>
-const CHAVE = "doure:fichas:v1";
-const RECEITAS = [
-  {sku:"PIP-OUR", nome:"Ouro Velho", desc:"Caramelo de panela com flor de sal. Âncora da casa."},
-  {sku:"PIP-NEV", nome:"Neve", desc:"Chocolate branco, leite em pó e raspas de limão siciliano."},
-  {sku:"PIP-MEI", nome:"Meia-Noite", desc:"Chocolate 70%, nibs de cacau e sal."},
-  {sku:"PIP-EDE", nome:"Éden", desc:"Doce de leite, caju caramelizado e linha de chocolate."},
-  {sku:"PIP-P33", nome:"Pistácio 33", desc:"Pistache verdadeiro e chocolate branco. 33 potes/semana."},
-  {sku:"PIP-BRA", nome:"Brasa", desc:"Páprica defumada, queijo e pimenta no fim."},
-  {sku:"PIP-PAR", nome:"Parma", desc:"Parmesão curado, alho tostado e ervas."},
-  {sku:"PIP-EDI", nome:"Edição de Estação", desc:"Receita nova a cada três meses."}
-];
-const CAMPOS = ["data","temp","minutos","milho","final","potes","perda","custo","notas"];
-let sku = RECEITAS[0].sku;
+const CHAVE = "doure:fichas:v2";
+const PRECO = {milho:18, acucar:7, cob:46, top:62, manteigaKg:45, oleoKg:12, leitePo:28, doceLeite:22, pistache:120, caju:58, queijo:48, paprika:80};
 
+/* Premissa comum: Dupla 180 g, lote ≤ 4 kg, rendimento produto/milho cru ≈ 14× (doces), perda 6%, 45 min.
+   Ponto de caramelo: hard crack 149–154 °C (pesquisa); playbook cita 148 °C — alvo 150 °C.
+   Estouro: óleo ≥ 180 °C. Fonte de mercado: milho mushroom ~0,86× peso estourado/cru antes da cobertura. */
+
+const FICHAS = {
+"PIP-OUR":{
+  nome:"Ouro Velho", papel:"Âncora da casa. Menor custo de insumo, nunca sai do cardápio.",
+  tipo:"doce", temp:150, tempLabel:"°C caramelo (hard crack)", minutos:45, potes:22, perda:6, rend:14,
+  bom:[{n:"Milho mushroom",k:"milho",g:7.1},{n:"Açúcar cristal",k:"acucar",g:40},{n:"Água (evapora)",k:"agua",g:12},{n:"Manteiga sem sal",k:"manteiga",g:8},{n:"Bicarbonato",k:"bico",g:0.2},{n:"Flor de sal",k:"sal",g:0.8},{n:"Baunilha",k:"bau",g:0.4}],
+  proc:["Aquecer óleo a ≥ 180 °C; estourar milho mushroom; descartar piruá.","Calda: açúcar + pouca água até 150 °C (âmbar claro, hard crack).","Desligar; incorporar manteiga e bicarbonato (espuma).","Envolver pipoca; espalhar; flor de sal por cima.","Resfriar; embalar Dupla 180 g; escrever data no lacre."],
+  pcc:["Óleo de estouro ≥ 180 °C.","Caramelo travar em 150 °C — abaixo de 145 °C amolece; acima de 155 °C amarga.","Lote final ≤ 4 kg (22 × 180 g).","Perda-alvo ≤ 6%."],
+  emb:"Pote kraft com janela 180 g + lacre dourado numerado + cartão.",
+  val:"7 dias fechado, seco, longe de umidade. Premissa — validar em laboratório.",
+  alerg:["Leite (manteiga)","Pode conter traços de soja"],
+  notas:"Premissa: caramelo de panela com flor de sal. Se colar no dente a 145 °C, subir 3–5 °C."
+},
+"PIP-NEV":{
+  nome:"Neve", papel:"Viral / foto. Chocolate branco + leite em pó + limão siciliano.",
+  tipo:"doce", temp:45, tempLabel:"°C chocolate branco (trabalho)", minutos:50, potes:22, perda:7, rend:14,
+  bom:[{n:"Milho mushroom",k:"milho",g:7.1},{n:"Açúcar (base leve)",k:"acucar",g:18},{n:"Chocolate branco cobertura",k:"cob",g:28},{n:"Leite em pó",k:"leite",g:10},{n:"Raspas limão siciliano",k:"limao",g:1.2},{n:"Óleo estouro",k:"oleo",g:3}],
+  proc:["Estourar milho; descartar piruá; secar bem.","Calda leve opcional até 145 °C para base crocante; esfriar.","Derreter chocolate branco a ~40–45 °C; não superaquecer.","Envolver pipoca; polvilhar leite em pó; raspas de limão no fim.","Espalhar até firmar; embalar."],
+  pcc:["Chocolate branco ≤ 45 °C — acima de 50 °C emborracha.","Pipoca 100% seca antes da cobertura.","Visual: branco brilhante; lote sem manchas cinza."],
+  emb:"Pote kraft janela; fundo escuro na foto de cardápio.",
+  val:"5–7 dias seco. Premissa.",
+  alerg:["Leite","Soja (cobertura)"],
+  notas:"Mais fotogênica do catálogo. Limão entra no final para não amargar no calor."
+},
+"PIP-MEI":{
+  nome:"Meia-Noite", papel:"Premium adulto. Chocolate 70% + nibs + sal.",
+  tipo:"doce", temp:45, tempLabel:"°C chocolate 70% (trabalho)", minutos:50, potes:22, perda:7, rend:14,
+  bom:[{n:"Milho mushroom",k:"milho",g:7.1},{n:"Açúcar base",k:"acucar",g:12},{n:"Chocolate 70%",k:"cob",g:30},{n:"Nibs de cacau",k:"nibs",g:4},{n:"Flor de sal",k:"sal",g:0.6},{n:"Óleo estouro",k:"oleo",g:3}],
+  proc:["Estourar e secar.","Base leve de caramelo (opcional) a 148–150 °C.","Derreter chocolate 70% a ~45 °C.","Envolver; finalizar com nibs e flor de sal.","Resfriar até casca fosca-brilhante; embalar."],
+  pcc:["Amargor controlado: 70% de cacau real, não cobertura ao leite.","Sal no fim, nunca na calda quente.","Textura: quebra no dente, sem cola."],
+  emb:"Pote kraft; visual escuro no cardápio.",
+  val:"7 dias seco. Premissa.",
+  alerg:["Pode conter leite","Soja"],
+  notas:"Para quem acha pipoca doce enjoativa. Não adoçar demais."
+},
+"PIP-EDE":{
+  nome:"Éden", papel:"Indulgência / viral. Doce de leite + caju + fio de chocolate.",
+  tipo:"doce", temp:150, tempLabel:"°C caramelo base", minutos:55, potes:22, perda:8, rend:14,
+  bom:[{n:"Milho mushroom",k:"milho",g:7.1},{n:"Açúcar",k:"acucar",g:28},{n:"Doce de leite pastoso",k:"dl",g:14},{n:"Castanha-de-caju caramelizada",k:"caju",g:8},{n:"Chocolate meio amargo (fio)",k:"cob",g:8},{n:"Manteiga",k:"manteiga",g:5},{n:"Óleo estouro",k:"oleo",g:3}],
+  proc:["Estourar milho; caramelizar base a 150 °C com manteiga.","Aquecer doce de leite até fluidificar; envolver ainda quente.","Incorporar caju caramelizado.","Esfriar; regar fio de chocolate.","Embalar sem amassar o fio."],
+  pcc:["Doce de leite não pode ir à fervura alta — queima fácil.","Caju torrado seco antes de entrar.","Perda-alvo 8% (cobertura pegajosa)."],
+  emb:"Pote kraft; fio de chocolate visível na janela.",
+  val:"5 dias seco (doce de leite hidrata). Premissa — priorizar giro.",
+  alerg:["Leite","Castanha-de-caju","Soja"],
+  notas:"Maior ticket doce. Nome Éden: recompensa, não aviso."
+},
+"PIP-P33":{
+  nome:"Pistácio 33", papel:"Escassez real: 33 potes/semana. Pistache + chocolate branco.",
+  tipo:"doce", temp:45, tempLabel:"°C chocolate branco", minutos:40, potes:11, perda:6, rend:14,
+  bom:[{n:"Milho mushroom",k:"milho",g:7.1},{n:"Açúcar base",k:"acucar",g:15},{n:"Chocolate branco",k:"cob",g:30},{n:"Pistache sem casca",k:"pist",g:12},{n:"Óleo estouro",k:"oleo",g:3}],
+  proc:["Lote de 11 potes (metade do padrão) — duas corridas/semana ≤ 33 un.","Estourar; base leve; chocolate branco a 40–45 °C.","Pistache picado no meio da mistura e por cima.","Contar potes; parar em 33 na semana."],
+  pcc:["Teto semanal 33 — honesto.","Pistache verde vivo; evitar ranço.","Custo de insumo alto: não entrar em promoção."],
+  emb:"Pote kraft; etiqueta 'Lote da semana · 33'.",
+  val:"5–7 dias. Premissa.",
+  alerg:["Leite","Pistache","Soja"],
+  notas:"Rendimento manual e preço do pistache limitam a 33/semana."
+},
+"PIP-BRA":{
+  nome:"Brasa", papel:"Salgada. Páprica defumada, queijo, pimenta no fim.",
+  tipo:"salgado", temp:180, tempLabel:"°C óleo de estouro", minutos:35, potes:22, perda:5, rend:10,
+  bom:[{n:"Milho mushroom",k:"milho",g:10},{n:"Óleo",k:"oleo",g:5},{n:"Manteiga derretida",k:"manteiga",g:6},{n:"Páprica defumada",k:"pap",g:2.5},{n:"Queijo ralado fino",k:"queijo",g:8},{n:"Pimenta caiena",k:"pimenta",g:0.4},{n:"Sal",k:"sal",g:1.2}],
+  proc:["Estourar em óleo ≥ 180 °C; descartar piruá.","Banho leve de manteiga derretida.","Mistura seca: páprica, queijo, sal; pimenta por último.","Embalar ainda crocante."],
+  pcc:["Sem calda doce — rendimento ~10× (menos cobertura).","Queijo bem seco para não amolecer.","Pimenta só no fim."],
+  emb:"Pote kraft; diferenciar visualmente das doces.",
+  val:"5 dias seco. Premissa.",
+  alerg:["Leite","Pode conter glúten (queijo industrial)"],
+  notas:"Linha salgada amplia ocasião e pedidos a dois."
+},
+"PIP-PAR":{
+  nome:"Parma", papel:"Salgada premium. Parmesão, alho tostado, ervas.",
+  tipo:"salgado", temp:180, tempLabel:"°C óleo de estouro", minutos:40, potes:22, perda:5, rend:10,
+  bom:[{n:"Milho mushroom",k:"milho",g:10},{n:"Óleo",k:"oleo",g:5},{n:"Manteiga",k:"manteiga",g:5},{n:"Parmesão curado ralado",k:"queijo",g:10},{n:"Alho tostado em pó",k:"alho",g:1.5},{n:"Ervas (tomilho/orégano)",k:"ervas",g:0.8},{n:"Sal",k:"sal",g:0.8}],
+  proc:["Estourar a ≥ 180 °C.","Manteiga + alho tostado.","Parmesão e ervas com a pipoca ainda quente.","Embalar."],
+  pcc:["Parmesão curado (não mussarela).","Alho tostado — cru amarga.","Sugestão de serviço: vinho."],
+  emb:"Pote kraft.",
+  val:"5 dias seco. Premissa.",
+  alerg:["Leite"],
+  notas:"Única recomendada com vinho no site."
+},
+"PIP-EDI":{
+  nome:"Edição de Estação", papel:"Rotativa a cada 3 meses. Trocar fruta/doce do momento.",
+  tipo:"doce", temp:150, tempLabel:"°C conforme base", minutos:50, potes:22, perda:8, rend:14,
+  bom:[{n:"Milho mushroom",k:"milho",g:7.1},{n:"Açúcar base",k:"acucar",g:30},{n:"Cobertura da estação",k:"cob",g:20},{n:"Fruta/doce da estação",k:"fruta",g:10},{n:"Manteiga",k:"manteiga",g:5}],
+  proc:["Definir sabor do trimestre (ex.: goiabada, cupuaçu, café).","Seguir base Ouro Velho ou Neve conforme textura.","Documentar BOM desta edição na nota antes de produzir.","Comunicar 'nunca volta igual'."],
+  pcc:["Nova ficha a cada edição — não reutilizar BOM velho.","Testar 1 lote piloto antes do cardápio.","Prazo de validade pode mudar com fruta."],
+  emb:"Pote kraft + faixa 'Edição · [estação]'.",
+  val:"Definir por edição. Premissa padrão 5–7 dias.",
+  alerg:["Depende da edição — declarar no rótulo"],
+  notas:"Template. Preencher fruta/doce ao lançar o trimestre."
+}
+};
+
+const CAMPOS = ["data","temp","minutos","milho","final","potes","perda","custo","notas"];
+let sku = "PIP-OUR";
 const brl = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+
+function premissaMedida(f){
+  const pote = 180, potes = f.potes, final = pote * potes, milho = Math.round(final / f.rend);
+  const custo = custoLote(f, milho, final);
+  return {
+    data:"", temp:f.temp, minutos:f.minutos, milho, final, potes,
+    perda:f.perda, custo:custo.toFixed(2), notas:f.notas
+  };
+}
+
+function custoLote(f, milhoG, finalG){
+  const fat = finalG / 100;
+  let t = (milhoG/1000)*PRECO.milho;
+  f.bom.forEach(i => {
+    const g = (i.g||0) * fat;
+    if(i.k==="acucar") t += (g/1000)*PRECO.acucar;
+    else if(i.k==="cob"||i.k==="nibs") t += (g/1000)*PRECO.cob;
+    else if(i.k==="caju") t += (g/1000)*PRECO.caju;
+    else if(i.k==="pist") t += (g/1000)*PRECO.pistache;
+    else if(i.k==="manteiga") t += (g/1000)*PRECO.manteigaKg;
+    else if(i.k==="oleo") t += (g/1000)*PRECO.oleoKg;
+    else if(i.k==="leite") t += (g/1000)*PRECO.leitePo;
+    else if(i.k==="dl") t += (g/1000)*PRECO.doceLeite;
+    else if(i.k==="queijo") t += (g/1000)*PRECO.queijo;
+    else if(i.k==="pap") t += (g/1000)*PRECO.paprika;
+    else if(i.k==="top"||i.k==="sal"||i.k==="pimenta"||i.k==="alho"||i.k==="ervas"||i.k==="limao"||i.k==="fruta"||i.k==="bau"||i.k==="bico") t += g * 0.02;
+  });
+  return Math.round(t*100)/100;
+}
+
 function banco(){
   try{ return JSON.parse(localStorage.getItem(CHAVE) || "{}"); }
   catch(e){ return {}; }
 }
-function medida(f){ return f && Number(f.final) > 0 && Number(f.potes) > 0; }
+function medidaOk(m){ return m && Number(m.final)>0 && Number(m.potes)>0; }
 
 function nav(){
   const dados = banco();
-  document.getElementById("nav").innerHTML = RECEITAS.map(r => {
-    const ok = medida(dados[r.sku]);
-    return `<button type="button" data-sku="${r.sku}" ${r.sku===sku?'aria-current="true"':""}>${r.nome}<span class="st">${ok?"Medida":"Ainda sem medição"}</span></button>`;
+  document.getElementById("nav").innerHTML = Object.keys(FICHAS).map(id => {
+    const f = FICHAS[id], m = dados[id] || premissaMedida(f);
+    const ok = medidaOk(m);
+    const edit = !!dados[id];
+    return `<button type="button" data-sku="${id}" ${id===sku?'aria-current="true"':""}>${f.nome}<span class="st">${edit?"Medição salva":"Premissa pronta"} · ${ok?"lote ok":"—"}</span></button>`;
   }).join("");
   document.querySelectorAll("#nav button").forEach(b => b.onclick = () => { sku = b.dataset.sku; carregar(); });
 }
 
 function carregar(){
-  const r = RECEITAS.find(x => x.sku === sku);
-  document.getElementById("titulo").textContent = r.nome;
-  document.getElementById("desc").textContent = r.desc + " · " + r.sku;
-  const f = banco()[sku] || {};
-  CAMPOS.forEach(c => { document.getElementById(c).value = f[c] ?? ""; });
-  document.getElementById("msg").textContent = "";
-  nav();
-  derivado();
+  const f = FICHAS[sku];
+  const m = banco()[sku] || premissaMedida(f);
+  document.getElementById("titulo").textContent = f.nome;
+  document.getElementById("desc").textContent = f.tipo.toUpperCase() + " · " + sku + " · referência Dupla 180 g";
+  document.getElementById("papel").textContent = f.papel;
+  document.getElementById("tempHint").textContent = f.tempLabel;
+  CAMPOS.forEach(c => { document.getElementById(c).value = m[c] ?? ""; });
+  document.getElementById("msg").textContent = banco()[sku] ? "Medição salva neste navegador." : "Carregada a premissa de projeto. Edite após o teste real.";
+  const potes = Number(m.potes)||f.potes, fat = (180*potes)/100;
+  document.querySelector("#tIng tbody").innerHTML = f.bom.map(i => {
+    const g100 = i.g, gPote = +(g100*1.8).toFixed(1), gLote = +(g100*fat).toFixed(0);
+    return `<tr><td>${i.n}</td><td class="r">${g100}</td><td class="r">${gPote}</td><td class="r">${gLote}</td></tr>`;
+  }).join("");
+  document.getElementById("proc").innerHTML = f.proc.map(s => `<li>${s}</li>`).join("");
+  document.getElementById("pcc").innerHTML = f.pcc.map(s => `<li>${s}</li>`).join("");
+  document.getElementById("emb").textContent = "Embalagem: " + f.emb;
+  document.getElementById("val").textContent = "Validade: " + f.val;
+  document.getElementById("alerg").innerHTML = f.alerg.map(a =>
+    `<span class="chip${/castanha|pistache|leite|glúten/i.test(a)?" alerta":""}">${a}</span>`).join("");
+  nav(); derivado();
 }
 
-function ler(){
-  const o = {sku};
-  CAMPOS.forEach(c => o[c] = document.getElementById(c).value);
-  return o;
-}
+function ler(){ const o={sku}; CAMPOS.forEach(c => o[c]=document.getElementById(c).value); return o; }
 
 function derivado(){
-  const f = ler();
-  const milho = Number(f.milho)||0, fin = Number(f.final)||0, potes = Number(f.potes)||0, custo = Number(f.custo)||0;
-  const rend = milho ? (fin/milho) : 0;
-  const gPote = potes ? fin/potes : 0;
-  const cPote = potes ? custo/potes : 0;
+  const m = ler(), milho=+m.milho||0, fin=+m.final||0, potes=+m.potes||0, custo=+m.custo||0;
+  const rend = milho ? fin/milho : 0;
   document.getElementById("nums").innerHTML = [
-    ["Rendimento (final ÷ cru)", rend ? rend.toFixed(1)+"×" : "—"],
-    ["Gramas por pote", gPote ? Math.round(gPote)+" g" : "—"],
-    ["Custo de insumo por pote", cPote ? brl(cPote) : "—"]
+    ["Rendimento final÷cru", rend?rend.toFixed(1)+"×":"—"],
+    ["Gramas por pote", potes?Math.round(fin/potes)+" g":"—"],
+    ["Insumo por pote", potes?brl(custo/potes):"—"],
+    ["Peso do lote", fin?fin.toLocaleString("pt-BR")+" g":"—"]
   ].map(([k,v]) => `<div class="num"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
 }
 
 document.getElementById("form").addEventListener("input", derivado);
 document.getElementById("salvar").onclick = () => {
-  const dados = banco();
-  dados[sku] = ler();
-  try{
-    localStorage.setItem(CHAVE, JSON.stringify(dados));
-    document.getElementById("msg").textContent = "Ficha salva neste navegador.";
-  }catch(e){
-    document.getElementById("msg").textContent = "Não foi possível salvar neste navegador.";
-  }
+  const dados = banco(); dados[sku] = ler();
+  try{ localStorage.setItem(CHAVE, JSON.stringify(dados)); document.getElementById("msg").textContent = "Medição salva neste navegador."; }
+  catch(e){ document.getElementById("msg").textContent = "Não foi possível salvar."; }
   nav();
 };
+document.getElementById("restaurar").onclick = () => {
+  const dados = banco(); delete dados[sku];
+  try{ localStorage.setItem(CHAVE, JSON.stringify(dados)); }catch(e){}
+  carregar();
+  document.getElementById("msg").textContent = "Premissa restaurada para esta receita.";
+};
 document.getElementById("exportar").onclick = () => {
-  const blob = new Blob([JSON.stringify(banco(), null, 2)], {type:"application/json"});
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "doure-fichas-tecnicas.json";
-  a.click();
-  URL.revokeObjectURL(a.href);
+  const out = {};
+  Object.keys(FICHAS).forEach(id => {
+    out[id] = {ficha:FICHAS[id], medicao: banco()[id] || premissaMedida(FICHAS[id])};
+  });
+  const blob = new Blob([JSON.stringify(out,null,2)], {type:"application/json"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = "doure-fichas-tecnicas.json"; a.click(); URL.revokeObjectURL(a.href);
 };
 carregar();
 </script>
