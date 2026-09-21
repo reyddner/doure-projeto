@@ -54,7 +54,7 @@ Commercial food photography of gourmet popcorn in a clear kraft window jar, 180g
 Commercial food photography of gourmet popcorn in a clear kraft window jar, 180g portion, shot on deep warm black background (#1A1210), single hard side light from left, product glowing, surroundings disappear, dark 70% chocolate coating, cocoa nibs, light salt crystals, deep brown-black popcorn (#4A2C1C), rich matte-gloss mix, shallow depth of field, ultra sharp product focus, photorealistic, no hands, no text, no watermark, 3/4 angle, square crop for delivery app menu
 ```
 
-### Ruína (P1)
+### Éden (P1)
 
 ```
 Commercial food photography of gourmet popcorn in a clear kraft window jar, 180g portion, shot on deep warm black background (#1A1210), single hard side light from left, product glowing, surroundings disappear, dulce de leche coating, caramelized cashew pieces, thin dark chocolate drizzle on top, warm caramel tones, shallow depth of field, ultra sharp product focus, photorealistic, no hands, no text, no watermark, 3/4 angle, square crop for delivery app menu
@@ -132,7 +132,7 @@ Commercial photo of exactly 33 identical kraft window jars of pistachio white ch
 2. Ouro Velho
 3. Neve
 4. Meia-Noite
-5. Ruína
+5. Éden
 6. Pistácio 33
 7. Brasa + Parma
 8. Caixa Dourê
